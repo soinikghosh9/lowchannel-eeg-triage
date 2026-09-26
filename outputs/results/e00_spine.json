@@ -1,0 +1,112 @@
+{
+  "n_recordings": 1864,
+  "by_cohort": {
+    "CAUEEG": 1272,
+    "AlzEEG": 183,
+    "MCI_Dataset": 166,
+    "ds004504_raw": 88,
+    "GENEEG": 63,
+    "Mendeley": 35,
+    "MISP": 29,
+    "P-ADIC": 28
+  },
+  "by_label": {
+    "CN": 663,
+    "MCI": 516,
+    "AD": 496,
+    "VAD": 80,
+    "TGA": 72,
+    "FTD": 37
+  },
+  "expected_mismatch": {},
+  "age_available": {
+    "AlzEEG": 0,
+    "CAUEEG": 1272,
+    "GENEEG": 0,
+    "MCI_Dataset": 0,
+    "MISP": 0,
+    "Mendeley": 0,
+    "P-ADIC": 0,
+    "ds004504_raw": 88
+  },
+  "n_with_age": 1360,
+  "age_by_label": {
+    "AD": {
+      "n": 266,
+      "mean": 74.5,
+      "sd": 9.0
+    },
+    "CN": {
+      "n": 488,
+      "mean": 65.3,
+      "sd": 9.3
+    },
+    "FTD": {
+      "n": 37,
+      "mean": 67.8,
+      "sd": 9.4
+    },
+    "MCI": {
+      "n": 417,
+      "mean": 73.8,
+      "sd": 7.8
+    },
+    "TGA": {
+      "n": 72,
+      "mean": 62.6,
+      "sd": 8.9
+    },
+    "VAD": {
+      "n": 80,
+      "mean": 79.3,
+      "sd": 6.1
+    }
+  },
+  "subtypes": {
+    "eoad": {
+      "n": 41,
+      "age_mean": 61.6,
+      "age_sd": 3.7
+    },
+    "load": {
+      "n": 189,
+      "age_mean": 78.8,
+      "age_sd": 5.6
+    },
+    "vd": {
+      "n": 79,
+      "age_mean": 79.3,
+      "age_sd": 6.2
+    },
+    "sivd": {
+      "n": 79,
+      "age_mean": 79.3,
+      "age_sd": 6.2
+    },
+    "smi": {
+      "n": 186,
+      "age_mean": 69.6,
+      "age_sd": 9.3
+    },
+    "tga": {
+      "n": 72,
+      "age_mean": 62.6,
+      "age_sd": 8.9
+    },
+    "mci_amnestic": {
+      "n": 334,
+      "age_mean": 73.5,
+      "age_sd": 7.7
+    },
+    "mci_vascular": {
+      "n": 70,
+      "age_mean": 77.0,
+      "age_sd": 6.5
+    },
+    "ad": {
+      "n": 230,
+      "age_mean": 75.7,
+      "age_sd": 8.5
+    }
+  }
+}

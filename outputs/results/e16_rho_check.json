@@ -1,0 +1,95 @@
+{
+  "cohort": "CAUEEG",
+  "tasks": {
+    "screening": {
+      "n": 1200,
+      "n_matched": 660,
+      "budgets": {
+        "b19|256|f32|full": {
+          "auc": 0.7417874332219018,
+          "auc_matched": 0.6714921946740129,
+          "auc_size_matched": 0.7387772268135905,
+          "auc_resid_pooled": 0.6177896559733504,
+          "auc_resid_controls": 0.6645879824414396,
+          "rho_matched": 0.29073156371768516,
+          "rho_size_only": 0.012449805054792302,
+          "rho_matched_size_adjusted": 0.281789989093499,
+          "rho_resid_pooled": 0.5128379734059696,
+          "rho_resid_controls": 0.3192864482316249
+        },
+        "b4|256|f32|full": {
+          "auc": 0.7486644380349231,
+          "auc_matched": 0.6687832874196511,
+          "auc_size_matched": 0.7441502295684114,
+          "auc_resid_pooled": 0.6213325336132354,
+          "auc_resid_controls": 0.6540960663767681,
+          "rho_matched": 0.32124075017133447,
+          "rho_size_only": 0.01815381605100183,
+          "rho_matched_size_adjusted": 0.3086908510468646,
+          "rho_resid_pooled": 0.5120631861472885,
+          "rho_resid_controls": 0.380305171119296
+        }
+      }
+    },
+    "dementia": {
+      "n": 783,
+      "n_matched": 396,
+      "budgets": {
+        "b19|256|f32|full": {
+          "auc": 0.8051487398800398,
+          "auc_matched": 0.7553565962656872,
+          "auc_size_matched": 0.7979139883685339,
+          "auc_resid_pooled": 0.6582512977756261,
+          "auc_resid_controls": 0.7252413997148928,
+          "rho_matched": 0.1631733548495953,
+          "rho_size_only": 0.02370893458170598,
+          "rho_matched_size_adjusted": 0.14285127172410975,
+          "rho_resid_pooled": 0.4813961944006785,
+          "rho_resid_controls": 0.26186357576492114
+        },
+        "b4|256|f32|full": {
+          "auc": 0.8110021786492375,
+          "auc_matched": 0.7623201714110805,
+          "auc_size_matched": 0.8056876849301093,
+          "auc_resid_pooled": 0.6698640361494392,
+          "auc_resid_controls": 0.7261827913607144,
+          "rho_matched": 0.1565326887727779,
+          "rho_size_only": 0.01708828453295855,
+          "rho_matched_size_adjusted": 0.14186869689874515,
+          "rho_resid_pooled": 0.453817214762924,
+          "rho_resid_controls": 0.2727292382867398
+        }
+      }
+    },
+    "mci": {
+      "n": 876,
+      "n_matched": 544,
+      "budgets": {
+        "b19|256|f32|full": {
+          "auc": 0.6884244238596051,
+          "auc_matched": 0.589073313148789,
+          "auc_size_matched": 0.6822680579584773,
+          "auc_resid_pooled": 0.564729915414074,
+          "auc_resid_controls": 0.6122997027214829,
+          "rho_matched": 0.5272729971823747,
+          "rho_size_only": 0.03267286573058535,
+          "rho_matched_size_adjusted": 0.5113059625121982,
+          "rho_resid_pooled": 0.6564674892555106,
+          "rho_resid_controls": 0.40400665465132407
+        },
+        "b4|256|f32|full": {
+          "auc": 0.6959504291991243,
+          "auc_matched": 0.6014070609861591,
+          "auc_size_matched": 0.6861610618512111,
+          "auc_resid_pooled": 0.5558716425552369,
+          "auc_resid_controls": 0.6024774951280806,
+          "rho_matched": 0.4824861501930697,
+          "rho_size_only": 0.04995838686306381,
+          "rho_matched_size_adjusted": 0.45527244001643813,
+          "rho_resid_pooled": 0.7148684859553929,
+          "rho_resid_controls": 0.47702336990574684
+        }
+      }
+    }
+  }
+}

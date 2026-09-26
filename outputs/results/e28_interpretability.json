@@ -1,0 +1,24 @@
+{
+ "subject": "CAUEEG_AD_(serial withheld: access-controlled dataset)",
+ "age": 57.0,
+ "label": "AD",
+ "budget": "b19|256|f32|full",
+ "abnormality": 4.831271617513564,
+ "referral_threshold": 1.2161129478802468,
+ "n_controls_fitting_reference": 459,
+ "most_deviant": [
+  {
+   "feature": "theta_alpha_ratio",
+   "z": 13.178096005873705
+  },
+  {
+   "feature": "rel_theta",
+   "z": 12.628149866782264
+  },
+  {
+   "feature": "slowing_ratio",
+   "z": 5.413261135996821
+  }
+ ],
+ "note": "An impaired patient in the youngest fifth of impaired participants, that is the case an instrument leaning on age is most likely to miss."
+}

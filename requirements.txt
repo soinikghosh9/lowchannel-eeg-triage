@@ -1,0 +1,13 @@
+numpy>=2.0
+scipy>=1.11
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.8
+openpyxl>=3.1
+mne>=1.6
+mne-icalabel>=0.6
+torch>=2.2          # ICLabel backend used for the paper (onnxruntime also works)
+h5py>=3.9           # P-ADIC .mat (v7.3) files
+pymupdf>=1.24       # tools/ only
+# Optional, for experiments/e11_deep_arm.py:
+# braindecode>=0.8

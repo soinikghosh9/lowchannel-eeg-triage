@@ -1,0 +1,385 @@
+{
+  "cohort": "CAUEEG",
+  "n": 1200,
+  "regions": {
+    "r_frontal": {
+      "n_electrodes": 7,
+      "channels": [
+        "Fp1",
+        "Fp2",
+        "F7",
+        "F3",
+        "Fz",
+        "F4",
+        "F8"
+      ],
+      "auc_eeg": 0.6924150076884855,
+      "auc_matched": 0.6423324150596877,
+      "rho": 0.2602842326617271,
+      "per_feature": {
+        "rel_delta": {
+          "auc_raw": 0.48956688688370836,
+          "auc_deviation": 0.4976464119910972,
+          "auc_matched": 0.5034802571166207
+        },
+        "rel_theta": {
+          "auc_raw": 0.6495491283932976,
+          "auc_deviation": 0.570094584542469,
+          "auc_matched": 0.6385032139577594
+        },
+        "rel_alpha": {
+          "auc_raw": 0.4611297810472217,
+          "auc_deviation": 0.5258424257392266,
+          "auc_matched": 0.4396510560146924
+        },
+        "rel_beta": {
+          "auc_raw": 0.40288840082441735,
+          "auc_deviation": 0.5334338863750628,
+          "auc_matched": 0.41587695133149677
+        },
+        "rel_gamma": {
+          "auc_raw": 0.4636465472378785,
+          "auc_deviation": 0.5215439302126609,
+          "auc_matched": 0.47279155188246097
+        },
+        "theta_alpha_ratio": {
+          "auc_raw": 0.6300618313002214,
+          "auc_deviation": 0.5928366248283689,
+          "auc_matched": 0.63633608815427
+        },
+        "slowing_ratio": {
+          "auc_raw": 0.5781976308292098,
+          "auc_deviation": 0.5530358492174797,
+          "auc_matched": 0.5781450872359963
+        },
+        "spectral_entropy": {
+          "auc_raw": 0.5068961157712447,
+          "auc_deviation": 0.4656458474827928,
+          "auc_matched": 0.5061157024793388
+        },
+        "spectral_edge95": {
+          "auc_raw": 0.46842281672003033,
+          "auc_deviation": 0.5605876178631597,
+          "auc_matched": 0.4828971533516988
+        },
+        "spectral_median": {
+          "auc_raw": 0.5261320302599972,
+          "auc_deviation": 0.44374174921130544,
+          "auc_matched": 0.5104315886134068
+        },
+        "pdr_frequency": {
+          "auc_raw": 0.32385576812821393,
+          "auc_deviation": 0.5994504864473905,
+          "auc_matched": 0.35589990817263545
+        },
+        "pdr_prominence": {
+          "auc_raw": 0.6037563323425037,
+          "auc_deviation": 0.48959040806306026,
+          "auc_matched": 0.56
+        },
+        "aperiodic_exponent": {
+          "auc_raw": 0.6044149253643578,
+          "auc_deviation": 0.5569433051373196,
+          "auc_matched": 0.6029201101928374
+        },
+        "hjorth_mobility": {
+          "auc_raw": 0.48141091794342566,
+          "auc_deviation": 0.5188389945871886,
+          "auc_matched": 0.49082644628099176
+        },
+        "hjorth_complexity": {
+          "auc_raw": 0.5214263243159012,
+          "auc_deviation": 0.48289569239001645,
+          "auc_matched": 0.5166850321395776
+        },
+        "asymmetry_alpha": {
+          "auc_raw": 0.4722347178487529,
+          "auc_deviation": 0.5579517757020337,
+          "auc_matched": 0.48393939393939395
+        }
+      }
+    },
+    "r_temporal": {
+      "n_electrodes": 4,
+      "channels": [
+        "T3",
+        "T4",
+        "T5",
+        "T6"
+      ],
+      "auc_eeg": 0.7508666084517478,
+      "auc_matched": 0.6851285583103764,
+      "rho": 0.2620438429294409,
+      "per_feature": {
+        "rel_delta": {
+          "auc_raw": 0.5652521617433898,
+          "auc_deviation": 0.5304202352705965,
+          "auc_matched": 0.5789439853076217
+        },
+        "rel_theta": {
+          "auc_raw": 0.7070143096974882,
+          "auc_deviation": 0.6018040744562932,
+          "auc_matched": 0.6644903581267217
+        },
+        "rel_alpha": {
+          "auc_raw": 0.4192973635698094,
+          "auc_deviation": 0.5529917470061949,
+          "auc_matched": 0.40560146923783286
+        },
+        "rel_beta": {
+          "auc_raw": 0.3283145016891147,
+          "auc_deviation": 0.564837600957312,
+          "auc_matched": 0.383287419651056
+        },
+        "rel_gamma": {
+          "auc_raw": 0.46273510153799113,
+          "auc_deviation": 0.5505455443535939,
+          "auc_matched": 0.49689623507805325
+        },
+        "theta_alpha_ratio": {
+          "auc_raw": 0.6698978886801384,
+          "auc_deviation": 0.6261102731690967,
+          "auc_matched": 0.6552708907254362
+        },
+        "slowing_ratio": {
+          "auc_raw": 0.6657522808193603,
+          "auc_deviation": 0.6203417039330352,
+          "auc_matched": 0.6477961432506887
+        },
+        "spectral_entropy": {
+          "auc_raw": 0.41449022253975815,
+          "auc_deviation": 0.5124441739508819,
+          "auc_matched": 0.45614325068870526
+        },
+        "spectral_edge95": {
+          "auc_raw": 0.4279605079398681,
+          "auc_deviation": 0.5764350124515243,
+          "auc_matched": 0.47268595041322314
+        },
+        "spectral_median": {
+          "auc_raw": 0.398816296649114,
+          "auc_deviation": 0.5278814179742972,
+          "auc_matched": 0.4060238751147842
+        },
+        "pdr_frequency": {
+          "auc_raw": 0.25702180707340666,
+          "auc_deviation": 0.6323007535597834,
+          "auc_matched": 0.3336088154269972
+        },
+        "pdr_prominence": {
+          "auc_raw": 0.5800646244402694,
+          "auc_deviation": 0.4683478429608461,
+          "auc_matched": 0.5148484848484849
+        },
+        "aperiodic_exponent": {
+          "auc_raw": 0.6846045060699344,
+          "auc_deviation": 0.60082206521835,
+          "auc_matched": 0.6457759412304866
+        },
+        "hjorth_mobility": {
+          "auc_raw": 0.3921245211234891,
+          "auc_deviation": 0.5652962639546747,
+          "auc_matched": 0.42629935720844814
+        },
+        "hjorth_complexity": {
+          "auc_raw": 0.6347190248119041,
+          "auc_deviation": 0.5507778159996942,
+          "auc_matched": 0.6133057851239669
+        },
+        "asymmetry_alpha": {
+          "auc_raw": 0.42369582410862083,
+          "auc_deviation": 0.5066550236828875,
+          "auc_matched": 0.4284022038567493
+        }
+      }
+    },
+    "r_central": {
+      "n_electrodes": 3,
+      "channels": [
+        "C3",
+        "Cz",
+        "C4"
+      ],
+      "auc_eeg": 0.7045798676345632,
+      "auc_matched": 0.6562947658402204,
+      "rho": 0.23602078910615706,
+      "per_feature": {
+        "rel_delta": {
+          "auc_raw": 0.5136408139504115,
+          "auc_deviation": 0.5013686386235405,
+          "auc_matched": 0.5226629935720845
+        },
+        "rel_theta": {
+          "auc_raw": 0.6548355134526446,
+          "auc_deviation": 0.6081489125864771,
+          "auc_matched": 0.6463269054178145
+        },
+        "rel_alpha": {
+          "auc_raw": 0.4909134744016065,
+          "auc_deviation": 0.5139671703139196,
+          "auc_matched": 0.47464646464646465
+        },
+        "rel_beta": {
+          "auc_raw": 0.3833952234365031,
+          "auc_deviation": 0.5341101202814309,
+          "auc_matched": 0.39783287419651053
+        },
+        "rel_gamma": {
+          "auc_raw": 0.4305434274474522,
+          "auc_deviation": 0.5706355716675634,
+          "auc_matched": 0.45229568411386595
+        },
+        "theta_alpha_ratio": {
+          "auc_raw": 0.6087222413331804,
+          "auc_deviation": 0.588241174412485,
+          "auc_matched": 0.6121487603305785
+        },
+        "slowing_ratio": {
+          "auc_raw": 0.6026596573552198,
+          "auc_deviation": 0.565881353291054,
+          "auc_matched": 0.6010927456382001
+        },
+        "spectral_entropy": {
+          "auc_raw": 0.43860237152290815,
+          "auc_deviation": 0.49288631331974986,
+          "auc_matched": 0.45026629935720847
+        },
+        "spectral_edge95": {
+          "auc_raw": 0.4263581275965177,
+          "auc_deviation": 0.581797841343765,
+          "auc_matched": 0.4514967860422406
+        },
+        "spectral_median": {
+          "auc_raw": 0.4492118934843393,
+          "auc_deviation": 0.5089586291856674,
+          "auc_matched": 0.44541322314049586
+        },
+        "pdr_frequency": {
+          "auc_raw": 0.3290171969222537,
+          "auc_deviation": 0.6273539555273301,
+          "auc_matched": 0.34982093663911845
+        },
+        "pdr_prominence": {
+          "auc_raw": 0.5457825055348275,
+          "auc_deviation": 0.5124559345405578,
+          "auc_matched": 0.5153810835629018
+        },
+        "aperiodic_exponent": {
+          "auc_raw": 0.6084635083603092,
+          "auc_deviation": 0.5419132715314345,
+          "auc_matched": 0.6061157024793389
+        },
+        "hjorth_mobility": {
+          "auc_raw": 0.4133141635721615,
+          "auc_deviation": 0.5201855821050867,
+          "auc_matched": 0.43393021120293845
+        },
+        "hjorth_complexity": {
+          "auc_raw": 0.5797353279293423,
+          "auc_deviation": 0.5103713700204928,
+          "auc_matched": 0.5723048668503214
+        },
+        "asymmetry_alpha": {
+          "auc_raw": 0.4172422005239343,
+          "auc_deviation": 0.5429041012116348,
+          "auc_matched": 0.424297520661157
+        }
+      }
+    },
+    "r_posterior": {
+      "n_electrodes": 5,
+      "channels": [
+        "P3",
+        "Pz",
+        "P4",
+        "O1",
+        "O2"
+      ],
+      "auc_eeg": 0.7290815861507296,
+      "auc_matched": 0.664623507805326,
+      "rho": 0.2813760784028792,
+      "per_feature": {
+        "rel_delta": {
+          "auc_raw": 0.557490172557252,
+          "auc_deviation": 0.49128981327123744,
+          "auc_matched": 0.5659779614325069
+        },
+        "rel_theta": {
+          "auc_raw": 0.6956124180066389,
+          "auc_deviation": 0.6149759348933755,
+          "auc_matched": 0.6649219467401286
+        },
+        "rel_alpha": {
+          "auc_raw": 0.4647314616354864,
+          "auc_deviation": 0.4979051449639685,
+          "auc_matched": 0.45816345270890724
+        },
+        "rel_beta": {
+          "auc_raw": 0.35979466010425765,
+          "auc_deviation": 0.5202267441689526,
+          "auc_matched": 0.3976308539944904
+        },
+        "rel_gamma": {
+          "auc_raw": 0.43336596896968416,
+          "auc_deviation": 0.49662912098412615,
+          "auc_matched": 0.4797061524334252
+        },
+        "theta_alpha_ratio": {
+          "auc_raw": 0.6265542354293644,
+          "auc_deviation": 0.5948212243361882,
+          "auc_matched": 0.6143526170798899
+        },
+        "slowing_ratio": {
+          "auc_raw": 0.6392644927216651,
+          "auc_deviation": 0.5352244361532287,
+          "auc_matched": 0.6235353535353535
+        },
+        "spectral_entropy": {
+          "auc_raw": 0.4365031062657482,
+          "auc_deviation": 0.48029366192420886,
+          "auc_matched": 0.48859504132231407
+        },
+        "spectral_edge95": {
+          "auc_raw": 0.39355049262170005,
+          "auc_deviation": 0.5667927989909414,
+          "auc_matched": 0.4598576675849403
+        },
+        "spectral_median": {
+          "auc_raw": 0.3959805244634966,
+          "auc_deviation": 0.5113666099218215,
+          "auc_matched": 0.416712580348944
+        },
+        "pdr_frequency": {
+          "auc_raw": 0.313531440466425,
+          "auc_deviation": 0.6301309247645677,
+          "auc_matched": 0.38221303948576674
+        },
+        "pdr_prominence": {
+          "auc_raw": 0.5220672764532414,
+          "auc_deviation": 0.4870236593662806,
+          "auc_matched": 0.49259871441689623
+        },
+        "aperiodic_exponent": {
+          "auc_raw": 0.6723117497111305,
+          "auc_deviation": 0.5746694539264199,
+          "auc_matched": 0.6419651056014692
+        },
+        "hjorth_mobility": {
+          "auc_raw": 0.3630288222651484,
+          "auc_deviation": 0.5457237025864476,
+          "auc_matched": 0.4160606060606061
+        },
+        "hjorth_complexity": {
+          "auc_raw": 0.627042299900917,
+          "auc_deviation": 0.4815167632505094,
+          "auc_matched": 0.6004591368227732
+        },
+        "asymmetry_alpha": {
+          "auc_raw": 0.4607799035043617,
+          "auc_deviation": 0.5190742063807079,
+          "auc_matched": 0.4695408631772268
+        }
+      }
+    }
+  }
+}

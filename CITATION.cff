@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "lowchannel-eeg-triage"
+repository-code: "https://github.com/soinikghosh9/lowchannel-eeg-triage"
+license: MIT
+authors:
+  - family-names: Ghosh
+    given-names: Soinik
+    affiliation: "School of Biomedical Engineering, Indian Institute of Technology (BHU), Varanasi"
+  - family-names: Chaurasia
+    given-names: Rameshwar Nath
+    affiliation: "Department of Neurology, Institute of Medical Sciences, Banaras Hindu University"
+  - family-names: Sharma
+    given-names: Shiru
+    affiliation: "School of Biomedical Engineering, Indian Institute of Technology (BHU), Varanasi"
+  - family-names: Sharma
+    given-names: Neeraj
+    affiliation: "School of Biomedical Engineering, Indian Institute of Technology (BHU), Varanasi"
+preferred-citation:
+  type: conference-paper
+  title: "Decomposing a clinical EEG montage for low-channel cognitive triage: placement, age referencing and output design"
+  authors:
+    - family-names: Ghosh
+      given-names: Soinik
+    - family-names: Chaurasia
+      given-names: Rameshwar Nath
+    - family-names: Sharma
+      given-names: Shiru
+    - family-names: Sharma
+      given-names: Neeraj
+  collection-title: "NeurIPS 2026 Workshop on Global South AI"
+  year: 2026

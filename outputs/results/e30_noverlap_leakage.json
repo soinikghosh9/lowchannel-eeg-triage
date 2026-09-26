@@ -1,0 +1,184 @@
+{
+  "screening": {
+    "n_train": 949,
+    "n_test": 172,
+    "n_test_pos": 103,
+    "n_test_neg": 69,
+    "auc_age": 0.811,
+    "auc_eeg": 0.665,
+    "auc_eeg_plus_age": 0.828,
+    "inc_margin": 0.018,
+    "inc_ci": [
+      -0.02,
+      0.058
+    ],
+    "cv_age": 0.786,
+    "cv_eeg_plus_age": 0.827,
+    "cv_inc": 0.041
+  },
+  "dementia": {
+    "n_train": 615,
+    "n_test": 111,
+    "n_test_pos": 42,
+    "n_test_neg": 69,
+    "auc_age": 0.857,
+    "auc_eeg": 0.774,
+    "auc_eeg_plus_age": 0.924,
+    "inc_margin": 0.067,
+    "inc_ci": [
+      0.01,
+      0.133
+    ],
+    "cv_age": 0.822,
+    "cv_eeg_plus_age": 0.889,
+    "cv_inc": 0.067
+  },
+  "second_split": {
+    "split": "abnormal-no-overlap.json",
+    "held_out_overlap_with_first": 115,
+    "n_held_out_serials": 214,
+    "screening": {
+      "n_train": 1028,
+      "n_test": 121,
+      "n_test_pos": 52,
+      "n_test_neg": 69,
+      "auc_age": 0.8,
+      "auc_eeg": 0.659,
+      "auc_eeg_plus_age": 0.802,
+      "inc_margin": 0.001,
+      "inc_ci": [
+        -0.041,
+        0.046
+      ]
+    },
+    "dementia": {
+      "n_train": 658,
+      "n_test": 91,
+      "n_test_pos": 22,
+      "n_test_neg": 69,
+      "auc_age": 0.856,
+      "auc_eeg": 0.781,
+      "auc_eeg_plus_age": 0.906,
+      "inc_margin": 0.05,
+      "inc_ci": [
+        -0.014,
+        0.126
+      ]
+    }
+  },
+  "same_recordings_under_cv": {
+    "first_split": {
+      "screening": {
+        "n": 172,
+        "auc_eeg": 0.67,
+        "auc_age": 0.811,
+        "auc_eeg_plus_age": 0.831,
+        "inc_margin": 0.021
+      },
+      "dementia": {
+        "n": 111,
+        "auc_eeg": 0.776,
+        "auc_age": 0.857,
+        "auc_eeg_plus_age": 0.926,
+        "inc_margin": 0.069
+      }
+    },
+    "second_split": {
+      "screening": {
+        "n": 121,
+        "auc_eeg": 0.654,
+        "auc_age": 0.8,
+        "auc_eeg_plus_age": 0.804,
+        "inc_margin": 0.004
+      },
+      "dementia": {
+        "n": 91,
+        "auc_eeg": 0.782,
+        "auc_age": 0.856,
+        "auc_eeg_plus_age": 0.908,
+        "inc_margin": 0.052
+      }
+    }
+  },
+  "dedup": {
+    "n_identified_repeats": 75,
+    "screening": {
+      "removed": 68,
+      "all": {
+        "n": 1200,
+        "auc_eeg": 0.742,
+        "auc_age": 0.786,
+        "auc_eeg_plus_age": 0.827,
+        "inc_margin": 0.041,
+        "inc_ci": [
+          0.026,
+          0.056
+        ]
+      },
+      "dedup": {
+        "n": 1132,
+        "auc_eeg": 0.735,
+        "auc_age": 0.785,
+        "auc_eeg_plus_age": 0.823,
+        "inc_margin": 0.037,
+        "inc_ci": [
+          0.022,
+          0.052
+        ]
+      },
+      "random_removal_inc_mean": 0.04
+    },
+    "dementia": {
+      "removed": 44,
+      "all": {
+        "n": 783,
+        "auc_eeg": 0.805,
+        "auc_age": 0.822,
+        "auc_eeg_plus_age": 0.889,
+        "inc_margin": 0.067,
+        "inc_ci": [
+          0.045,
+          0.09
+        ]
+      },
+      "dedup": {
+        "n": 739,
+        "auc_eeg": 0.805,
+        "auc_age": 0.822,
+        "auc_eeg_plus_age": 0.89,
+        "inc_margin": 0.068,
+        "inc_ci": [
+          0.045,
+          0.091
+        ]
+      },
+      "random_removal_inc_mean": 0.066
+    },
+    "MCI": {
+      "removed": 47,
+      "all": {
+        "n": 876,
+        "auc_eeg": 0.688,
+        "auc_age": 0.759,
+        "auc_eeg_plus_age": 0.776,
+        "inc_margin": 0.017,
+        "inc_ci": [
+          0.002,
+          0.032
+        ]
+      },
+      "dedup": {
+        "n": 829,
+        "auc_eeg": 0.679,
+        "auc_age": 0.757,
+        "auc_eeg_plus_age": 0.77,
+        "inc_margin": 0.012,
+        "inc_ci": [
+          -0.003,
+          0.028
+        ]
+      },
+      "random_removal_inc_mean": 0.014
+    }
+  }
+}

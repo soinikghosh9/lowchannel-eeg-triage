@@ -1,0 +1,146 @@
+{
+  "source": "CAUEEG",
+  "target": "ds004504_raw",
+  "spec_target": 0.8,
+  "budgets": {
+    "b19|256|f32|full": {
+      "auc": {
+        "direct": 0.8544710695499708,
+        "normative": 0.8492109877264757
+      },
+      "direct": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.8135593220338981,
+        "specificity": 0.7953571428571428,
+        "specificity_sd": 0.07715525693994796,
+        "auc": 0.8544710695499708
+      },
+      "normative": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.7796610169491524,
+        "specificity": 0.8321428571428572,
+        "specificity_sd": 0.07448804862362218,
+        "auc": 0.8492109877264757
+      },
+      "anchored": {
+        "5": {
+          "n_anchor": 5,
+          "n_heldout_controls": 24,
+          "sensitivity": 0.7925423728813559,
+          "specificity": 0.5204166666666667,
+          "specificity_sd": 0.19002878071492224
+        },
+        "10": {
+          "n_anchor": 10,
+          "n_heldout_controls": 19,
+          "sensitivity": 0.8389830508474576,
+          "specificity": 0.5689473684210526,
+          "specificity_sd": 0.14465452204449897
+        },
+        "15": {
+          "n_anchor": 15,
+          "n_heldout_controls": 14,
+          "sensitivity": 0.8444067796610171,
+          "specificity": 0.5685714285714286,
+          "specificity_sd": 0.14980259118763803
+        }
+      },
+      "n_target_controls": 29
+    },
+    "b8|256|f32|full": {
+      "auc": {
+        "direct": 0.8497954412624197,
+        "normative": 0.8649912331969608
+      },
+      "direct": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.7796610169491524,
+        "specificity": 0.7657142857142857,
+        "specificity_sd": 0.0763183450811033,
+        "auc": 0.8497954412624197
+      },
+      "normative": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.728813559322034,
+        "specificity": 0.8635714285714287,
+        "specificity_sd": 0.06783458271593405,
+        "auc": 0.8649912331969608
+      },
+      "anchored": {
+        "5": {
+          "n_anchor": 5,
+          "n_heldout_controls": 24,
+          "sensitivity": 0.7055084745762713,
+          "specificity": 0.5885416666666667,
+          "specificity_sd": 0.19337721754097323
+        },
+        "10": {
+          "n_anchor": 10,
+          "n_heldout_controls": 19,
+          "sensitivity": 0.7934745762711864,
+          "specificity": 0.6415789473684209,
+          "specificity_sd": 0.15429133862441932
+        },
+        "15": {
+          "n_anchor": 15,
+          "n_heldout_controls": 14,
+          "sensitivity": 0.799406779661017,
+          "specificity": 0.6557142857142857,
+          "specificity_sd": 0.14634318067683322
+        }
+      },
+      "n_target_controls": 29
+    },
+    "b4|256|f32|full": {
+      "auc": {
+        "direct": 0.7697253068381064,
+        "normative": 0.8018702513150204
+      },
+      "direct": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.7627118644067795,
+        "specificity": 0.6246428571428573,
+        "specificity_sd": 0.09793727167770945,
+        "auc": 0.7697253068381064
+      },
+      "normative": {
+        "n_anchor": 0,
+        "n_heldout_controls": 14,
+        "sensitivity": 0.6610169491525424,
+        "specificity": 0.8210714285714286,
+        "specificity_sd": 0.07142767856584814,
+        "auc": 0.8018702513150204
+      },
+      "anchored": {
+        "5": {
+          "n_anchor": 5,
+          "n_heldout_controls": 24,
+          "sensitivity": 0.8066101694915254,
+          "specificity": 0.5441666666666667,
+          "specificity_sd": 0.2179306082219751
+        },
+        "10": {
+          "n_anchor": 10,
+          "n_heldout_controls": 19,
+          "sensitivity": 0.813728813559322,
+          "specificity": 0.5844736842105263,
+          "specificity_sd": 0.16943751657221806
+        },
+        "15": {
+          "n_anchor": 15,
+          "n_heldout_controls": 14,
+          "sensitivity": 0.8323728813559321,
+          "specificity": 0.5685714285714286,
+          "specificity_sd": 0.16945892284153186
+        }
+      },
+      "n_target_controls": 29
+    }
+  },
+  "score_scale": "calibrated probability from source-fitted logistic rule"
+}

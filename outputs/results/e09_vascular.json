@@ -1,0 +1,10 @@
+{
+  "job": "vascular",
+  "out_dir": "outputs\\harmonised_extra",
+  "done": 0,
+  "skipped": 152,
+  "failed": 0,
+  "elapsed_min": 0.0,
+  "size_gb": 2.49,
+  "run_ica": true
+}

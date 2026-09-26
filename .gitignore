@@ -1,0 +1,9 @@
+# Data are never committed: obtain each dataset from its maintainers (see README).
+data/
+outputs/cache/
+outputs/harmonised_extra/
+outputs/harmonised_noica/
+outputs/logs/
+
+__pycache__/
+*.pyc

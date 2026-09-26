@@ -1,0 +1,10 @@
+{
+  "job": "noica",
+  "out_dir": "outputs\\harmonised_noica",
+  "done": 0,
+  "skipped": 1360,
+  "failed": 0,
+  "elapsed_min": 0.0,
+  "size_gb": 20.9,
+  "run_ica": false
+}

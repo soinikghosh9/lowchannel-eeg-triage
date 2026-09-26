@@ -1,0 +1,266 @@
+{
+ "source": "CAUEEG",
+ "target": "ds004504_raw",
+ "spec_target": 0.8,
+ "n_target": 88,
+ "n_target_controls": 29,
+ "age_gap_target": -2.5745178258328565,
+ "protocol": "threshold = 80th percentile of source out-of-fold probabilities among source controls; model refit on all source subjects; applied once to the target with no refitting and no target labels",
+ "source_contrasts": {
+  "dementia": {
+   "positive_labels": [
+    "AD",
+    "FTD",
+    "VAD"
+   ],
+   "n_source": 783,
+   "n_source_control": 459,
+   "budgets": {
+    "b19": {
+     "eeg": {
+      "threshold": 0.4155434692301798,
+      "sensitivity": 0.7627118644067796,
+      "specificity": 0.8275862068965517,
+      "youden_j": 0.5902980713033315,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.027586206896551668,
+      "auc": 0.8620689655172413,
+      "auc_ci": [
+       0.7784921098772648,
+       0.932218001168907
+      ],
+      "n_features": 17
+     },
+     "eeg+age": {
+      "threshold": 0.36067042209915295,
+      "sensitivity": 0.6610169491525424,
+      "specificity": 0.7931034482758621,
+      "youden_j": 0.4541203974284045,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.006896551724137945,
+      "auc": 0.7510227936879018,
+      "auc_ci": [
+       0.6487434248977206,
+       0.84281122150789
+      ],
+      "n_features": 18
+     },
+     "normative": {
+      "threshold": 0.4119149173335535,
+      "sensitivity": 0.711864406779661,
+      "specificity": 0.9655172413793104,
+      "youden_j": 0.6773816481589714,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.16551724137931034,
+      "auc": 0.8556399766218585,
+      "auc_ci": [
+       0.7650350672121566,
+       0.9298655756867329
+      ],
+      "n_features": 17
+     },
+     "age_transported": {
+      "threshold": 0.5124192730244387,
+      "sensitivity": 0.13559322033898305,
+      "specificity": 0.8620689655172413,
+      "youden_j": -0.0023378141437756517,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.06206896551724128,
+      "auc": 0.4032729398012858,
+      "n_features": 1
+     }
+    },
+    "b4": {
+     "eeg": {
+      "threshold": 0.39946189154762046,
+      "sensitivity": 0.7457627118644068,
+      "specificity": 0.7586206896551724,
+      "youden_j": 0.5043834015195792,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.04137931034482767,
+      "auc": 0.7849210987726476,
+      "auc_ci": [
+       0.6726914085330216,
+       0.8837083576855639
+      ],
+      "n_features": 16
+     },
+     "eeg+age": {
+      "threshold": 0.40836138253854637,
+      "sensitivity": 0.6271186440677966,
+      "specificity": 0.7931034482758621,
+      "youden_j": 0.4202220923436588,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.006896551724137945,
+      "auc": 0.722969023962595,
+      "auc_ci": [
+       0.6171537112799532,
+       0.8258474576271185
+      ],
+      "n_features": 17
+     },
+     "normative": {
+      "threshold": 0.4158929632427684,
+      "sensitivity": 0.6440677966101694,
+      "specificity": 0.896551724137931,
+      "youden_j": 0.5406195207481006,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.096551724137931,
+      "auc": 0.8088836937463472,
+      "auc_ci": [
+       0.7089421390999415,
+       0.8971507890122734
+      ],
+      "n_features": 16
+     },
+     "age_transported": {
+      "threshold": 0.5124192730244387,
+      "sensitivity": 0.13559322033898305,
+      "specificity": 0.8620689655172413,
+      "youden_j": -0.0023378141437756517,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.06206896551724128,
+      "auc": 0.4032729398012858,
+      "n_features": 1
+     }
+    }
+   }
+  },
+  "screening": {
+   "positive_labels": [
+    "AD",
+    "FTD",
+    "MCI",
+    "VAD"
+   ],
+   "n_source": 1200,
+   "n_source_control": 459,
+   "budgets": {
+    "b19": {
+     "eeg": {
+      "threshold": 0.6627819875153127,
+      "sensitivity": 0.7627118644067796,
+      "specificity": 0.7931034482758621,
+      "youden_j": 0.5558153126826417,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.006896551724137945,
+      "auc": 0.8544710695499708,
+      "auc_ci": [
+       0.767957334891876,
+       0.9269579193454119
+      ],
+      "n_features": 17
+     },
+     "eeg+age": {
+      "threshold": 0.6486918723110702,
+      "sensitivity": 0.6440677966101694,
+      "specificity": 0.7931034482758621,
+      "youden_j": 0.43717124488603165,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.006896551724137945,
+      "auc": 0.7399181765049678,
+      "auc_ci": [
+       0.6329631794272356,
+       0.8328462887200467
+      ],
+      "n_features": 18
+     },
+     "normative": {
+      "threshold": 0.6632446830063257,
+      "sensitivity": 0.711864406779661,
+      "specificity": 0.896551724137931,
+      "youden_j": 0.608416130917592,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.096551724137931,
+      "auc": 0.8492109877264757,
+      "auc_ci": [
+       0.7603740502630041,
+       0.9246201052016364
+      ],
+      "n_features": 17
+     },
+     "age_transported": {
+      "threshold": 0.7164795921891322,
+      "sensitivity": 0.13559322033898305,
+      "specificity": 0.8620689655172413,
+      "youden_j": -0.0023378141437756517,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.06206896551724128,
+      "auc": 0.4032729398012858,
+      "n_features": 1
+     }
+    },
+    "b4": {
+     "eeg": {
+      "threshold": 0.6516973618221505,
+      "sensitivity": 0.7288135593220338,
+      "specificity": 0.6551724137931034,
+      "youden_j": 0.3839859731151374,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.14482758620689662,
+      "auc": 0.7697253068381064,
+      "auc_ci": [
+       0.6598480420806546,
+       0.8743424897720631
+      ],
+      "n_features": 16
+     },
+     "eeg+age": {
+      "threshold": 0.653487504262399,
+      "sensitivity": 0.5932203389830508,
+      "specificity": 0.7586206896551724,
+      "youden_j": 0.3518410286382232,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": 0.04137931034482767,
+      "auc": 0.711864406779661,
+      "auc_ci": [
+       0.6031414377556984,
+       0.8170660432495617
+      ],
+      "n_features": 17
+     },
+     "normative": {
+      "threshold": 0.6498439641601017,
+      "sensitivity": 0.6271186440677966,
+      "specificity": 0.8620689655172413,
+      "youden_j": 0.4891876095850378,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.06206896551724128,
+      "auc": 0.8018702513150204,
+      "auc_ci": [
+       0.7001753360607832,
+       0.8918907071887784
+      ],
+      "n_features": 16
+     },
+     "age_transported": {
+      "threshold": 0.7164795921891322,
+      "sensitivity": 0.13559322033898305,
+      "specificity": 0.8620689655172413,
+      "youden_j": -0.0023378141437756517,
+      "n_target_controls": 29,
+      "specificity_granularity": 0.034482758620689655,
+      "spec_shortfall": -0.06206896551724128,
+      "auc": 0.4032729398012858,
+      "n_features": 1
+     }
+    }
+   }
+  }
+ }
+}

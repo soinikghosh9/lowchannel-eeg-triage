@@ -1,0 +1,3802 @@
+{
+  "APAgeScreen": {
+    "count": 2,
+    "value": "0.842"
+  },
+  "APBothMCI": {
+    "count": 1,
+    "value": "0.738"
+  },
+  "APEEGScreen": {
+    "count": 1,
+    "value": "0.828"
+  },
+  "APNormDem": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "APNormMCI": {
+    "count": 1,
+    "value": "0.605"
+  },
+  "AUCBothDem": {
+    "count": 2,
+    "value": "0.889"
+  },
+  "AUCBothMCI": {
+    "count": 1,
+    "value": "0.776"
+  },
+  "AUCBothScreen": {
+    "count": 3,
+    "value": "0.827"
+  },
+  "AUCDeepDem": {
+    "count": 1,
+    "value": "0.882"
+  },
+  "AUCDeepExternalHi": {
+    "count": 1,
+    "value": "0.831"
+  },
+  "AUCDeepExternalLo": {
+    "count": 1,
+    "value": "0.764"
+  },
+  "AUCDeepMCI": {
+    "count": 4,
+    "value": "0.732"
+  },
+  "AUCDeepScreen": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "AUCDeepWithin": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "AUCDemFour": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "AUCDemFull": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "AUCExternal": {
+    "count": 4,
+    "value": "0.862"
+  },
+  "AUCMCIFull": {
+    "count": 3,
+    "value": "0.688"
+  },
+  "AUCMCIOne": {
+    "count": 1,
+    "value": "0.669"
+  },
+  "AUCOpAgeDem": {
+    "count": 2,
+    "value": "0.819"
+  },
+  "AUCOpAgeMCI": {
+    "count": 1,
+    "value": "0.757"
+  },
+  "AUCOpBothDem": {
+    "count": 2,
+    "value": "0.889"
+  },
+  "AUCOpBothMCI": {
+    "count": 1,
+    "value": "0.776"
+  },
+  "AUCOpBothScreen": {
+    "count": 3,
+    "value": "0.827"
+  },
+  "AUCOpEEGDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "AUCOpEEGMCI": {
+    "count": 3,
+    "value": "0.688"
+  },
+  "AUCOpEEGScreen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "AUCOpNormDem": {
+    "count": 3,
+    "value": "0.730"
+  },
+  "AUCOpNormScreen": {
+    "count": 1,
+    "value": "0.662"
+  },
+  "AUCScreenFour": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "AUCScreenFull": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "AUCScreenOne": {
+    "count": 3,
+    "value": "0.723"
+  },
+  "AgeAUCAll": {
+    "count": 5,
+    "value": "0.786"
+  },
+  "AgeAUCClean": {
+    "count": 2,
+    "value": "0.865"
+  },
+  "AgeAUCSMI": {
+    "count": 2,
+    "value": "0.671"
+  },
+  "AgeOnlyDem": {
+    "count": 1,
+    "value": "0.822"
+  },
+  "AgeOnlyExternal": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "AgeOnlyExternalDeep": {
+    "count": 3,
+    "value": "0.597"
+  },
+  "AgeOnlyExternalFair": {
+    "count": 3,
+    "value": "0.597"
+  },
+  "AgeOnlyExternalNoFTD": {
+    "count": 1,
+    "value": "0.436"
+  },
+  "AgeOnlyExternalRefit": {
+    "count": 2,
+    "value": "0.576"
+  },
+  "AgeOnlyMCI": {
+    "count": 1,
+    "value": "0.759"
+  },
+  "AgeOnlyScreen": {
+    "count": 5,
+    "value": "0.786"
+  },
+  "BalAccAgeDem": {
+    "count": 29,
+    "value": "0.74"
+  },
+  "BalAccAgeMCI": {
+    "count": 7,
+    "value": "0.68"
+  },
+  "BalAccAgeScreen": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "BalAccBothDem": {
+    "count": 6,
+    "value": "0.81"
+  },
+  "BalAccBothMCI": {
+    "count": 16,
+    "value": "0.72"
+  },
+  "BalAccBothScreen": {
+    "count": 7,
+    "value": "0.77"
+  },
+  "BalAccEEGDem": {
+    "count": 29,
+    "value": "0.74"
+  },
+  "BalAccEEGMCI": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "BalAccEEGScreen": {
+    "count": 7,
+    "value": "0.68"
+  },
+  "BalAccNormDem": {
+    "count": 5,
+    "value": "0.70"
+  },
+  "BalAccNormMCI": {
+    "count": 1,
+    "value": "0.56"
+  },
+  "BalAccNormScreen": {
+    "count": 1,
+    "value": "0.62"
+  },
+  "BestDeepModel": {
+    "count": 1,
+    "value": "ShallowFBCSPNet"
+  },
+  "BestRegion": {
+    "count": 34,
+    "value": "temporal"
+  },
+  "BrierBothDem": {
+    "count": 1,
+    "value": "0.134"
+  },
+  "BrierBothMCI": {
+    "count": 1,
+    "value": "0.192"
+  },
+  "BrierEEGScreen": {
+    "count": 1,
+    "value": "0.197"
+  },
+  "CalSlopeAgeDem": {
+    "count": 1,
+    "value": "1.01"
+  },
+  "CalSlopeAgeMCI": {
+    "count": 14,
+    "value": "1.00"
+  },
+  "CalSlopeAgeScreen": {
+    "count": 14,
+    "value": "1.00"
+  },
+  "CalSlopeBothMCI": {
+    "count": 3,
+    "value": "0.93"
+  },
+  "CalSlopeEEGDem": {
+    "count": 5,
+    "value": "0.92"
+  },
+  "CalSlopeEEGMCI": {
+    "count": 5,
+    "value": "0.89"
+  },
+  "CalSlopeEEGScreen": {
+    "count": 3,
+    "value": "0.95"
+  },
+  "CalSlopeNormDem": {
+    "count": 1,
+    "value": "0.55"
+  },
+  "CalSlopeNormMCI": {
+    "count": 2,
+    "value": "0.26"
+  },
+  "CalSlopeNormScreen": {
+    "count": 2,
+    "value": "0.37"
+  },
+  "CaseAbnormality": {
+    "count": 1,
+    "value": "4.83"
+  },
+  "CaseNControls": {
+    "count": 3,
+    "value": "459"
+  },
+  "CaseZSlowingRatio": {
+    "count": 2,
+    "value": "5.4"
+  },
+  "CaseZThetaAlphaRatio": {
+    "count": 1,
+    "value": "13.2"
+  },
+  "CompSpread": {
+    "count": 1,
+    "value": "0.195"
+  },
+  "DeepMarginDemLo": {
+    "count": 5,
+    "value": "+0.035"
+  },
+  "DeepMarginMCILo": {
+    "count": 1,
+    "value": "-0.041"
+  },
+  "DeepMarginScreenHi": {
+    "count": 2,
+    "value": "+0.025"
+  },
+  "DesignDelta02": {
+    "count": 32,
+    "value": "0.02"
+  },
+  "DesignDelta03": {
+    "count": 68,
+    "value": "0.03"
+  },
+  "DesignDelta04": {
+    "count": 45,
+    "value": "0.04"
+  },
+  "DesignDelta05": {
+    "count": 31,
+    "value": "0.05"
+  },
+  "DesignDelta06": {
+    "count": 31,
+    "value": "0.06"
+  },
+  "DesignDelta08": {
+    "count": 8,
+    "value": "0.08"
+  },
+  "DesignN04": {
+    "count": 1,
+    "value": "330"
+  },
+  "DesignN05": {
+    "count": 1,
+    "value": "210"
+  },
+  "DesignN06": {
+    "count": 4,
+    "value": "150"
+  },
+  "DigitFour12812Screen": {
+    "count": 1,
+    "value": "0.750"
+  },
+  "DigitFour12816Screen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "DigitFour1288Dem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "DigitFour1288Screen": {
+    "count": 4,
+    "value": "0.748"
+  },
+  "DigitFour128FScreen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "DigitFour25612Dem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "DigitFour25612Screen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "DigitFour25616Dem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "DigitFour25616Screen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "DigitFour256FDem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "DigitFour256FScreen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "DigitFour6412Screen": {
+    "count": 4,
+    "value": "0.740"
+  },
+  "DigitFour648Screen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "DigitFull12812Dem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull12816Dem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull1288Screen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "DigitFull128FDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull25612Dem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull25612Screen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "DigitFull25616Dem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull25616Screen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "DigitFull256FDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull256FScreen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "DigitFull648Dem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "DigitFull648Screen": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "DigitFull64FDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "EasyCogAgeAUC": {
+    "count": 3,
+    "value": "0.734"
+  },
+  "EasyCogBlocksVerified": {
+    "count": 2,
+    "value": "yes"
+  },
+  "EasyCogInc": {
+    "count": 2,
+    "value": "-0.012"
+  },
+  "EasyCogIncCI": {
+    "count": 1,
+    "value": "[-0.066, +0.042]"
+  },
+  "EasyCogMMSEAgeMAE": {
+    "count": 1,
+    "value": "4.596"
+  },
+  "EasyCogMMSEAgePCC": {
+    "count": 1,
+    "value": "0.289"
+  },
+  "EasyCogMMSEEarPCC": {
+    "count": 1,
+    "value": "-0.016"
+  },
+  "EasyCogMMSEForePCC": {
+    "count": 1,
+    "value": "-0.088"
+  },
+  "EasyCogMMSEFullMAE": {
+    "count": 1,
+    "value": "4.834"
+  },
+  "EasyCogMMSEFullPCC": {
+    "count": 2,
+    "value": "0.090"
+  },
+  "EasyCogMMSEMeanMAE": {
+    "count": 1,
+    "value": "4.815"
+  },
+  "EasyCogMMSEPlaceP": {
+    "count": 1,
+    "value": "$P=0.073$"
+  },
+  "EasyCogMMSEPubMAE": {
+    "count": 1,
+    "value": "5.659"
+  },
+  "EasyCogMMSEPubPCC": {
+    "count": 1,
+    "value": "0.310"
+  },
+  "EasyCogMMSESd": {
+    "count": 2,
+    "value": "6.03"
+  },
+  "EasyCogMMSESlowMAE": {
+    "count": 1,
+    "value": "4.516"
+  },
+  "EasyCogMMSESlowPCC": {
+    "count": 1,
+    "value": "0.330"
+  },
+  "EasyCogMoCAAgeMAE": {
+    "count": 2,
+    "value": "5.421"
+  },
+  "EasyCogMoCAAgePCC": {
+    "count": 1,
+    "value": "0.408"
+  },
+  "EasyCogMoCAFullMAE": {
+    "count": 1,
+    "value": "5.549"
+  },
+  "EasyCogMoCAFullPCC": {
+    "count": 1,
+    "value": "0.347"
+  },
+  "EasyCogMoCAMeanMAE": {
+    "count": 2,
+    "value": "6.072"
+  },
+  "EasyCogMoCAPlaceCI": {
+    "count": 1,
+    "value": "[+0.142, +0.520]"
+  },
+  "EasyCogMoCAPlaceDPCC": {
+    "count": 1,
+    "value": "+0.360"
+  },
+  "EasyCogMoCAPlaceP": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "EasyCogMoCAPubMAE": {
+    "count": 2,
+    "value": "6.975"
+  },
+  "EasyCogMoCAPubPCC": {
+    "count": 1,
+    "value": "0.213"
+  },
+  "EasyCogMoCASlowMAE": {
+    "count": 2,
+    "value": "5.064"
+  },
+  "EasyCogMoCASlowPCC": {
+    "count": 1,
+    "value": "0.502"
+  },
+  "EasyCogPlaceCar": {
+    "count": 1,
+    "value": "+0.246"
+  },
+  "EasyCogPlaceNative": {
+    "count": 4,
+    "value": "-0.003"
+  },
+  "EasyCogUnderpowered": {
+    "count": 1,
+    "value": "5 of 6"
+  },
+  "ExtAPBothFour": {
+    "count": 4,
+    "value": "0.862"
+  },
+  "ExtAPEEGFour": {
+    "count": 1,
+    "value": "0.864"
+  },
+  "ExtAgeFreeFour": {
+    "count": 3,
+    "value": "0.597"
+  },
+  "ExtAgeFreeFull": {
+    "count": 3,
+    "value": "0.597"
+  },
+  "ExtAgeSrcFour": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "ExtAgeSrcFull": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "ExtBothFour": {
+    "count": 3,
+    "value": "0.723"
+  },
+  "ExtBothFull": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "ExtEEGFour": {
+    "count": 2,
+    "value": "0.785"
+  },
+  "ExtEEGFull": {
+    "count": 4,
+    "value": "0.862"
+  },
+  "ExtNormFour": {
+    "count": 2,
+    "value": "0.809"
+  },
+  "ExtNormFull": {
+    "count": 2,
+    "value": "0.856"
+  },
+  "ExtOpGranularity": {
+    "count": 11,
+    "value": "0.034"
+  },
+  "ExtPrev": {
+    "count": 9,
+    "value": "0.67"
+  },
+  "ExtSensAgeFreeFour": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "ExtSensAgeFreeFull": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "ExtSensAgeSrcFour": {
+    "count": 3,
+    "value": "0.19"
+  },
+  "ExtSensAgeSrcFull": {
+    "count": 3,
+    "value": "0.19"
+  },
+  "ExtSensBothFour": {
+    "count": 5,
+    "value": "0.61"
+  },
+  "ExtSensBothFull": {
+    "count": 7,
+    "value": "0.68"
+  },
+  "ExtSensEEGFour": {
+    "count": 6,
+    "value": "0.64"
+  },
+  "ExtSensEEGFull": {
+    "count": 5,
+    "value": "0.83"
+  },
+  "ExtSensNormFour": {
+    "count": 26,
+    "value": "0.73"
+  },
+  "ExtSensNormFull": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "F1AgeDemFive": {
+    "count": 2,
+    "value": "0.25"
+  },
+  "F1AgeDemTwenty": {
+    "count": 1,
+    "value": "0.55"
+  },
+  "F1AgeMCIFive": {
+    "count": 1,
+    "value": "0.21"
+  },
+  "F1AgeMCITen": {
+    "count": 1,
+    "value": "0.33"
+  },
+  "F1AgeMCITwenty": {
+    "count": 3,
+    "value": "0.47"
+  },
+  "F1AgeScreenFive": {
+    "count": 1,
+    "value": "0.23"
+  },
+  "F1AgeScreenTen": {
+    "count": 1,
+    "value": "0.36"
+  },
+  "F1AgeScreenTwenty": {
+    "count": 2,
+    "value": "0.51"
+  },
+  "F1BothDemFive": {
+    "count": 3,
+    "value": "0.29"
+  },
+  "F1BothDemTen": {
+    "count": 2,
+    "value": "0.46"
+  },
+  "F1BothDemTwenty": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "F1BothMCIFive": {
+    "count": 4,
+    "value": "0.24"
+  },
+  "F1BothMCITen": {
+    "count": 2,
+    "value": "0.37"
+  },
+  "F1BothMCITwenty": {
+    "count": 2,
+    "value": "0.53"
+  },
+  "F1BothScreenFive": {
+    "count": 2,
+    "value": "0.26"
+  },
+  "F1BothScreenTen": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "F1BothScreenTwenty": {
+    "count": 2,
+    "value": "0.58"
+  },
+  "F1EEGDemFive": {
+    "count": 2,
+    "value": "0.25"
+  },
+  "F1EEGMCIFive": {
+    "count": 9,
+    "value": "0.17"
+  },
+  "F1EEGMCITen": {
+    "count": 3,
+    "value": "0.28"
+  },
+  "F1EEGMCITwenty": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "F1EEGScreenFive": {
+    "count": 1,
+    "value": "0.21"
+  },
+  "F1EEGScreenTen": {
+    "count": 1,
+    "value": "0.33"
+  },
+  "F1EEGScreenTwenty": {
+    "count": 3,
+    "value": "0.47"
+  },
+  "F1NormDemFive": {
+    "count": 3,
+    "value": "0.22"
+  },
+  "F1NormDemTwenty": {
+    "count": 3,
+    "value": "0.50"
+  },
+  "F1NormMCIFive": {
+    "count": 2,
+    "value": "0.12"
+  },
+  "F1NormMCITen": {
+    "count": 1,
+    "value": "0.20"
+  },
+  "F1NormMCITwenty": {
+    "count": 1,
+    "value": "0.30"
+  },
+  "F1NormScreenFive": {
+    "count": 1,
+    "value": "0.16"
+  },
+  "FlagAgeDemFive": {
+    "count": 1,
+    "value": "224"
+  },
+  "FlagAgeMCITwenty": {
+    "count": 3,
+    "value": "272"
+  },
+  "FlagAgeScreenFive": {
+    "count": 1,
+    "value": "221"
+  },
+  "FlagBothMCITwenty": {
+    "count": 1,
+    "value": "289"
+  },
+  "FlagBothScreenFive": {
+    "count": 1,
+    "value": "227"
+  },
+  "FlagEEGDemFive": {
+    "count": 1,
+    "value": "224"
+  },
+  "FlagEEGMCIFive": {
+    "count": 1,
+    "value": "213"
+  },
+  "FlagEEGScreenTwenty": {
+    "count": 3,
+    "value": "272"
+  },
+  "FlagNormScreenTen": {
+    "count": 1,
+    "value": "224"
+  },
+  "FoldSDDem": {
+    "count": 11,
+    "value": "0.002"
+  },
+  "FoldSDMax": {
+    "count": 9,
+    "value": "0.007"
+  },
+  "FoldSDScreen": {
+    "count": 11,
+    "value": "0.002"
+  },
+  "GapCompSMI": {
+    "count": 2,
+    "value": "5.4"
+  },
+  "GapEOAD": {
+    "count": 1,
+    "value": "-0.041"
+  },
+  "IncAtSmallDem": {
+    "count": 3,
+    "value": "-0.011"
+  },
+  "IncAtSmallScreen": {
+    "count": 1,
+    "value": "-0.034"
+  },
+  "IncCIDem": {
+    "count": 1,
+    "value": "[+0.045, +0.090]"
+  },
+  "IncCIMCI": {
+    "count": 1,
+    "value": "[+0.002, +0.032]"
+  },
+  "IncCIScreen": {
+    "count": 1,
+    "value": "[+0.026, +0.056]"
+  },
+  "IncCIScreenFull": {
+    "count": 1,
+    "value": "[+0.026, +0.056]"
+  },
+  "IncCompAll": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "IncCompClean": {
+    "count": 3,
+    "value": "+0.031"
+  },
+  "IncCompSMI": {
+    "count": 2,
+    "value": "+0.056"
+  },
+  "IncDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "IncFeatDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "IncFeatMCI": {
+    "count": 2,
+    "value": "+0.017"
+  },
+  "IncFeatScreen": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "IncFullScreen": {
+    "count": 6,
+    "value": "+0.042"
+  },
+  "IncMCI": {
+    "count": 2,
+    "value": "+0.017"
+  },
+  "IncSEDem": {
+    "count": 1,
+    "value": "0.0114"
+  },
+  "IncSEMCI": {
+    "count": 1,
+    "value": "0.0077"
+  },
+  "IncSEScreen": {
+    "count": 1,
+    "value": "0.0075"
+  },
+  "IncScreen": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "IncScreenEight": {
+    "count": 12,
+    "value": "+0.038"
+  },
+  "IncScreenFour": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "IncScreenFull": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "IncScreenTwo": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "IncSpan": {
+    "count": 12,
+    "value": "0.037"
+  },
+  "LRnegAgeDem": {
+    "count": 6,
+    "value": "0.40"
+  },
+  "LRnegAgeMCI": {
+    "count": 1,
+    "value": "0.55"
+  },
+  "LRnegAgeScreen": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "LRnegBothDem": {
+    "count": 3,
+    "value": "0.22"
+  },
+  "LRnegBothScreen": {
+    "count": 5,
+    "value": "0.34"
+  },
+  "LRnegEEGDem": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "LRnegEEGMCI": {
+    "count": 9,
+    "value": "0.67"
+  },
+  "LRnegEEGScreen": {
+    "count": 1,
+    "value": "0.55"
+  },
+  "LRnegNormDem": {
+    "count": 2,
+    "value": "0.51"
+  },
+  "LRnegNormMCI": {
+    "count": 10,
+    "value": "0.86"
+  },
+  "LRnegNormScreen": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "LadderDrop": {
+    "count": 4,
+    "value": "+0.007"
+  },
+  "MarginCIDemFull": {
+    "count": 1,
+    "value": "[-0.058, +0.025]"
+  },
+  "MarginCIMCIFull": {
+    "count": 1,
+    "value": "[-0.109, -0.032]"
+  },
+  "MarginCIScreenFull": {
+    "count": 1,
+    "value": "[-0.077, -0.012]"
+  },
+  "MarginDeepWithin": {
+    "count": 2,
+    "value": "+0.025"
+  },
+  "MarginDemFour": {
+    "count": 3,
+    "value": "-0.011"
+  },
+  "MarginDemFull": {
+    "count": 1,
+    "value": "-0.016"
+  },
+  "MarginDemOne": {
+    "count": 3,
+    "value": "-0.032"
+  },
+  "MarginMCIFour": {
+    "count": 1,
+    "value": "-0.063"
+  },
+  "MarginMCIFull": {
+    "count": 2,
+    "value": "-0.071"
+  },
+  "MarginScreenFour": {
+    "count": 1,
+    "value": "-0.038"
+  },
+  "MarginScreenFull": {
+    "count": 2,
+    "value": "-0.045"
+  },
+  "MarginScreenOne": {
+    "count": 1,
+    "value": "-0.063"
+  },
+  "MechAperiodicExponentFrontal": {
+    "count": 1,
+    "value": "0.104"
+  },
+  "MechAperiodicExponentTemporal": {
+    "count": 1,
+    "value": "0.185"
+  },
+  "MechAsymmetryAlphaFrontal": {
+    "count": 5,
+    "value": "0.028"
+  },
+  "MechAsymmetryAlphaTemporal": {
+    "count": 1,
+    "value": "0.076"
+  },
+  "MechHjorthComplexityFrontal": {
+    "count": 3,
+    "value": "0.021"
+  },
+  "MechHjorthMobilityFrontal": {
+    "count": 1,
+    "value": "0.019"
+  },
+  "MechHjorthMobilityTemporal": {
+    "count": 1,
+    "value": "0.108"
+  },
+  "MechPdrFrequencyFrontal": {
+    "count": 1,
+    "value": "0.176"
+  },
+  "MechPdrFrequencyTemporal": {
+    "count": 2,
+    "value": "0.243"
+  },
+  "MechPdrProminenceFrontal": {
+    "count": 1,
+    "value": "0.104"
+  },
+  "MechPdrProminenceTemporal": {
+    "count": 2,
+    "value": "0.080"
+  },
+  "MechRelAlphaFrontal": {
+    "count": 5,
+    "value": "0.039"
+  },
+  "MechRelAlphaTemporal": {
+    "count": 1,
+    "value": "0.081"
+  },
+  "MechRelBetaFrontal": {
+    "count": 1,
+    "value": "0.097"
+  },
+  "MechRelBetaTemporal": {
+    "count": 1,
+    "value": "0.172"
+  },
+  "MechRelDeltaFrontal": {
+    "count": 6,
+    "value": "0.010"
+  },
+  "MechRelDeltaTemporal": {
+    "count": 1,
+    "value": "0.065"
+  },
+  "MechRelGammaFrontal": {
+    "count": 3,
+    "value": "0.036"
+  },
+  "MechRelGammaTemporal": {
+    "count": 12,
+    "value": "0.037"
+  },
+  "MechRelThetaFrontal": {
+    "count": 1,
+    "value": "0.150"
+  },
+  "MechRelThetaTemporal": {
+    "count": 1,
+    "value": "0.207"
+  },
+  "MechSlowingRatioFrontal": {
+    "count": 1,
+    "value": "0.078"
+  },
+  "MechSlowingRatioTemporal": {
+    "count": 1,
+    "value": "0.166"
+  },
+  "MechSpectralEdge95Frontal": {
+    "count": 5,
+    "value": "0.032"
+  },
+  "MechSpectralEdge95Temporal": {
+    "count": 1,
+    "value": "0.072"
+  },
+  "MechSpectralEntropyFrontal": {
+    "count": 9,
+    "value": "0.007"
+  },
+  "MechSpectralEntropyTemporal": {
+    "count": 1,
+    "value": "0.086"
+  },
+  "MechSpectralMedianFrontal": {
+    "count": 2,
+    "value": "0.026"
+  },
+  "MechSpectralMedianTemporal": {
+    "count": 1,
+    "value": "0.101"
+  },
+  "MechThetaAlphaRatioFrontal": {
+    "count": 3,
+    "value": "0.130"
+  },
+  "MechThetaAlphaRatioTemporal": {
+    "count": 1,
+    "value": "0.170"
+  },
+  "NAgeTrain": {
+    "count": 3,
+    "value": "1,272"
+  },
+  "NBRangeDemTen": {
+    "count": 1,
+    "value": "0.05--0.24"
+  },
+  "NBRangeScreenTen": {
+    "count": 1,
+    "value": "0.05--0.10"
+  },
+  "NCtrlAll": {
+    "count": 3,
+    "value": "459"
+  },
+  "NCtrlSMI": {
+    "count": 2,
+    "value": "186"
+  },
+  "NDem": {
+    "count": 2,
+    "value": "783"
+  },
+  "NDroppedNoAge": {
+    "count": 26,
+    "value": "504"
+  },
+  "NForPowerDem": {
+    "count": 1,
+    "value": "180"
+  },
+  "NForPowerMCI": {
+    "count": 1,
+    "value": "1,470"
+  },
+  "NForPowerScreen": {
+    "count": 1,
+    "value": "320"
+  },
+  "NMCI": {
+    "count": 3,
+    "value": "876"
+  },
+  "NNeededDemFull": {
+    "count": 2,
+    "value": "120"
+  },
+  "NNeededScreenFull": {
+    "count": 3,
+    "value": "350"
+  },
+  "NNeededScreenSlow": {
+    "count": 11,
+    "value": "200"
+  },
+  "NPVAgeDemTwenty": {
+    "count": 1,
+    "value": "0.91"
+  },
+  "NPVAgeMCITwenty": {
+    "count": 6,
+    "value": "0.88"
+  },
+  "NPVAgeScreenTen": {
+    "count": 3,
+    "value": "0.95"
+  },
+  "NPVAgeScreenTwenty": {
+    "count": 5,
+    "value": "0.89"
+  },
+  "NPVBothDemTwenty": {
+    "count": 3,
+    "value": "0.95"
+  },
+  "NPVBothMCITen": {
+    "count": 3,
+    "value": "0.95"
+  },
+  "NPVBothScreenTwenty": {
+    "count": 5,
+    "value": "0.92"
+  },
+  "NPVEEGDemTwenty": {
+    "count": 1,
+    "value": "0.91"
+  },
+  "NPVEEGMCITen": {
+    "count": 3,
+    "value": "0.93"
+  },
+  "NPVEEGMCITwenty": {
+    "count": 10,
+    "value": "0.86"
+  },
+  "NPVEEGScreenTwenty": {
+    "count": 6,
+    "value": "0.88"
+  },
+  "NPVNormDemTen": {
+    "count": 3,
+    "value": "0.95"
+  },
+  "NPVNormDemTwenty": {
+    "count": 5,
+    "value": "0.89"
+  },
+  "NPVNormMCITen": {
+    "count": 1,
+    "value": "0.91"
+  },
+  "NPVNormMCITwenty": {
+    "count": 7,
+    "value": "0.82"
+  },
+  "NPVNormScreenTen": {
+    "count": 3,
+    "value": "0.93"
+  },
+  "NPVNormScreenTwenty": {
+    "count": 7,
+    "value": "0.85"
+  },
+  "NPrimaryAgree": {
+    "count": 1,
+    "value": "5 of 6"
+  },
+  "NSMI": {
+    "count": 2,
+    "value": "186"
+  },
+  "NScreen": {
+    "count": 4,
+    "value": "1,200"
+  },
+  "OpDementiaAgeFourAUC": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "OpDementiaAgeFourDSpec": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpDementiaAgeFourSens": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "OpDementiaAgeFullAUC": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "OpDementiaAgeFullDSpec": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpDementiaAgeFullSens": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "OpDementiaBothFourAUC": {
+    "count": 3,
+    "value": "0.723"
+  },
+  "OpDementiaBothFourDSpec": {
+    "count": 24,
+    "value": "-0.01"
+  },
+  "OpDementiaBothFourSens": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "OpDementiaBothFullAUC": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "OpDementiaBothFullDSpec": {
+    "count": 24,
+    "value": "-0.01"
+  },
+  "OpDementiaBothFullSens": {
+    "count": 12,
+    "value": "0.66"
+  },
+  "OpDementiaEEGFourAUC": {
+    "count": 2,
+    "value": "0.785"
+  },
+  "OpDementiaEEGFourDSpec": {
+    "count": 9,
+    "value": "-0.04"
+  },
+  "OpDementiaEEGFourSens": {
+    "count": 17,
+    "value": "0.75"
+  },
+  "OpDementiaEEGFullAUC": {
+    "count": 4,
+    "value": "0.862"
+  },
+  "OpDementiaEEGFullDSpec": {
+    "count": 52,
+    "value": "+0.03"
+  },
+  "OpDementiaEEGFullSens": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "OpDementiaNormFourAUC": {
+    "count": 2,
+    "value": "0.809"
+  },
+  "OpDementiaNormFourDSpec": {
+    "count": 5,
+    "value": "+0.10"
+  },
+  "OpDementiaNormFourSens": {
+    "count": 6,
+    "value": "0.64"
+  },
+  "OpDementiaNormFullAUC": {
+    "count": 2,
+    "value": "0.856"
+  },
+  "OpDementiaNormFullDSpec": {
+    "count": 4,
+    "value": "+0.17"
+  },
+  "OpDementiaNormFullSens": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "OpMaxDevAge": {
+    "count": 31,
+    "value": "0.06"
+  },
+  "OpMaxDevBoth": {
+    "count": 45,
+    "value": "0.04"
+  },
+  "OpMaxDevEEG": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "OpMaxDevNorm": {
+    "count": 9,
+    "value": "0.17"
+  },
+  "OpScreeningAgeFourAUC": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "OpScreeningAgeFourDSpec": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpScreeningAgeFourSens": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "OpScreeningAgeFullAUC": {
+    "count": 5,
+    "value": "0.403"
+  },
+  "OpScreeningAgeFullDSpec": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpScreeningAgeFullSens": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "OpScreeningBothFourAUC": {
+    "count": 1,
+    "value": "0.712"
+  },
+  "OpScreeningBothFourDSpec": {
+    "count": 9,
+    "value": "-0.04"
+  },
+  "OpScreeningBothFourSens": {
+    "count": 5,
+    "value": "0.59"
+  },
+  "OpScreeningBothFullAUC": {
+    "count": 4,
+    "value": "0.740"
+  },
+  "OpScreeningBothFullDSpec": {
+    "count": 24,
+    "value": "-0.01"
+  },
+  "OpScreeningBothFullSens": {
+    "count": 6,
+    "value": "0.64"
+  },
+  "OpScreeningEEGFourAUC": {
+    "count": 1,
+    "value": "0.770"
+  },
+  "OpScreeningEEGFourDSpec": {
+    "count": 2,
+    "value": "-0.14"
+  },
+  "OpScreeningEEGFourSens": {
+    "count": 26,
+    "value": "0.73"
+  },
+  "OpScreeningEEGFullAUC": {
+    "count": 2,
+    "value": "0.854"
+  },
+  "OpScreeningEEGFullDSpec": {
+    "count": 24,
+    "value": "-0.01"
+  },
+  "OpScreeningEEGFullSens": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "OpScreeningNormFourAUC": {
+    "count": 1,
+    "value": "0.802"
+  },
+  "OpScreeningNormFourDSpec": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpScreeningNormFourSens": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "OpScreeningNormFullAUC": {
+    "count": 2,
+    "value": "0.849"
+  },
+  "OpScreeningNormFullDSpec": {
+    "count": 5,
+    "value": "+0.10"
+  },
+  "OpScreeningNormFullSens": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "OpWorstAgeOver": {
+    "count": 17,
+    "value": "+0.06"
+  },
+  "OpWorstAgeUnder": {
+    "count": 21,
+    "value": "+0.00"
+  },
+  "OpWorstBothOver": {
+    "count": 21,
+    "value": "+0.00"
+  },
+  "OpWorstBothUnder": {
+    "count": 9,
+    "value": "-0.04"
+  },
+  "OpWorstEEGOver": {
+    "count": 52,
+    "value": "+0.03"
+  },
+  "OpWorstEEGUnder": {
+    "count": 2,
+    "value": "-0.14"
+  },
+  "OpWorstNormOver": {
+    "count": 4,
+    "value": "+0.17"
+  },
+  "OpWorstNormUnder": {
+    "count": 21,
+    "value": "+0.00"
+  },
+  "PAltHolmIncDem": {
+    "count": 1,
+    "value": "$P=0.025$"
+  },
+  "PAltHolmIncMCI": {
+    "count": 1,
+    "value": "$P=0.025$"
+  },
+  "PAltHolmIncScreen": {
+    "count": 1,
+    "value": "$P=0.025$"
+  },
+  "PAltHolmSubScreen": {
+    "count": 1,
+    "value": "$P=0.025$"
+  },
+  "PAltSubScreen": {
+    "count": 2,
+    "value": "$P=0.012$"
+  },
+  "PIncDem": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PIncMCI": {
+    "count": 1,
+    "value": "$P=0.061$"
+  },
+  "PIncScreen": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PMCIOne": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PPVAgeDemFive": {
+    "count": 9,
+    "value": "0.15"
+  },
+  "PPVAgeDemTwenty": {
+    "count": 2,
+    "value": "0.46"
+  },
+  "PPVAgeMCIFive": {
+    "count": 5,
+    "value": "0.13"
+  },
+  "PPVAgeMCITen": {
+    "count": 4,
+    "value": "0.24"
+  },
+  "PPVAgeMCITwenty": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "PPVAgeScreenFive": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "PPVAgeScreenTen": {
+    "count": 2,
+    "value": "0.25"
+  },
+  "PPVAgeScreenTwenty": {
+    "count": 1,
+    "value": "0.43"
+  },
+  "PPVBothDemFive": {
+    "count": 3,
+    "value": "0.18"
+  },
+  "PPVBothDemTen": {
+    "count": 1,
+    "value": "0.31"
+  },
+  "PPVBothDemTwenty": {
+    "count": 2,
+    "value": "0.51"
+  },
+  "PPVBothMCIFive": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "PPVBothMCITen": {
+    "count": 2,
+    "value": "0.26"
+  },
+  "PPVBothScreenFive": {
+    "count": 1,
+    "value": "0.16"
+  },
+  "PPVBothScreenTen": {
+    "count": 3,
+    "value": "0.29"
+  },
+  "PPVBothScreenTwenty": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "PPVEEGDemFive": {
+    "count": 9,
+    "value": "0.15"
+  },
+  "PPVEEGDemTwenty": {
+    "count": 2,
+    "value": "0.46"
+  },
+  "PPVEEGMCIFive": {
+    "count": 4,
+    "value": "0.11"
+  },
+  "PPVEEGMCITen": {
+    "count": 1,
+    "value": "0.20"
+  },
+  "PPVEEGMCITwenty": {
+    "count": 1,
+    "value": "0.36"
+  },
+  "PPVEEGScreenFive": {
+    "count": 5,
+    "value": "0.13"
+  },
+  "PPVEEGScreenTen": {
+    "count": 4,
+    "value": "0.24"
+  },
+  "PPVEEGScreenTwenty": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "PPVNormDemFive": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "PPVNormDemTen": {
+    "count": 2,
+    "value": "0.25"
+  },
+  "PPVNormDemTwenty": {
+    "count": 1,
+    "value": "0.43"
+  },
+  "PPVNormMCIFive": {
+    "count": 8,
+    "value": "0.08"
+  },
+  "PPVNormMCITen": {
+    "count": 9,
+    "value": "0.15"
+  },
+  "PPVNormMCITwenty": {
+    "count": 3,
+    "value": "0.28"
+  },
+  "PPVNormScreenFive": {
+    "count": 14,
+    "value": "0.10"
+  },
+  "PPVNormScreenTen": {
+    "count": 3,
+    "value": "0.19"
+  },
+  "PTestCIFourB4_InheritDem": {
+    "count": 1,
+    "value": "[-0.009, +0.017]"
+  },
+  "PTestCIFourB4_InheritScreen": {
+    "count": 1,
+    "value": "[+0.002, +0.027]"
+  },
+  "PTestCIPosteriorFrontalScreen": {
+    "count": 1,
+    "value": "[+0.012, +0.062]"
+  },
+  "PTestCITemporalFrontalScreen": {
+    "count": 1,
+    "value": "[+0.035, +0.082]"
+  },
+  "PTestFourB4_InheritDem": {
+    "count": 5,
+    "value": "+0.004"
+  },
+  "PTestFourB4_InheritScreen": {
+    "count": 3,
+    "value": "+0.015"
+  },
+  "PTestFourFullDem": {
+    "count": 3,
+    "value": "+0.006"
+  },
+  "PTestFourFullScreen": {
+    "count": 4,
+    "value": "+0.007"
+  },
+  "PTestPTemporalFrontalScreen": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PTestPTwoFrontalOneScreen": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PTestPTwoFrontalScreen": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PTestPosteriorFrontalDem": {
+    "count": 5,
+    "value": "+0.033"
+  },
+  "PTestPosteriorFrontalScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "PTestTemporalFrontalDem": {
+    "count": 4,
+    "value": "+0.054"
+  },
+  "PTestTemporalFrontalScreen": {
+    "count": 2,
+    "value": "+0.058"
+  },
+  "PTestTwoFrontalDem": {
+    "count": 2,
+    "value": "+0.056"
+  },
+  "PTestTwoFrontalOneDem": {
+    "count": 2,
+    "value": "+0.056"
+  },
+  "PTestTwoFrontalScreen": {
+    "count": 2,
+    "value": "+0.056"
+  },
+  "PTestTwoFullDem": {
+    "count": 2,
+    "value": "+0.017"
+  },
+  "PTestTwoFullScreen": {
+    "count": 3,
+    "value": "+0.006"
+  },
+  "PTestTwoGanglionDem": {
+    "count": 1,
+    "value": "+0.020"
+  },
+  "PTestTwoGanglionScreen": {
+    "count": 1,
+    "value": "+0.022"
+  },
+  "PTestTwoInsightDem": {
+    "count": 1,
+    "value": "+0.020"
+  },
+  "PTestTwoInsightScreen": {
+    "count": 2,
+    "value": "+0.017"
+  },
+  "PTestTwoMuseDem": {
+    "count": 1,
+    "value": "+0.022"
+  },
+  "PTestTwoMuseScreen": {
+    "count": 2,
+    "value": "+0.014"
+  },
+  "PlaceCentralDem": {
+    "count": 3,
+    "value": "0.758"
+  },
+  "PlaceCentralScreen": {
+    "count": 1,
+    "value": "0.705"
+  },
+  "PlaceEightDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "PlaceEightScreen": {
+    "count": 1,
+    "value": "0.737"
+  },
+  "PlaceFourDem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "PlaceFourScreen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "PlaceFrontalOneScreen": {
+    "count": 1,
+    "value": "0.675"
+  },
+  "PlaceFrontalScreen": {
+    "count": 3,
+    "value": "0.692"
+  },
+  "PlaceFullDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "PlaceFullScreen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "PlaceGanglionDem": {
+    "count": 1,
+    "value": "0.802"
+  },
+  "PlaceGanglionScreen": {
+    "count": 1,
+    "value": "0.726"
+  },
+  "PlaceIncCentralDem": {
+    "count": 2,
+    "value": "+0.058"
+  },
+  "PlaceIncCentralScreen": {
+    "count": 9,
+    "value": "+0.034"
+  },
+  "PlaceIncEightDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "PlaceIncEightScreen": {
+    "count": 12,
+    "value": "+0.038"
+  },
+  "PlaceIncFourScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "PlaceIncFrontalDem": {
+    "count": 2,
+    "value": "+0.062"
+  },
+  "PlaceIncFrontalOneScreen": {
+    "count": 2,
+    "value": "+0.026"
+  },
+  "PlaceIncFrontalScreen": {
+    "count": 1,
+    "value": "+0.030"
+  },
+  "PlaceIncFullDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "PlaceIncFullScreen": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "PlaceIncGanglionDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "PlaceIncGanglionScreen": {
+    "count": 12,
+    "value": "+0.038"
+  },
+  "PlaceIncInsightDem": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "PlaceIncInsightScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "PlaceIncMuseDem": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "PlaceIncMuseScreen": {
+    "count": 3,
+    "value": "+0.039"
+  },
+  "PlaceIncOneAPDem": {
+    "count": 2,
+    "value": "+0.062"
+  },
+  "PlaceIncOneAPScreen": {
+    "count": 5,
+    "value": "+0.035"
+  },
+  "PlaceIncPosteriorScreen": {
+    "count": 5,
+    "value": "+0.033"
+  },
+  "PlaceIncTemporalDem": {
+    "count": 1,
+    "value": "+0.071"
+  },
+  "PlaceIncTemporalScreen": {
+    "count": 1,
+    "value": "+0.044"
+  },
+  "PlaceIncTwoScreen": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "PlaceInsightScreen": {
+    "count": 4,
+    "value": "0.731"
+  },
+  "PlaceMuseScreen": {
+    "count": 3,
+    "value": "0.734"
+  },
+  "PlaceOneAPScreen": {
+    "count": 3,
+    "value": "0.723"
+  },
+  "PlacePosteriorScreen": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "PlaceTemporalDem": {
+    "count": 1,
+    "value": "0.820"
+  },
+  "PlaceTemporalScreen": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "PlaceTwoDem": {
+    "count": 1,
+    "value": "0.823"
+  },
+  "PlaceTwoScreen": {
+    "count": 4,
+    "value": "0.748"
+  },
+  "PlacementCI": {
+    "count": 1,
+    "value": "[+0.035, +0.082]"
+  },
+  "PlacementDiff": {
+    "count": 2,
+    "value": "+0.058"
+  },
+  "PlacementP": {
+    "count": 2,
+    "value": "$P<0.0001$"
+  },
+  "PrepDiffCINoICAFourDem": {
+    "count": 1,
+    "value": "[-0.003, +0.006]"
+  },
+  "PrepDiffCINoICAFourScreen": {
+    "count": 1,
+    "value": "[-0.002, +0.007]"
+  },
+  "PrepDiffCINoICAFullDem": {
+    "count": 1,
+    "value": "[-0.013, +0.020]"
+  },
+  "PrepDiffCINoICAFullScreen": {
+    "count": 1,
+    "value": "[-0.032, -0.002]"
+  },
+  "PrepDiffEMGfreeFourDem": {
+    "count": 4,
+    "value": "+0.002"
+  },
+  "PrepDiffEMGfreeFourScreen": {
+    "count": 6,
+    "value": "-0.002"
+  },
+  "PrepDiffEMGfreeFullDem": {
+    "count": 4,
+    "value": "+0.002"
+  },
+  "PrepDiffEMGfreeFullScreen": {
+    "count": 4,
+    "value": "-0.003"
+  },
+  "PrepDiffNoICAFourDem": {
+    "count": 4,
+    "value": "+0.002"
+  },
+  "PrepDiffNoICAFourScreen": {
+    "count": 4,
+    "value": "+0.002"
+  },
+  "PrepDiffNoICAFullDem": {
+    "count": 5,
+    "value": "+0.004"
+  },
+  "PrepDiffNoICAFullScreen": {
+    "count": 3,
+    "value": "-0.017"
+  },
+  "PrepEMGfreeFourDem": {
+    "count": 1,
+    "value": "0.813"
+  },
+  "PrepEMGfreeFullScreen": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "PrepICAFourDem": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "PrepICAFourScreen": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "PrepICAFullDem": {
+    "count": 3,
+    "value": "0.805"
+  },
+  "PrepICAFullScreen": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "PrepIncEMGfreeFourDem": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "PrepIncEMGfreeFourScreen": {
+    "count": 3,
+    "value": "+0.039"
+  },
+  "PrepIncEMGfreeFullScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "PrepIncICAFourScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "PrepIncICAFullDem": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "PrepIncICAFullScreen": {
+    "count": 17,
+    "value": "+0.041"
+  },
+  "PrepIncNoICAFourDem": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "PrepIncNoICAFourScreen": {
+    "count": 12,
+    "value": "+0.038"
+  },
+  "PrepIncNoICAFullDem": {
+    "count": 1,
+    "value": "+0.071"
+  },
+  "PrepIncNoICAFullScreen": {
+    "count": 9,
+    "value": "+0.034"
+  },
+  "PrepNDem": {
+    "count": 2,
+    "value": "783"
+  },
+  "PrepNScreen": {
+    "count": 4,
+    "value": "1,200"
+  },
+  "PrepNoICAFourDem": {
+    "count": 1,
+    "value": "0.813"
+  },
+  "PrepNoICAFourScreen": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "PrepNoICAFullDem": {
+    "count": 2,
+    "value": "0.809"
+  },
+  "PrepNoICAFullScreen": {
+    "count": 3,
+    "value": "0.725"
+  },
+  "RegionCentralAUC": {
+    "count": 1,
+    "value": "0.705"
+  },
+  "RegionFrontalAUC": {
+    "count": 3,
+    "value": "0.692"
+  },
+  "RegionPosteriorAUC": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "RegionTemporalAUC": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "RevADB2Bipolar": {
+    "count": 2,
+    "value": "+0.077"
+  },
+  "RevADB2BipolarCI": {
+    "count": 1,
+    "value": "[+0.012, +0.141]"
+  },
+  "RevADB2BipolarHolm": {
+    "count": 3,
+    "value": "0.18"
+  },
+  "RevADB2Full": {
+    "count": 6,
+    "value": "-0.002"
+  },
+  "RevADBipolarVsFull": {
+    "count": 1,
+    "value": "-0.082"
+  },
+  "RevADBipolarVsFullCI": {
+    "count": 1,
+    "value": "[-0.137, -0.028]"
+  },
+  "RevADTPvsFrontal": {
+    "count": 1,
+    "value": "+0.077 [+0.012, +0.141]"
+  },
+  "RevADTempFront": {
+    "count": 5,
+    "value": "+0.035"
+  },
+  "RevADTempFrontCI": {
+    "count": 1,
+    "value": "[-0.009, +0.079]"
+  },
+  "RevAgeBrainLat": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevAgePADIC": {
+    "count": 4,
+    "value": "0.668"
+  },
+  "RevBrainLatOffsetMax": {
+    "count": 1,
+    "value": "25\\,mm"
+  },
+  "RevBrainLatOffsetMedian": {
+    "count": 1,
+    "value": "16\\,mm"
+  },
+  "RevDedupDem": {
+    "count": 3,
+    "value": "+0.068"
+  },
+  "RevDedupDemCI": {
+    "count": 1,
+    "value": "[+0.045, +0.091]"
+  },
+  "RevDedupMCI": {
+    "count": 3,
+    "value": "+0.012"
+  },
+  "RevDedupMCICI": {
+    "count": 1,
+    "value": "[-0.003, +0.028]"
+  },
+  "RevDedupMaxShift": {
+    "count": 6,
+    "value": "0.004"
+  },
+  "RevDedupRandomDem": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "RevDedupRandomMCI": {
+    "count": 2,
+    "value": "+0.014"
+  },
+  "RevDedupRandomScreen": {
+    "count": 6,
+    "value": "+0.040"
+  },
+  "RevDedupScreen": {
+    "count": 9,
+    "value": "+0.037"
+  },
+  "RevDedupScreenCI": {
+    "count": 1,
+    "value": "[+0.022, +0.052]"
+  },
+  "RevDiffB2": {
+    "count": 3,
+    "value": "0.692"
+  },
+  "RevDiffB2Frontal": {
+    "count": 1,
+    "value": "+0.106"
+  },
+  "RevDiffB2FrontalCI": {
+    "count": 1,
+    "value": "[-0.011, +0.224]"
+  },
+  "RevDiffFrontal": {
+    "count": 1,
+    "value": "0.574"
+  },
+  "RevDiffFull": {
+    "count": 2,
+    "value": "0.615"
+  },
+  "RevExt3_BrainLat_b19_age_transported_auc": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevExt3_BrainLat_b19_age_transported_spec": {
+    "count": 16,
+    "value": "0.72"
+  },
+  "RevExt3_BrainLat_b19_eeg+age_auc": {
+    "count": 3,
+    "value": "0.688"
+  },
+  "RevExt3_BrainLat_b19_eeg+age_spec": {
+    "count": 16,
+    "value": "0.72"
+  },
+  "RevExt3_BrainLat_b19_eeg_auc": {
+    "count": 1,
+    "value": "0.644"
+  },
+  "RevExt3_BrainLat_b19_eeg_spec": {
+    "count": 12,
+    "value": "0.66"
+  },
+  "RevExt3_BrainLat_b19_normative_auc": {
+    "count": 4,
+    "value": "0.601"
+  },
+  "RevExt3_BrainLat_b19_normative_spec": {
+    "count": 7,
+    "value": "0.84"
+  },
+  "RevExt3_BrainLat_b4_age_transported_auc": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevExt3_BrainLat_b4_age_transported_spec": {
+    "count": 16,
+    "value": "0.72"
+  },
+  "RevExt3_BrainLat_b4_eeg+age_auc": {
+    "count": 3,
+    "value": "0.725"
+  },
+  "RevExt3_BrainLat_b4_eeg+age_spec": {
+    "count": 12,
+    "value": "0.66"
+  },
+  "RevExt3_BrainLat_b4_eeg_auc": {
+    "count": 1,
+    "value": "0.669"
+  },
+  "RevExt3_BrainLat_b4_eeg_spec": {
+    "count": 1,
+    "value": "0.56"
+  },
+  "RevExt3_BrainLat_b4_normative_auc": {
+    "count": 2,
+    "value": "0.635"
+  },
+  "RevExt3_BrainLat_b4_normative_spec": {
+    "count": 12,
+    "value": "0.66"
+  },
+  "RevExt3_PADIC_b19_age_transported_auc": {
+    "count": 4,
+    "value": "0.668"
+  },
+  "RevExt3_PADIC_b19_age_transported_spec": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "RevExt3_PADIC_b19_eeg+age_auc": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "RevExt3_PADIC_b19_eeg+age_spec": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "RevExt3_PADIC_b19_eeg_auc": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevExt3_PADIC_b19_eeg_spec": {
+    "count": 5,
+    "value": "0.59"
+  },
+  "RevExt3_PADIC_b19_normative_auc": {
+    "count": 1,
+    "value": "0.653"
+  },
+  "RevExt3_PADIC_b19_normative_spec": {
+    "count": 29,
+    "value": "0.74"
+  },
+  "RevExt3_PADIC_b4_age_transported_auc": {
+    "count": 4,
+    "value": "0.668"
+  },
+  "RevExt3_PADIC_b4_age_transported_spec": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "RevExt3_PADIC_b4_eeg+age_auc": {
+    "count": 3,
+    "value": "0.725"
+  },
+  "RevExt3_PADIC_b4_eeg+age_spec": {
+    "count": 5,
+    "value": "0.61"
+  },
+  "RevExt3_PADIC_b4_eeg_auc": {
+    "count": 2,
+    "value": "0.602"
+  },
+  "RevExt3_PADIC_b4_eeg_spec": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "RevExt3_PADIC_b4_normative_auc": {
+    "count": 2,
+    "value": "0.649"
+  },
+  "RevExt3_PADIC_b4_normative_spec": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "RevExtB2Full": {
+    "count": 5,
+    "value": "-0.010"
+  },
+  "RevExtB2FullCI": {
+    "count": 3,
+    "value": "[-0.054, +0.034]"
+  },
+  "RevExtTempFront": {
+    "count": 3,
+    "value": "+0.018"
+  },
+  "RevExtTempFrontCI": {
+    "count": 2,
+    "value": "[-0.030, +0.066]"
+  },
+  "RevFTDFourHolm": {
+    "count": 8,
+    "value": "0.012"
+  },
+  "RevFTDFourLoss": {
+    "count": 6,
+    "value": "0.159"
+  },
+  "RevFTDFourLossCI": {
+    "count": 2,
+    "value": "[0.063, 0.255]"
+  },
+  "RevFTDFrontoOcc": {
+    "count": 1,
+    "value": "-0.116"
+  },
+  "RevFTDGanglion": {
+    "count": 4,
+    "value": "-0.003"
+  },
+  "RevFTDInsight": {
+    "count": 6,
+    "value": "+0.042"
+  },
+  "RevFTDInsightCI": {
+    "count": 1,
+    "value": "[-0.018, +0.101]"
+  },
+  "RevFTDMuse": {
+    "count": 2,
+    "value": "-0.025"
+  },
+  "RevFTDNoPoleMax": {
+    "count": 6,
+    "value": "0.159"
+  },
+  "RevFTDNoPoleMin": {
+    "count": 5,
+    "value": "0.071"
+  },
+  "RevFTDPoleWithin": {
+    "count": 2,
+    "value": "0.050"
+  },
+  "RevGapBrainLat": {
+    "count": 1,
+    "value": "4.3"
+  },
+  "RevGapPADIC": {
+    "count": 1,
+    "value": "4.7"
+  },
+  "RevIncBrainLatb19": {
+    "count": 4,
+    "value": "+0.054"
+  },
+  "RevIncBrainLatb19CI": {
+    "count": 2,
+    "value": "[-0.021, +0.130]"
+  },
+  "RevIncBrainLatb4": {
+    "count": 3,
+    "value": "+0.091"
+  },
+  "RevIncBrainLatb4CI": {
+    "count": 1,
+    "value": "[-0.009, +0.192]"
+  },
+  "RevIncPADICb19": {
+    "count": 3,
+    "value": "+0.068"
+  },
+  "RevIncPADICb19CI": {
+    "count": 2,
+    "value": "[-0.037, +0.173]"
+  },
+  "RevIncPADICb4": {
+    "count": 2,
+    "value": "+0.057"
+  },
+  "RevIncPADICb4CI": {
+    "count": 1,
+    "value": "[-0.044, +0.159]"
+  },
+  "RevInheritGain": {
+    "count": 20,
+    "value": "0.041"
+  },
+  "RevInheritGainCI": {
+    "count": 1,
+    "value": "[0.011, 0.071]"
+  },
+  "RevInheritHolm": {
+    "count": 6,
+    "value": "0.075"
+  },
+  "RevInteractionTransfer": {
+    "count": 1,
+    "value": "+0.108"
+  },
+  "RevInteractionTransferCI": {
+    "count": 1,
+    "value": "[-0.010, +0.227]"
+  },
+  "RevInteractionWithin": {
+    "count": 5,
+    "value": "+0.066"
+  },
+  "RevInteractionWithinCI": {
+    "count": 1,
+    "value": "[-0.043, +0.175]"
+  },
+  "RevNExternal": {
+    "count": 4,
+    "value": "257"
+  },
+  "RevNoOverlapScreenInc": {
+    "count": 3,
+    "value": "+0.018"
+  },
+  "RevNoOverlapScreenIncCI": {
+    "count": 1,
+    "value": "[-0.020, +0.058]"
+  },
+  "RevPair_AD_b2_vs_b19": {
+    "count": 6,
+    "value": "-0.002"
+  },
+  "RevPair_AD_b2_vs_frontal1": {
+    "count": 2,
+    "value": "+0.077"
+  },
+  "RevPair_AD_b2_vs_ganglion": {
+    "count": 2,
+    "value": "-0.013"
+  },
+  "RevPair_AD_b2_vs_insight": {
+    "count": 1,
+    "value": "-0.008"
+  },
+  "RevPair_AD_b2_vs_muse": {
+    "count": 3,
+    "value": "+0.003"
+  },
+  "RevPair_AD_b2_vs_r_frontal": {
+    "count": 3,
+    "value": "+0.015"
+  },
+  "RevPair_AD_b4_vs_b19": {
+    "count": 2,
+    "value": "-0.039"
+  },
+  "RevPair_AD_b4_vs_b4_inherit": {
+    "count": 2,
+    "value": "-0.045"
+  },
+  "RevPair_AD_r_posterior_vs_r_frontal": {
+    "count": 3,
+    "value": "+0.006"
+  },
+  "RevPair_AD_r_temporal_vs_r_frontal": {
+    "count": 5,
+    "value": "+0.035"
+  },
+  "RevPair_FTD_b2_vs_b19": {
+    "count": 1,
+    "value": "-0.120"
+  },
+  "RevPair_FTD_b2_vs_frontal1": {
+    "count": 4,
+    "value": "-0.054"
+  },
+  "RevPair_FTD_b2_vs_ganglion": {
+    "count": 1,
+    "value": "-0.110"
+  },
+  "RevPair_FTD_b2_vs_insight": {
+    "count": 1,
+    "value": "-0.134"
+  },
+  "RevPair_FTD_b2_vs_muse": {
+    "count": 1,
+    "value": "-0.091"
+  },
+  "RevPair_FTD_b2_vs_r_frontal": {
+    "count": 1,
+    "value": "-0.076"
+  },
+  "RevPair_FTD_b4_vs_b19": {
+    "count": 1,
+    "value": "-0.159"
+  },
+  "RevPair_FTD_b4_vs_b4_inherit": {
+    "count": 1,
+    "value": "-0.072"
+  },
+  "RevPair_FTD_r_posterior_vs_r_frontal": {
+    "count": 1,
+    "value": "-0.064"
+  },
+  "RevPair_FTD_r_temporal_vs_r_frontal": {
+    "count": 2,
+    "value": "-0.059"
+  },
+  "RevPair_dementia_b2_vs_b19": {
+    "count": 3,
+    "value": "-0.010 [-0.054, +0.034]"
+  },
+  "RevPair_dementia_b2_vs_frontal1": {
+    "count": 1,
+    "value": "+0.054 [-0.011, +0.119]"
+  },
+  "RevPair_dementia_b2_vs_ganglion": {
+    "count": 1,
+    "value": "-0.015 [-0.063, +0.032]"
+  },
+  "RevPair_dementia_b2_vs_insight": {
+    "count": 1,
+    "value": "-0.017 [-0.067, +0.034]"
+  },
+  "RevPair_dementia_b2_vs_muse": {
+    "count": 1,
+    "value": "+0.000 [-0.039, +0.039]"
+  },
+  "RevPair_dementia_b2_vs_r_frontal": {
+    "count": 1,
+    "value": "+0.003 [-0.056, +0.062]"
+  },
+  "RevPair_dementia_b4_vs_b19": {
+    "count": 1,
+    "value": "-0.036 [-0.086, +0.014]"
+  },
+  "RevPair_dementia_b4_vs_b4_inherit": {
+    "count": 1,
+    "value": "-0.041 [-0.071, -0.011]"
+  },
+  "RevPair_dementia_r_posterior_vs_r_frontal": {
+    "count": 1,
+    "value": "-0.010 [-0.062, +0.042]"
+  },
+  "RevPair_dementia_r_temporal_vs_r_frontal": {
+    "count": 2,
+    "value": "+0.018 [-0.030, +0.066]"
+  },
+  "RevPooledIncb19": {
+    "count": 1,
+    "value": "+0.059"
+  },
+  "RevPooledIncb19CI": {
+    "count": 1,
+    "value": "[-0.002, +0.120]"
+  },
+  "RevPooledIncb4": {
+    "count": 1,
+    "value": "+0.075"
+  },
+  "RevPooledIncb4CI": {
+    "count": 1,
+    "value": "[+0.003, +0.146]"
+  },
+  "RevSameRecAge": {
+    "count": 3,
+    "value": "0.811"
+  },
+  "RevSameRecBoth": {
+    "count": 1,
+    "value": "0.831"
+  },
+  "RevSameRecInc": {
+    "count": 1,
+    "value": "+0.021"
+  },
+  "RevSecondHeldOut": {
+    "count": 1,
+    "value": "214"
+  },
+  "RevSecondOverlap": {
+    "count": 2,
+    "value": "115"
+  },
+  "RevSecondSameRecInc": {
+    "count": 5,
+    "value": "+0.004"
+  },
+  "RevSecondSplitInc": {
+    "count": 1,
+    "value": "+0.001"
+  },
+  "RevStressAtMost": {
+    "count": 5,
+    "value": "0.028"
+  },
+  "RevStressCleanFour": {
+    "count": 3,
+    "value": "0.758"
+  },
+  "RevStressContact": {
+    "count": 5,
+    "value": "0.044"
+  },
+  "RevStressContactCI": {
+    "count": 1,
+    "value": "[0.025, 0.063]"
+  },
+  "RevStressContactFull": {
+    "count": 11,
+    "value": "0.002"
+  },
+  "RevStressDemClean": {
+    "count": 3,
+    "value": "+0.067"
+  },
+  "RevStressDemModerate": {
+    "count": 1,
+    "value": "+0.063"
+  },
+  "RevStressDemSevere": {
+    "count": 6,
+    "value": "+0.042"
+  },
+  "RevStressDisplace": {
+    "count": 1,
+    "value": "-0.007"
+  },
+  "RevStressMains": {
+    "count": 2,
+    "value": "-0.055"
+  },
+  "RevStressMainsCI": {
+    "count": 1,
+    "value": "[-0.081, -0.029]"
+  },
+  "RevStressNoise10": {
+    "count": 2,
+    "value": "-0.059"
+  },
+  "RevStressNoise5": {
+    "count": 2,
+    "value": "-0.028"
+  },
+  "RevStressSevereClinic": {
+    "count": 4,
+    "value": "+0.007"
+  },
+  "RevStressSevereDevice": {
+    "count": 2,
+    "value": "+0.024"
+  },
+  "RevStressShort": {
+    "count": 2,
+    "value": "-0.022"
+  },
+  "RevStressTab_b19_clean_clinic": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "RevStressTab_b19_clean_device": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "RevStressTab_b19_contact_bad_clinic": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "RevStressTab_b19_contact_bad_device": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "RevStressTab_b19_contact_drop_clinic": {
+    "count": 4,
+    "value": "0.740"
+  },
+  "RevStressTab_b19_contact_drop_device": {
+    "count": 4,
+    "value": "0.740"
+  },
+  "RevStressTab_b19_displace100_device": {
+    "count": 4,
+    "value": "0.731"
+  },
+  "RevStressTab_b19_displace50_clinic": {
+    "count": 1,
+    "value": "0.737"
+  },
+  "RevStressTab_b19_displace50_device": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "RevStressTab_b19_field_moderate_device": {
+    "count": 4,
+    "value": "0.732"
+  },
+  "RevStressTab_b19_field_severe_device": {
+    "count": 2,
+    "value": "0.708"
+  },
+  "RevStressTab_b19_mains_device": {
+    "count": 1,
+    "value": "0.738"
+  },
+  "RevStressTab_b19_motion2_clinic": {
+    "count": 1,
+    "value": "0.743"
+  },
+  "RevStressTab_b19_motion2_device": {
+    "count": 1,
+    "value": "0.743"
+  },
+  "RevStressTab_b19_motion6_clinic": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "RevStressTab_b19_motion6_device": {
+    "count": 4,
+    "value": "0.740"
+  },
+  "RevStressTab_b19_noise10_device": {
+    "count": 2,
+    "value": "0.715"
+  },
+  "RevStressTab_b19_noise1_clinic": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "RevStressTab_b19_noise1_device": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "RevStressTab_b19_noise2_clinic": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "RevStressTab_b19_noise2_device": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "RevStressTab_b19_noise5_device": {
+    "count": 3,
+    "value": "0.723"
+  },
+  "RevStressTab_b19_short12_clinic": {
+    "count": 4,
+    "value": "0.731"
+  },
+  "RevStressTab_b19_short12_device": {
+    "count": 4,
+    "value": "0.731"
+  },
+  "RevStressTab_b19_short3_clinic": {
+    "count": 1,
+    "value": "0.726"
+  },
+  "RevStressTab_b19_short3_device": {
+    "count": 3,
+    "value": "0.730"
+  },
+  "RevStressTab_b19_short6_clinic": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "RevStressTab_b19_short6_device": {
+    "count": 2,
+    "value": "0.733"
+  },
+  "RevStressTab_b4_clean_clinic": {
+    "count": 3,
+    "value": "0.758"
+  },
+  "RevStressTab_b4_clean_device": {
+    "count": 3,
+    "value": "0.758"
+  },
+  "RevStressTab_b4_contact_bad_clinic": {
+    "count": 1,
+    "value": "0.695"
+  },
+  "RevStressTab_b4_contact_bad_device": {
+    "count": 2,
+    "value": "0.715"
+  },
+  "RevStressTab_b4_contact_drop_clinic": {
+    "count": 3,
+    "value": "0.744"
+  },
+  "RevStressTab_b4_contact_drop_device": {
+    "count": 2,
+    "value": "0.761"
+  },
+  "RevStressTab_b4_displace100_clinic": {
+    "count": 2,
+    "value": "0.728"
+  },
+  "RevStressTab_b4_displace100_device": {
+    "count": 2,
+    "value": "0.733"
+  },
+  "RevStressTab_b4_displace50_clinic": {
+    "count": 1,
+    "value": "0.753"
+  },
+  "RevStressTab_b4_displace50_device": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "RevStressTab_b4_field_moderate_clinic": {
+    "count": 2,
+    "value": "0.708"
+  },
+  "RevStressTab_b4_field_moderate_device": {
+    "count": 4,
+    "value": "0.732"
+  },
+  "RevStressTab_b4_field_severe_clinic": {
+    "count": 1,
+    "value": "0.663"
+  },
+  "RevStressTab_b4_field_severe_device": {
+    "count": 3,
+    "value": "0.699"
+  },
+  "RevStressTab_b4_mains_clinic": {
+    "count": 1,
+    "value": "0.587"
+  },
+  "RevStressTab_b4_mains_device": {
+    "count": 1,
+    "value": "0.750"
+  },
+  "RevStressTab_b4_motion2_clinic": {
+    "count": 1,
+    "value": "0.763"
+  },
+  "RevStressTab_b4_motion2_device": {
+    "count": 1,
+    "value": "0.764"
+  },
+  "RevStressTab_b4_motion6_clinic": {
+    "count": 2,
+    "value": "0.761"
+  },
+  "RevStressTab_b4_motion6_device": {
+    "count": 1,
+    "value": "0.762"
+  },
+  "RevStressTab_b4_noise10_clinic": {
+    "count": 1,
+    "value": "0.657"
+  },
+  "RevStressTab_b4_noise10_device": {
+    "count": 1,
+    "value": "0.700"
+  },
+  "RevStressTab_b4_noise1_clinic": {
+    "count": 1,
+    "value": "0.756"
+  },
+  "RevStressTab_b4_noise1_device": {
+    "count": 1,
+    "value": "0.757"
+  },
+  "RevStressTab_b4_noise2_clinic": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "RevStressTab_b4_noise2_device": {
+    "count": 3,
+    "value": "0.744"
+  },
+  "RevStressTab_b4_noise5_clinic": {
+    "count": 1,
+    "value": "0.706"
+  },
+  "RevStressTab_b4_noise5_device": {
+    "count": 4,
+    "value": "0.731"
+  },
+  "RevStressTab_b4_short12_clinic": {
+    "count": 1,
+    "value": "0.746"
+  },
+  "RevStressTab_b4_short12_device": {
+    "count": 3,
+    "value": "0.744"
+  },
+  "RevStressTab_b4_short3_clinic": {
+    "count": 2,
+    "value": "0.729"
+  },
+  "RevStressTab_b4_short3_device": {
+    "count": 4,
+    "value": "0.736"
+  },
+  "RevStressTab_b4_short6_clinic": {
+    "count": 1,
+    "value": "0.752"
+  },
+  "RevStressTab_b4_short6_device": {
+    "count": 4,
+    "value": "0.748"
+  },
+  "RevTab_AD_BrainLat_b19": {
+    "count": 6,
+    "value": "0.751"
+  },
+  "RevTab_AD_BrainLat_b1_ap": {
+    "count": 3,
+    "value": "0.734"
+  },
+  "RevTab_AD_BrainLat_b2": {
+    "count": 3,
+    "value": "0.734"
+  },
+  "RevTab_AD_BrainLat_b4": {
+    "count": 1,
+    "value": "0.714"
+  },
+  "RevTab_AD_BrainLat_b8": {
+    "count": 1,
+    "value": "0.782"
+  },
+  "RevTab_AD_BrainLat_frontal1": {
+    "count": 2,
+    "value": "0.676"
+  },
+  "RevTab_AD_BrainLat_ganglion": {
+    "count": 2,
+    "value": "0.728"
+  },
+  "RevTab_AD_BrainLat_insight": {
+    "count": 3,
+    "value": "0.739"
+  },
+  "RevTab_AD_BrainLat_muse": {
+    "count": 1,
+    "value": "0.769"
+  },
+  "RevTab_AD_BrainLat_r_central": {
+    "count": 1,
+    "value": "0.710"
+  },
+  "RevTab_AD_BrainLat_r_frontal": {
+    "count": 4,
+    "value": "0.732"
+  },
+  "RevTab_AD_BrainLat_r_posterior": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "RevTab_AD_BrainLat_r_temporal": {
+    "count": 2,
+    "value": "0.721"
+  },
+  "RevTab_AD_P-ADIC_b19": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevTab_AD_P-ADIC_b1_ap": {
+    "count": 1,
+    "value": "0.620"
+  },
+  "RevTab_AD_P-ADIC_b2": {
+    "count": 1,
+    "value": "0.617"
+  },
+  "RevTab_AD_P-ADIC_b4": {
+    "count": 2,
+    "value": "0.602"
+  },
+  "RevTab_AD_P-ADIC_b4_inherit": {
+    "count": 2,
+    "value": "0.649"
+  },
+  "RevTab_AD_P-ADIC_b8": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevTab_AD_P-ADIC_frontal1": {
+    "count": 1,
+    "value": "0.570"
+  },
+  "RevTab_AD_P-ADIC_ganglion": {
+    "count": 1,
+    "value": "0.659"
+  },
+  "RevTab_AD_P-ADIC_insight": {
+    "count": 1,
+    "value": "0.611"
+  },
+  "RevTab_AD_P-ADIC_muse": {
+    "count": 1,
+    "value": "0.654"
+  },
+  "RevTab_AD_P-ADIC_r_central": {
+    "count": 1,
+    "value": "0.637"
+  },
+  "RevTab_AD_P-ADIC_r_frontal": {
+    "count": 1,
+    "value": "0.605"
+  },
+  "RevTab_AD_P-ADIC_r_posterior": {
+    "count": 2,
+    "value": "0.632"
+  },
+  "RevTab_AD_P-ADIC_r_temporal": {
+    "count": 3,
+    "value": "0.686"
+  },
+  "RevTab_AD_ds004504_b19": {
+    "count": 1,
+    "value": "0.880"
+  },
+  "RevTab_AD_ds004504_b1_ap": {
+    "count": 1,
+    "value": "0.820"
+  },
+  "RevTab_AD_ds004504_b2": {
+    "count": 1,
+    "value": "0.884"
+  },
+  "RevTab_AD_ds004504_b4": {
+    "count": 1,
+    "value": "0.833"
+  },
+  "RevTab_AD_ds004504_b4_inherit": {
+    "count": 1,
+    "value": "0.868"
+  },
+  "RevTab_AD_ds004504_b8": {
+    "count": 2,
+    "value": "0.890"
+  },
+  "RevTab_AD_ds004504_frontal1": {
+    "count": 1,
+    "value": "0.777"
+  },
+  "RevTab_AD_ds004504_ganglion": {
+    "count": 1,
+    "value": "0.894"
+  },
+  "RevTab_AD_ds004504_insight": {
+    "count": 1,
+    "value": "0.898"
+  },
+  "RevTab_AD_ds004504_muse": {
+    "count": 1,
+    "value": "0.864"
+  },
+  "RevTab_AD_ds004504_r_central": {
+    "count": 1,
+    "value": "0.855"
+  },
+  "RevTab_AD_ds004504_r_frontal": {
+    "count": 2,
+    "value": "0.865"
+  },
+  "RevTab_AD_ds004504_r_posterior": {
+    "count": 1,
+    "value": "0.837"
+  },
+  "RevTab_AD_ds004504_r_temporal": {
+    "count": 1,
+    "value": "0.888"
+  },
+  "RevTab_FTD_BrainLat_b19": {
+    "count": 1,
+    "value": "0.606"
+  },
+  "RevTab_FTD_BrainLat_b1_ap": {
+    "count": 1,
+    "value": "0.418"
+  },
+  "RevTab_FTD_BrainLat_b2": {
+    "count": 2,
+    "value": "0.576"
+  },
+  "RevTab_FTD_BrainLat_b4": {
+    "count": 1,
+    "value": "0.578"
+  },
+  "RevTab_FTD_BrainLat_b8": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevTab_FTD_BrainLat_frontal1": {
+    "count": 3,
+    "value": "0.686"
+  },
+  "RevTab_FTD_BrainLat_ganglion": {
+    "count": 1,
+    "value": "0.485"
+  },
+  "RevTab_FTD_BrainLat_insight": {
+    "count": 1,
+    "value": "0.509"
+  },
+  "RevTab_FTD_BrainLat_muse": {
+    "count": 1,
+    "value": "0.537"
+  },
+  "RevTab_FTD_BrainLat_r_central": {
+    "count": 2,
+    "value": "0.342"
+  },
+  "RevTab_FTD_BrainLat_r_frontal": {
+    "count": 1,
+    "value": "0.476"
+  },
+  "RevTab_FTD_BrainLat_r_posterior": {
+    "count": 1,
+    "value": "0.608"
+  },
+  "RevTab_FTD_BrainLat_r_temporal": {
+    "count": 1,
+    "value": "0.535"
+  },
+  "RevTab_FTD_ds004504_b19": {
+    "count": 1,
+    "value": "0.843"
+  },
+  "RevTab_FTD_ds004504_b1_ap": {
+    "count": 9,
+    "value": "0.742"
+  },
+  "RevTab_FTD_ds004504_b2": {
+    "count": 3,
+    "value": "0.699"
+  },
+  "RevTab_FTD_ds004504_b4": {
+    "count": 2,
+    "value": "0.632"
+  },
+  "RevTab_FTD_ds004504_b4_inherit": {
+    "count": 1,
+    "value": "0.700"
+  },
+  "RevTab_FTD_ds004504_b8": {
+    "count": 4,
+    "value": "0.748"
+  },
+  "RevTab_FTD_ds004504_frontal1": {
+    "count": 2,
+    "value": "0.721"
+  },
+  "RevTab_FTD_ds004504_ganglion": {
+    "count": 1,
+    "value": "0.859"
+  },
+  "RevTab_FTD_ds004504_insight": {
+    "count": 1,
+    "value": "0.897"
+  },
+  "RevTab_FTD_ds004504_muse": {
+    "count": 1,
+    "value": "0.823"
+  },
+  "RevTab_FTD_ds004504_r_central": {
+    "count": 1,
+    "value": "0.773"
+  },
+  "RevTab_FTD_ds004504_r_frontal": {
+    "count": 2,
+    "value": "0.819"
+  },
+  "RevTab_FTD_ds004504_r_posterior": {
+    "count": 1,
+    "value": "0.711"
+  },
+  "RevTab_FTD_ds004504_r_temporal": {
+    "count": 3,
+    "value": "0.730"
+  },
+  "RevTab_dementia_BrainLat_b19": {
+    "count": 1,
+    "value": "0.650"
+  },
+  "RevTab_dementia_BrainLat_b1_ap": {
+    "count": 1,
+    "value": "0.645"
+  },
+  "RevTab_dementia_BrainLat_b2": {
+    "count": 2,
+    "value": "0.676"
+  },
+  "RevTab_dementia_BrainLat_b4": {
+    "count": 1,
+    "value": "0.672"
+  },
+  "RevTab_dementia_BrainLat_b8": {
+    "count": 1,
+    "value": "0.679"
+  },
+  "RevTab_dementia_BrainLat_frontal1": {
+    "count": 3,
+    "value": "0.686"
+  },
+  "RevTab_dementia_BrainLat_ganglion": {
+    "count": 2,
+    "value": "0.635"
+  },
+  "RevTab_dementia_BrainLat_insight": {
+    "count": 1,
+    "value": "0.639"
+  },
+  "RevTab_dementia_BrainLat_muse": {
+    "count": 2,
+    "value": "0.649"
+  },
+  "RevTab_dementia_BrainLat_r_central": {
+    "count": 1,
+    "value": "0.664"
+  },
+  "RevTab_dementia_BrainLat_r_frontal": {
+    "count": 3,
+    "value": "0.699"
+  },
+  "RevTab_dementia_BrainLat_r_posterior": {
+    "count": 1,
+    "value": "0.684"
+  },
+  "RevTab_dementia_BrainLat_r_temporal": {
+    "count": 2,
+    "value": "0.615"
+  },
+  "RevTab_dementia_P-ADIC_b19": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevTab_dementia_P-ADIC_b1_ap": {
+    "count": 1,
+    "value": "0.620"
+  },
+  "RevTab_dementia_P-ADIC_b2": {
+    "count": 1,
+    "value": "0.617"
+  },
+  "RevTab_dementia_P-ADIC_b4": {
+    "count": 2,
+    "value": "0.602"
+  },
+  "RevTab_dementia_P-ADIC_b4_inherit": {
+    "count": 2,
+    "value": "0.649"
+  },
+  "RevTab_dementia_P-ADIC_b8": {
+    "count": 8,
+    "value": "0.634"
+  },
+  "RevTab_dementia_P-ADIC_frontal1": {
+    "count": 1,
+    "value": "0.570"
+  },
+  "RevTab_dementia_P-ADIC_ganglion": {
+    "count": 1,
+    "value": "0.659"
+  },
+  "RevTab_dementia_P-ADIC_insight": {
+    "count": 1,
+    "value": "0.611"
+  },
+  "RevTab_dementia_P-ADIC_muse": {
+    "count": 1,
+    "value": "0.654"
+  },
+  "RevTab_dementia_P-ADIC_r_central": {
+    "count": 1,
+    "value": "0.637"
+  },
+  "RevTab_dementia_P-ADIC_r_frontal": {
+    "count": 1,
+    "value": "0.605"
+  },
+  "RevTab_dementia_P-ADIC_r_posterior": {
+    "count": 2,
+    "value": "0.632"
+  },
+  "RevTab_dementia_P-ADIC_r_temporal": {
+    "count": 3,
+    "value": "0.686"
+  },
+  "RevTab_dementia_ds004504_b19": {
+    "count": 4,
+    "value": "0.862"
+  },
+  "RevTab_dementia_ds004504_b1_ap": {
+    "count": 1,
+    "value": "0.796"
+  },
+  "RevTab_dementia_ds004504_b2": {
+    "count": 2,
+    "value": "0.842"
+  },
+  "RevTab_dementia_ds004504_b4": {
+    "count": 2,
+    "value": "0.785"
+  },
+  "RevTab_dementia_ds004504_b8": {
+    "count": 1,
+    "value": "0.868"
+  },
+  "RevTab_dementia_ds004504_frontal1": {
+    "count": 5,
+    "value": "0.749"
+  },
+  "RevTab_dementia_ds004504_ganglion": {
+    "count": 1,
+    "value": "0.867"
+  },
+  "RevTab_dementia_ds004504_insight": {
+    "count": 2,
+    "value": "0.890"
+  },
+  "RevTab_dementia_ds004504_muse": {
+    "count": 2,
+    "value": "0.842"
+  },
+  "RevTab_dementia_ds004504_r_central": {
+    "count": 2,
+    "value": "0.819"
+  },
+  "RevTab_dementia_ds004504_r_frontal": {
+    "count": 1,
+    "value": "0.835"
+  },
+  "RevTab_dementia_ds004504_r_posterior": {
+    "count": 1,
+    "value": "0.775"
+  },
+  "RevTab_dementia_ds004504_r_temporal": {
+    "count": 1,
+    "value": "0.850"
+  },
+  "RevTopoADFrontal": {
+    "count": 1,
+    "value": "0.197"
+  },
+  "RevTopoADPosterior": {
+    "count": 2,
+    "value": "0.243"
+  },
+  "RevTopoADTemporal": {
+    "count": 1,
+    "value": "0.235"
+  },
+  "RhoDemFour": {
+    "count": 1,
+    "value": "0.16"
+  },
+  "RhoDemFull": {
+    "count": 1,
+    "value": "0.16"
+  },
+  "RhoDemOne": {
+    "count": 8,
+    "value": "0.14"
+  },
+  "RhoMCIFour": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "RhoMCIFull": {
+    "count": 2,
+    "value": "0.53"
+  },
+  "RhoResidDem": {
+    "count": 2,
+    "value": "0.26"
+  },
+  "RhoResidMCI": {
+    "count": 6,
+    "value": "0.40"
+  },
+  "RhoScreenFull": {
+    "count": 3,
+    "value": "0.29"
+  },
+  "RhoScreenOne": {
+    "count": 3,
+    "value": "0.29"
+  },
+  "SensAgeDem": {
+    "count": 7,
+    "value": "0.68"
+  },
+  "SensAgeMCI": {
+    "count": 1,
+    "value": "0.56"
+  },
+  "SensAgeScreen": {
+    "count": 5,
+    "value": "0.61"
+  },
+  "SensBothDem": {
+    "count": 5,
+    "value": "0.83"
+  },
+  "SensBothMCI": {
+    "count": 6,
+    "value": "0.65"
+  },
+  "SensBothScreen": {
+    "count": 26,
+    "value": "0.73"
+  },
+  "SensDirect": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "SensEEGDem": {
+    "count": 9,
+    "value": "0.67"
+  },
+  "SensEEGMCI": {
+    "count": 2,
+    "value": "0.46"
+  },
+  "SensEEGScreen": {
+    "count": 1,
+    "value": "0.56"
+  },
+  "SensEOAD": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "SensLOAD": {
+    "count": 9,
+    "value": "0.67"
+  },
+  "SensMCIAmn": {
+    "count": 3,
+    "value": "0.47"
+  },
+  "SensMCIVas": {
+    "count": 2,
+    "value": "0.46"
+  },
+  "SensNormDem": {
+    "count": 10,
+    "value": "0.60"
+  },
+  "SensNormEOAD": {
+    "count": 9,
+    "value": "0.71"
+  },
+  "SensNormLOAD": {
+    "count": 2,
+    "value": "0.53"
+  },
+  "SensNormMCI": {
+    "count": 1,
+    "value": "0.31"
+  },
+  "SensNormMCIVas": {
+    "count": 5,
+    "value": "0.34"
+  },
+  "SensNormSMI": {
+    "count": 4,
+    "value": "0.24"
+  },
+  "SensNormScreen": {
+    "count": 1,
+    "value": "0.43"
+  },
+  "SensNormTGA": {
+    "count": 3,
+    "value": "0.22"
+  },
+  "SensNormVAD": {
+    "count": 5,
+    "value": "0.61"
+  },
+  "SensNormative": {
+    "count": 12,
+    "value": "0.66"
+  },
+  "SensSMI": {
+    "count": 3,
+    "value": "0.28"
+  },
+  "SensTGA": {
+    "count": 9,
+    "value": "0.17"
+  },
+  "SensVAD": {
+    "count": 13,
+    "value": "0.76"
+  },
+  "SpanDigitFourDem": {
+    "count": 1,
+    "value": "0.016"
+  },
+  "SpanDigitFourScreen": {
+    "count": 3,
+    "value": "0.009"
+  },
+  "SpanDigitFullDem": {
+    "count": 6,
+    "value": "0.004"
+  },
+  "SpanDigitFullScreen": {
+    "count": 9,
+    "value": "0.007"
+  },
+  "SpanPlaceDem": {
+    "count": 1,
+    "value": "0.065"
+  },
+  "SpanPlaceScreen": {
+    "count": 6,
+    "value": "0.075"
+  },
+  "SpecAgeDem": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecAgeMCI": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecAgeScreen": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecAnchored": {
+    "count": 7,
+    "value": "0.57"
+  },
+  "SpecAnchoredSD": {
+    "count": 9,
+    "value": "0.17"
+  },
+  "SpecBothDem": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecBothMCI": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecBothScreen": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecDirect": {
+    "count": 1,
+    "value": "0.62"
+  },
+  "SpecDirectFull": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecEEGDem": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecEEGMCI": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecEEGScreen": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecNormDem": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecNormMCI": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecNormScreen": {
+    "count": 6,
+    "value": "0.80"
+  },
+  "SpecNormative": {
+    "count": 7,
+    "value": "0.82"
+  },
+  "SpecNormativeFull": {
+    "count": 5,
+    "value": "0.83"
+  },
+  "SpecTarget": {
+    "count": 7,
+    "value": "80\\%"
+  },
+  "SubCIDem": {
+    "count": 1,
+    "value": "[-0.058, +0.025]"
+  },
+  "SubCIMCI": {
+    "count": 1,
+    "value": "[-0.109, -0.032]"
+  },
+  "SubCIScreen": {
+    "count": 1,
+    "value": "[-0.077, -0.012]"
+  },
+  "SubCompAll": {
+    "count": 2,
+    "value": "-0.045"
+  },
+  "SubCompClean": {
+    "count": 1,
+    "value": "-0.088"
+  },
+  "SubCompSMI": {
+    "count": 1,
+    "value": "+0.019"
+  },
+  "SubDeepScreen": {
+    "count": 2,
+    "value": "+0.025"
+  },
+  "SubDem": {
+    "count": 1,
+    "value": "-0.016"
+  },
+  "SubFeatDem": {
+    "count": 1,
+    "value": "-0.016"
+  },
+  "SubFeatMCI": {
+    "count": 2,
+    "value": "-0.071"
+  },
+  "SubFeatScreen": {
+    "count": 2,
+    "value": "-0.045"
+  },
+  "SubMCI": {
+    "count": 2,
+    "value": "-0.071"
+  },
+  "SubScreen": {
+    "count": 2,
+    "value": "-0.045"
+  },
+  "SubSpan": {
+    "count": 1,
+    "value": "0.108"
+  },
+  "TrueFlagBothScreenTwenty": {
+    "count": 1,
+    "value": "146"
+  },
+  "TrueFlagNormDemTwenty": {
+    "count": 1,
+    "value": "119"
+  },
+  "WorstRegion": {
+    "count": 32,
+    "value": "frontal"
+  },
+  "YoudenAgeDem": {
+    "count": 4,
+    "value": "0.48"
+  },
+  "YoudenAgeMCI": {
+    "count": 1,
+    "value": "0.36"
+  },
+  "YoudenAgeScreen": {
+    "count": 1,
+    "value": "0.41"
+  },
+  "YoudenBothDem": {
+    "count": 18,
+    "value": "0.63"
+  },
+  "YoudenBothScreen": {
+    "count": 2,
+    "value": "0.53"
+  },
+  "YoudenEEGDem": {
+    "count": 3,
+    "value": "0.47"
+  },
+  "YoudenEEGMCI": {
+    "count": 2,
+    "value": "0.26"
+  },
+  "YoudenEEGScreen": {
+    "count": 1,
+    "value": "0.36"
+  },
+  "YoudenNormDem": {
+    "count": 6,
+    "value": "0.40"
+  },
+  "YoudenNormMCI": {
+    "count": 4,
+    "value": "0.11"
+  },
+  "YoudenNormScreen": {
+    "count": 1,
+    "value": "0.23"
+  }
+}
