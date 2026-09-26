@@ -244,20 +244,20 @@ def panel_placement(ax, e25, task="screening"):
     y = np.arange(len(items))
     vals = [v["auc_eeg"] for _, v in items]
     cols = [_fp_colour(k) for k, _ in items]
-    ax.barh(y, vals, color=cols, height=0.68)
+    ax.barh(y, vals, color=cols, height=0.62)
     age = e25["tasks"][task]["auc_age"]
     ax.axvline(age, color=viz.INK, ls="--", lw=0.9)
-    # Values inside the right end of each bar, so no label reaches the dashed age line; the
-    # shortest bar (0.675) still holds three decimals.
-    for yi, v, c in zip(y, vals, cols):
-        ax.annotate(f"{v:.3f}", (v, yi), xytext=(-2, 0), textcoords="offset points",
-                    va="center", ha="right", fontsize=5.2, color=_ink_or_white(c), zorder=4)
+    # Values just past the end of each bar, in muted ink: a label inside a bar this thin overruns
+    # it, and the longest bar (0.751) leaves its label clear of the dashed age line.
+    for yi, v in zip(y, vals):
+        ax.annotate(f"{v:.3f}", (v, yi), xytext=(2, 0), textcoords="offset points",
+                    va="center", ha="left", fontsize=5.4, color=viz.MUTED, zorder=4)
     ax.annotate(f"age\n{age:.3f}", (age, len(items) - 1), xytext=(2, 1),
                 textcoords="offset points", ha="left", va="bottom", fontsize=5.6,
                 color=viz.INK, linespacing=1.0)
     ax.set_yticks(y)
     ax.set_yticklabels([PLACE_LABEL[k] for k, _ in items], fontsize=6.0)
-    ax.set_xlim(0.62, 0.82)
+    ax.set_xlim(0.62, 0.81)
     ax.set_ylim(-0.6, len(items) - 0.4)
     ax.set_xticks([0.65, 0.70, 0.75, 0.80])
     ax.set_xticklabels(["0.65", "0.70", "0.75", "0.80"], fontsize=6.0)
@@ -273,8 +273,8 @@ def panel_by_disease(ax_ad, ax_ftd, e33, order):
     frontotemporal dementia within cohort (CAUEEG holds 14 frontotemporal cases, too few to learn
     from), pooled across cohorts by fixed-effect weighting. Rows follow panel (a).
     """
-    for ax, con, reading, title in ((ax_ad, "AD", "transfer", "b  Alzheimer's"),
-                                    (ax_ftd, "FTD", "within", "frontotemporal")):
+    for ax, con, reading, title in ((ax_ad, "AD", "transfer", "b  AD, transfer"),
+                                    (ax_ftd, "FTD", "within", "FTD, within cohort")):
         pooled = e33["contrasts"][con][reading]["vs_full_pooled"]
         for yi, key in enumerate(order):
             if key == "b19":
@@ -292,7 +292,7 @@ def panel_by_disease(ax_ad, ax_ftd, e33, order):
         ax.tick_params(axis="y", left=False, labelleft=False)
         ax.xaxis.grid(True, color=viz.FAINT, lw=0.5)
         ax.set_axisbelow(True)
-        ax.set_title(title, loc="left", fontweight="bold", fontsize=7.6)
+        ax.set_title(title, loc="left", fontweight="bold", fontsize=7.4)
     ax_ad.text(0.0, -0.20, "AUC difference from the full montage, external cohorts",
                transform=ax_ad.transAxes, fontsize=6.6, ha="left", va="top", color=viz.INK)
 
@@ -313,10 +313,10 @@ def _increment_rows(e13, e30, e34, e35):
         ("CAUEEG MCI", "mci", rec(t["mci"]["budgets"][full])),
         ("no repeat visits", "screening", rec(e30["dedup"]["screening"]["dedup"])),
         ("4 el., clean", "screening", rec(four["clean"]["device"])),
-        ("field, moderate", "screening", rec(four["field_moderate"]["device"])),
-        ("field, severe", "screening", rec(four["field_severe"]["device"])),
-        ("lost contact", "screening", rec(four["contact_bad"]["device"])),
-        ("mains, clinic-trained", "screening", rec(four["mains"]["clinic"])),
+        ("4 el., moderate field", "screening", rec(four["field_moderate"]["device"])),
+        ("4 el., severe field", "screening", rec(four["field_severe"]["device"])),
+        ("4 el., lost contact", "screening", rec(four["contact_bad"]["device"])),
+        ("4 el., mains, clinic rule", "screening", rec(four["mains"]["clinic"])),
         ("external, 19 el.", "dementia", (pooled["b19_excl_ds004504"]["diff"],
                                           pooled["b19_excl_ds004504"]["ci"])),
         ("external, 4 el.", "dementia", (pooled["b4_excl_ds004504"]["diff"],
@@ -341,6 +341,9 @@ def panel_increment(ax, e13, e30, e34, e35):
         ax.axhline(yb, color=viz.FAINT, lw=0.6, zorder=0)
     ax.set_yticks(y)
     ax.set_yticklabels([r[0] for r in rows], fontsize=6.0)
+    # Each row label takes its contrast's colour, so the panel needs no legend over the intervals.
+    for tick, (_, task, _) in zip(ax.get_yticklabels(), rows):
+        tick.set_color(C_TASK[task])
     ax.set_ylim(-0.6, len(rows) - 0.4)
     ax.set_xlim(-0.09, 0.16)
     ax.set_xticks([-0.05, 0, 0.05, 0.10, 0.15])
@@ -349,11 +352,6 @@ def panel_increment(ax, e13, e30, e34, e35):
     ax.set_axisbelow(True)
     ax.set_xlabel("AUC(EEG + age) − AUC(age)", fontsize=6.6)
     ax.set_title("c  Increment over age", loc="left", fontweight="bold", fontsize=7.6)
-    from matplotlib.lines import Line2D
-    keys = [Line2D([0], [0], marker="o", color=C_TASK[t], lw=1.1, ms=3.0, label=lab)
-            for t, lab in (("screening", "screening"), ("dementia", "dementia"), ("mci", "MCI"))]
-    ax.legend(handles=keys, loc="upper right", frameon=False, fontsize=5.8, handlelength=1.3,
-              handletextpad=0.4, labelspacing=0.25, borderaxespad=0.1)
 
 
 def panel_cohort_size(ax, e20, e37):
@@ -402,6 +400,13 @@ def panel_cohort_size(ax, e20, e37):
     ax.text(ds["n"] * 1.12, yhi - 0.006,
             f"ds004504 {ds['estimators']['eeg17']['inc_margin']:+.2f}",
             fontsize=5.6, color=viz.INK, ha="left", va="center")
+    # The curves are named at n = 200, above and below their bands, where the panel is empty; the
+    # legend holds only the cohorts.
+    at = {t: next(x for x in rows if x["task"] == t and x["n"] == 200) for t in need}
+    ax.text(200, at["dementia"]["inc_q"][1] + 0.008, "dementia", color=C_INC, fontsize=5.8,
+            ha="center", va="bottom")
+    ax.text(200, at["screening"]["inc_q"][0] - 0.012, "screening", color=C_SUB, fontsize=5.8,
+            ha="center", va="top")
     ax.legend(handles=ext_keys, loc="upper right", bbox_to_anchor=(1.0, 0.93), frameon=False,
               fontsize=5.6, handlelength=1.0, handletextpad=0.4, borderaxespad=0.2,
               labelspacing=0.3)
@@ -505,7 +510,7 @@ def figure_one(e25, e20, e13, e30, e33, e34, e35, e37):
     from matplotlib.gridspec import GridSpec
     from matplotlib.lines import Line2D
 
-    fig = plt.figure(figsize=(BODY_W, 3.12))
+    fig = plt.figure(figsize=(BODY_W, 3.34))
     gs = GridSpec(2, 1, figure=fig, height_ratios=[1.30, 1.0], hspace=0.74,
                   left=0.185, right=0.985, top=0.94, bottom=0.115)
     top = gs[0].subgridspec(1, 3, width_ratios=[1.30, 0.80, 0.80], wspace=0.10)
@@ -564,8 +569,8 @@ def figure_topography(e25, e33):
               {r: float(np.mean([mech["per_feature"][f]["strength_by_region"][r]
                                  for f in mech["top_features"]]))
                for r in ("temporal", "posterior", "central", "frontal")}),
-             ("External, Alzheimer's", e33["topography"]["AD"]["top6_mean_strength_by_region"]),
-             ("External, frontotemporal",
+             ("External, AD", e33["topography"]["AD"]["top6_mean_strength_by_region"]),
+             ("External, FTD",
               e33["topography"]["FTD"]["top6_mean_strength_by_region"])]
     vals = [v for _, s in heads for v in s.values()]
     fig, axes = plt.subplots(1, 3, figsize=(BODY_W * 0.86, 2.05))
