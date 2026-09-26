@@ -17,7 +17,7 @@ harmonisation/      one preprocessing pipeline for every cohort (notch, band-pas
                     ICA + ICLabel, resampling) and the dataset loaders
 eegbudget/          montages, digitisation budgets, the 17 qEEG features, the age-conditioned
                     (normative) reference, cross-validation and paired inference
-experiments/        h00 harmonise -> e00 spine -> e01 features -> e02...e36 analyses and figures;
+experiments/        h00 harmonise -> e00 spine -> e01 features -> e02...e37 analyses and figures;
                     e07 verifies every number printed in the paper against outputs/results
 tools/              Figure 1 patch (text, montage strip)
 outputs/results/    the aggregate result files behind every reported number
@@ -70,6 +70,7 @@ python experiments/e25_acquisition_design.py
 python experiments/e31_external_extract.py && python experiments/e33_external_placement.py
 python experiments/e32_stress_extract.py && python experiments/e34_acquisition_stress.py
 python experiments/e35_external_transfer_all.py
+python experiments/e37_external_within_increment.py
 python experiments/e07_numbers.py          # verify every number the paper reports
 ```
 
@@ -83,15 +84,16 @@ python experiments/e07_numbers.py
 ```
 
 recomputes every quantity the paper states from `outputs/results/*.json` and compares it with the
-value the paper prints, recorded in `outputs/results/paper_values.json` (950 quantities).
+value the paper prints, recorded in `outputs/results/paper_values.json` (961 quantities).
 
 ## Notes
 
 - Figure 1 was drawn in diagrams.net; its source is `outputs/figures/fig1_framework.drawio`
   (open it in diagrams.net; the montage strip in it is drawn by `e29_montage_map.py`).
 - Every other figure is drawn by a script as vector PDF with editable text: the results figure
-  (`fig1_results.pdf`), net benefit (`fig2_utility.pdf`) and the margin and sample-size panels by
-  `e17_paper_figure.py`; the per-patient deviation (`fig3_interpretability.pdf`) by
+  (`fig1_results.pdf`: placement, placement by disease, the increment across every check, and
+  cohort size), the marker topography (`figA10_topography.pdf`) and net benefit
+  (`fig2_utility.pdf`) by `e17_paper_figure.py`; the per-patient deviation (`fig3_interpretability.pdf`) by
   `e28_interpretability_figure.py`; the montage map (`figA7_montages.pdf`) by `e29_montage_map.py`;
   placement by disease on the external cohorts (`figA8_external_placement.pdf`) and the acquisition
   stress test (`figA9_stress.pdf`) by `e36_revision_figures.py`.

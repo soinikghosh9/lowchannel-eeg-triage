@@ -199,9 +199,17 @@ PLACE_LABEL = {
 }
 
 
-#: Montages over a single lobe take that lobe's colour from panel (b); the rest are neutral grey.
-MONTAGE_REGION = {"r_temporal": "temporal", "b2": "temporal", "r_posterior": "posterior",
-                  "r_central": "central", "r_frontal": "frontal", "frontal1": "frontal"}
+#: Montages that carry a frontal-pole electrode (Fp1 or Fp2), the grouping the disease-specific
+#: result turns on. The full montage carries them too, but it is the reference and is drawn apart.
+#: The bilateral array's F3/F4 are not frontal-pole sites.
+HAS_FP = {"muse", "insight", "ganglion", "b1_ap", "r_frontal", "frontal1"}
+#: Placement colours. Kept apart from the contrast colours of the lower row (screening blue,
+#: dementia orange, MCI teal), so no hue means two things in one figure.
+C_NOFP, C_FP, C_FULL = "#4A5A66", "#87688F", "#B8BEC2"
+
+
+def _fp_colour(key):
+    return C_FULL if key == "b19" else (C_FP if key in HAS_FP else C_NOFP)
 
 
 def _region_shades(e25):
@@ -224,44 +232,186 @@ def _ink_or_white(color):
 
 
 def panel_placement(ax, e25, task="screening"):
-    """(a) Discrimination by electrode placement, at a fixed amplifier.
+    """(a) Discrimination by electrode placement in CAUEEG, at a fixed amplifier.
 
-    Ordered by AUC rather than by electrode count, because the ordering is the finding: the
-    montages carrying the fewest electrodes sit at the top and a seven-electrode frontal array
-    sits at the bottom. Commodity layouts are drawn in a second colour -- they are nearest-site
-    approximations of headset geometry on clinical hardware, so they belong on the axis but must
-    not read as measurements of those devices.
+    Ordered by AUC rather than by electrode count, because the ordering is the finding. Bars are
+    coloured by whether the montage carries a frontal-pole electrode, the grouping panel (b) turns
+    on. Returns the montage order, bottom to top, so panel (b) can share the rows.
     """
     rec = e25["tasks"][task]["placement"]
     items = [(k, v) for k, v in rec.items() if v.get("family") != "control" and k in PLACE_LABEL]
     items.sort(key=lambda kv: kv[1]["auc_eeg"])
     y = np.arange(len(items))
     vals = [v["auc_eeg"] for _, v in items]
-    shades, _ = _region_shades(e25)
-    grey = viz.SERIES[5]
-    cols = [shades[MONTAGE_REGION[k]] if k in MONTAGE_REGION else grey for k, _ in items]
+    cols = [_fp_colour(k) for k, _ in items]
     ax.barh(y, vals, color=cols, height=0.68)
     age = e25["tasks"][task]["auc_age"]
-    ax.axvline(age, color=viz.INK, ls="--", lw=1.0)
-    # The reference line spans the full height, so any in-axes legend crosses it and the shortest
-    # bars. Both annotations therefore sit outside the bars: the line is labelled above the panel,
-    # and the colour key goes below the x-axis.
-    # Values sit inside the right end of each bar, in white, so no label reaches the dashed age
-    # line. The bars are all long enough (shortest 0.675) to hold three decimals.
+    ax.axvline(age, color=viz.INK, ls="--", lw=0.9)
+    # Values inside the right end of each bar, so no label reaches the dashed age line; the
+    # shortest bar (0.675) still holds three decimals.
     for yi, v, c in zip(y, vals, cols):
-        ax.annotate(f"{v:.3f}", (v, yi), xytext=(-3, 0), textcoords="offset points",
-                    va="center", ha="right", fontsize=5.4, color=_ink_or_white(c), zorder=4)
-    # Age reference above the top bar, ending to the left of its line.
-    ax.annotate(f"age {age:.3f}", (age, len(items) - 1), xytext=(-3, 7),
-                textcoords="offset points", ha="right", va="bottom", fontsize=6.2,
-                color=viz.INK)
+        ax.annotate(f"{v:.3f}", (v, yi), xytext=(-2, 0), textcoords="offset points",
+                    va="center", ha="right", fontsize=5.2, color=_ink_or_white(c), zorder=4)
+    ax.annotate(f"age\n{age:.3f}", (age, len(items) - 1), xytext=(2, 1),
+                textcoords="offset points", ha="left", va="bottom", fontsize=5.6,
+                color=viz.INK, linespacing=1.0)
     ax.set_yticks(y)
-    ax.set_yticklabels([PLACE_LABEL[k] for k, _ in items], fontsize=6.2)
-    ax.set_xlim(0.62, 0.80)
-    ax.set_ylim(-0.7, len(items) + 0.5)
+    ax.set_yticklabels([PLACE_LABEL[k] for k, _ in items], fontsize=6.0)
+    ax.set_xlim(0.62, 0.82)
+    ax.set_ylim(-0.6, len(items) - 0.4)
     ax.set_xticks([0.65, 0.70, 0.75, 0.80])
-    ax.set_xlabel("AUC, EEG alone")
-    ax.set_title("a  Placement", loc="left", fontweight="bold")
+    ax.set_xticklabels(["0.65", "0.70", "0.75", "0.80"], fontsize=6.0)
+    ax.set_xlabel("AUC, EEG alone", fontsize=6.6)
+    ax.set_title("a  Placement, CAUEEG", loc="left", fontweight="bold", fontsize=7.6)
+    return [k for k, _ in items]
+
+
+def panel_by_disease(ax_ad, ax_ftd, e33, order):
+    """(b) Each montage against the full one on the external cohorts, by diagnosis.
+
+    Alzheimer's disease in transfer (the CAUEEG rule applied unchanged to three cohorts) and
+    frontotemporal dementia within cohort (CAUEEG holds 14 frontotemporal cases, too few to learn
+    from), pooled across cohorts by fixed-effect weighting. Rows follow panel (a).
+    """
+    for ax, con, reading, title in ((ax_ad, "AD", "transfer", "b  Alzheimer's"),
+                                    (ax_ftd, "FTD", "within", "frontotemporal")):
+        pooled = e33["contrasts"][con][reading]["vs_full_pooled"]
+        for yi, key in enumerate(order):
+            if key == "b19":
+                ax.plot(0, yi, "D", ms=2.8, color=C_FULL, mec=viz.INK, mew=0.4, zorder=3)
+                continue
+            v = pooled[f"{key}_vs_b19"]
+            col = _fp_colour(key)
+            ax.plot(v["ci"], [yi, yi], color=col, lw=1.1, solid_capstyle="round", zorder=2)
+            ax.plot(v["diff"], yi, "o", ms=3.2, color=col, mec="white", mew=0.4, zorder=3)
+        ax.axvline(0, color=viz.INK, lw=0.7, zorder=1)
+        ax.set_xlim(-0.28, 0.13)
+        ax.set_xticks([-0.2, -0.1, 0, 0.1])
+        ax.set_xticklabels(["−0.2", "−0.1", "0", "0.1"], fontsize=6.0)
+        ax.set_ylim(-0.6, len(order) - 0.4)
+        ax.tick_params(axis="y", left=False, labelleft=False)
+        ax.xaxis.grid(True, color=viz.FAINT, lw=0.5)
+        ax.set_axisbelow(True)
+        ax.set_title(title, loc="left", fontweight="bold", fontsize=7.6)
+    ax_ad.text(0.0, -0.20, "AUC difference from the full montage, external cohorts",
+               transform=ax_ad.transAxes, fontsize=6.6, ha="left", va="top", color=viz.INK)
+
+
+#: The increment over age across every check, top to bottom: (label, contrast, source).
+def _increment_rows(e13, e30, e34, e35):
+    t = e13["tasks"]
+    full = "b19|256|f32|full"
+    four = e34["tasks"]["screening"]["montages"]["b4"]["conditions"]
+    pooled = e35["pooled_increment"]
+
+    def rec(d, key="inc_margin", ci="inc_ci"):
+        return d[key], d[ci]
+
+    return [
+        ("CAUEEG screening", "screening", rec(t["screening"]["budgets"][full])),
+        ("CAUEEG dementia", "dementia", rec(t["dementia"]["budgets"][full])),
+        ("CAUEEG MCI", "mci", rec(t["mci"]["budgets"][full])),
+        ("no repeat visits", "screening", rec(e30["dedup"]["screening"]["dedup"])),
+        ("4 el., clean", "screening", rec(four["clean"]["device"])),
+        ("field, moderate", "screening", rec(four["field_moderate"]["device"])),
+        ("field, severe", "screening", rec(four["field_severe"]["device"])),
+        ("lost contact", "screening", rec(four["contact_bad"]["device"])),
+        ("mains, clinic-trained", "screening", rec(four["mains"]["clinic"])),
+        ("external, 19 el.", "dementia", (pooled["b19_excl_ds004504"]["diff"],
+                                          pooled["b19_excl_ds004504"]["ci"])),
+        ("external, 4 el.", "dementia", (pooled["b4_excl_ds004504"]["diff"],
+                                         pooled["b4_excl_ds004504"]["ci"])),
+    ]
+
+
+C_TASK = {"screening": C_SUB, "dementia": C_INC, "mci": C_DEEP}
+
+
+def panel_increment(ax, e13, e30, e34, e35):
+    """(c) What the recording adds beyond age, in every setting the paper tests."""
+    rows = _increment_rows(e13, e30, e34, e35)
+    y = np.arange(len(rows))[::-1]
+    for yi, (label, task, (est, ci)) in zip(y, rows):
+        col = C_TASK[task]
+        ax.plot(ci, [yi, yi], color=col, lw=1.1, solid_capstyle="round", zorder=2)
+        ax.plot(est, yi, "o", ms=3.2, color=col, mec="white", mew=0.4, zorder=3)
+    ax.axvline(0, color=viz.INK, lw=0.7, zorder=1)
+    # Group separators: CAUEEG and its leakage check, the simulated device, the external cohorts.
+    for yb in (y[3] - 0.5, y[8] - 0.5):
+        ax.axhline(yb, color=viz.FAINT, lw=0.6, zorder=0)
+    ax.set_yticks(y)
+    ax.set_yticklabels([r[0] for r in rows], fontsize=6.0)
+    ax.set_ylim(-0.6, len(rows) - 0.4)
+    ax.set_xlim(-0.09, 0.16)
+    ax.set_xticks([-0.05, 0, 0.05, 0.10, 0.15])
+    ax.set_xticklabels(["−0.05", "0", "0.05", "0.10", "0.15"], fontsize=6.0)
+    ax.xaxis.grid(True, color=viz.FAINT, lw=0.5)
+    ax.set_axisbelow(True)
+    ax.set_xlabel("AUC(EEG + age) − AUC(age)", fontsize=6.6)
+    ax.set_title("c  Increment over age", loc="left", fontweight="bold", fontsize=7.6)
+    from matplotlib.lines import Line2D
+    keys = [Line2D([0], [0], marker="o", color=C_TASK[t], lw=1.1, ms=3.0, label=lab)
+            for t, lab in (("screening", "screening"), ("dementia", "dementia"), ("mci", "MCI"))]
+    ax.legend(handles=keys, loc="upper right", frameon=False, fontsize=5.8, handlelength=1.3,
+              handletextpad=0.4, labelspacing=0.25, borderaxespad=0.1)
+
+
+def panel_cohort_size(ax, e20, e37):
+    """(d) How many recordings the increment needs, and what cohorts of 79-89 measure.
+
+    Curves: CAUEEG subsampled to n and cross-validated inside the subsample, 10th-90th
+    percentile of 25 draws. Points: each external cohort fitted and evaluated inside itself
+    (e37), on the dementia contrast, with its 95% interval -- the same reading as the curve.
+    """
+    from matplotlib.lines import Line2D
+
+    rows = [r for r in e20["rows"] if r["estimator"] == "eeg17"]
+    need = {}
+    for task, colour in (("screening", C_SUB), ("dementia", C_INC)):
+        r = sorted([x for x in rows if x["task"] == task], key=lambda x: x["n"])
+        n = [x["n"] for x in r]
+        ax.plot(n, [x["inc_mean"] for x in r], "-o", color=colour, lw=1.1, ms=1.8, zorder=3)
+        ax.fill_between(n, [x["inc_q"][0] for x in r], [x["inc_q"][1] for x in r],
+                        color=colour, alpha=0.16, lw=0, zorder=1)
+        need[task] = e20["thresholds"][f"{task}|eeg17"]["smallest_n_increment_reliably_positive"]
+    ax.set_xscale("log")
+    ax.set_xlim(35, 1500)
+    ylo, yhi = -0.17, 0.23
+    ax.set_ylim(ylo, yhi)
+    ax.axhline(0, color=viz.INK, lw=0.7, zorder=2)
+    for task, colour in (("screening", C_SUB), ("dementia", C_INC)):
+        # Stops short of the top edge, which carries the ds004504 marker and its label.
+        ax.axvline(need[task], ymax=0.86, color=colour, ls="--", lw=0.8, zorder=2)
+        ax.text(need[task] * 1.05, ylo + 0.008, f"n = {need[task]}", color=colour, fontsize=5.6,
+                ha="left", va="bottom")
+    # External cohorts: points with 95% intervals; ds004504, whose within-cohort age model is
+    # weak because its cases are younger, lies above the frame and is marked at the edge.
+    ext_keys = []
+    for cohort, marker in (("BrainLat", "s"), ("P-ADIC", "^")):
+        c = e37["cohorts"][cohort]
+        v = c["estimators"]["eeg17"]
+        x = c["n"]
+        ax.plot([x, x], v["inc_ci"], color=C_INC, lw=0.9, zorder=4)
+        ax.plot(x, v["inc_margin"], marker, ms=3.4, color="white", mec=C_INC, mew=1.0, zorder=5)
+        ext_keys.append(Line2D([0], [0], marker=marker, ls="", ms=3.4, color="white", mec=C_INC,
+                               mew=1.0, label=f"{cohort} ({x})"))
+    # ds004504 lies above the frame (its within-cohort age model is weak, the cases being younger):
+    # an arrowhead at the top edge, labelled beside it.
+    ds = e37["cohorts"]["ds004504"]
+    ax.plot(ds["n"], yhi - 0.006, "^", ms=3.4, color=C_INC, clip_on=False, zorder=5)
+    ax.text(ds["n"] * 1.12, yhi - 0.006,
+            f"ds004504 {ds['estimators']['eeg17']['inc_margin']:+.2f}",
+            fontsize=5.6, color=viz.INK, ha="left", va="center")
+    ax.legend(handles=ext_keys, loc="upper right", bbox_to_anchor=(1.0, 0.93), frameon=False,
+              fontsize=5.6, handlelength=1.0, handletextpad=0.4, borderaxespad=0.2,
+              labelspacing=0.3)
+    ax.set_xticks([40, 100, 300, 1000])
+    ax.set_xticklabels(["40", "100", "300", "1000"], fontsize=6.0)
+    ax.tick_params(axis="y", labelsize=6.0)
+    ax.set_xlabel("recordings, fitted and tested within cohort", fontsize=6.6)
+    ax.set_ylabel("increment over age", fontsize=6.6)
+    ax.set_title("d  Cohort size", loc="left", fontweight="bold", fontsize=7.6)
+    viz.hgrid(ax)
 
 
 def panel_topography(ax, e25):
@@ -346,20 +496,83 @@ def panel_mechanism(ax, e25):
 BODY_W = 5.5
 
 
-def figure_one(e25, e20, e19):
-    """Placement, its mechanism, and the cohort size the whole argument needs.
+def figure_one(e25, e20, e13, e30, e33, e34, e35, e37):
+    """The paper's results figure: placement in CAUEEG and by disease on the external cohorts
+    (top), the increment over age in every setting tested, and the cohort size it needs (bottom).
 
-    Drawn slightly wider than the text block so three panels fit without shrinking the montage
-    labels below legibility; the modest reduction on inclusion still leaves every label above 5pt,
-    and the printed height is no greater than the two-panel version it replaces.
+    Drawn at the text width, so every label reaches the page at the size set here.
     """
-    fig, axes = plt.subplots(1, 3, figsize=(5.95, 2.10),
-                             gridspec_kw={"width_ratios": [1.30, 1.02, 1.78]})
-    panel_placement(axes[0], e25)
-    panel_topography(axes[1], e25)
-    panel_complexity(axes[2], e20, e19)
-    fig.tight_layout(w_pad=0.9)
+    from matplotlib.gridspec import GridSpec
+    from matplotlib.lines import Line2D
+
+    fig = plt.figure(figsize=(BODY_W, 3.12))
+    gs = GridSpec(2, 1, figure=fig, height_ratios=[1.30, 1.0], hspace=0.74,
+                  left=0.185, right=0.985, top=0.94, bottom=0.115)
+    top = gs[0].subgridspec(1, 3, width_ratios=[1.30, 0.80, 0.80], wspace=0.10)
+    bot = gs[1].subgridspec(1, 2, width_ratios=[1.0, 1.0], wspace=0.34)
+    ax_a = fig.add_subplot(top[0])
+    ax_ad, ax_ftd = fig.add_subplot(top[1]), fig.add_subplot(top[2])
+    ax_c, ax_d = fig.add_subplot(bot[0]), fig.add_subplot(bot[1])
+
+    order = panel_placement(ax_a, e25)
+    panel_by_disease(ax_ad, ax_ftd, e33, order)
+    panel_increment(ax_c, e13, e30, e34, e35)
+    panel_cohort_size(ax_d, e20, e37)
+
+    place_keys = [Line2D([0], [0], marker="s", ls="", ms=4.5, color=C_NOFP,
+                         label="no frontal-pole electrode"),
+                  Line2D([0], [0], marker="s", ls="", ms=4.5, color=C_FP,
+                         label="carries Fp1 or Fp2"),
+                  Line2D([0], [0], marker="D", ls="", ms=3.4, color=C_FULL, mec=viz.INK, mew=0.4,
+                         label="full montage")]
+    fig.legend(handles=place_keys, ncol=3, loc="upper right", bbox_to_anchor=(0.99, 0.497),
+               frameon=False, fontsize=6.0, handletextpad=0.3, columnspacing=1.2)
     viz.save(fig, paths.FIGURES / "fig1_results")
+
+
+def _head(ax, strength, title, lo, hi):
+    """A top-down head with each 10-20 site shaded by its region's marker strength."""
+    from matplotlib.colors import Normalize
+    from matplotlib.patches import Circle
+    from eegbudget.montages import REGION
+
+    cmap, norm = plt.get_cmap("YlGnBu"), Normalize(lo, hi)
+    site_region = {ch: r for r, chans in REGION.items() for ch in chans}
+    ax.set_aspect("equal")
+    ax.set_xlim(-1.35, 1.35)
+    ax.set_ylim(-2.35, 1.45)
+    ax.axis("off")
+    ax.add_patch(Circle((0, 0), 1.16, fill=False, lw=1.0, edgecolor=viz.MUTED, zorder=2))
+    ax.plot([-0.16, 0, 0.16], [1.14, 1.38, 1.14], color=viz.MUTED, lw=1.0, zorder=2)
+    for name, (px, py) in viz.POS.items():
+        r = site_region.get(name)
+        ax.add_patch(Circle((px * 0.93, py * 0.93), 0.135,
+                            facecolor=cmap(norm(strength[r])) if r else viz.FAINT,
+                            edgecolor=viz.INK, lw=0.5, zorder=3))
+    for i, r in enumerate(sorted(strength, key=strength.get, reverse=True)):
+        ax.text(0, -1.45 - 0.24 * i, f"{r} {strength[r]:.3f}", ha="center", va="center",
+                fontsize=6.4, color=viz.INK)
+    ax.set_title(title, fontsize=7.4, fontweight="bold")
+
+
+def figure_topography(e25, e33):
+    """Where the six strongest markers discriminate, by scalp region, in CAUEEG and in each
+    external diagnosis. One colour scale across the three heads, so strengths compare directly.
+    """
+    mech = e25["mechanism"]
+    heads = [("CAUEEG, screening",
+              {r: float(np.mean([mech["per_feature"][f]["strength_by_region"][r]
+                                 for f in mech["top_features"]]))
+               for r in ("temporal", "posterior", "central", "frontal")}),
+             ("External, Alzheimer's", e33["topography"]["AD"]["top6_mean_strength_by_region"]),
+             ("External, frontotemporal",
+              e33["topography"]["FTD"]["top6_mean_strength_by_region"])]
+    vals = [v for _, s in heads for v in s.values()]
+    fig, axes = plt.subplots(1, 3, figsize=(BODY_W * 0.86, 2.05))
+    for ax, (title, s) in zip(axes, heads):
+        _head(ax, s, title, min(vals), max(vals))
+    fig.tight_layout(w_pad=0.6)
+    viz.save(fig, paths.FIGURES / "figA10_topography")
 
 
 def figure_samplesize(e20, e19):
@@ -437,16 +650,20 @@ def main():
     e21 = load("e21_clinical_utility.json")
     e11 = load("e11_deep_arm.json")
     e25 = load("e25_acquisition_design.json")
-    missing = [n for n, v in (("e13", e13), ("e19", e19), ("e20", e20), ("e21", e21)) if not v]
+    e30, e33 = load("e30_noverlap_leakage.json"), load("e33_external_placement.json")
+    e34, e35 = load("e34_acquisition_stress.json"), load("e35_external_transfer_all.json")
+    e37 = load("e37_external_within_increment.json")
+    needed = (("e13", e13), ("e19", e19), ("e20", e20), ("e21", e21), ("e25", e25), ("e30", e30),
+              ("e33", e33), ("e34", e34), ("e35", e35), ("e37", e37))
+    missing = [n for n, v in needed if not v]
     if missing:
         raise SystemExit(f"missing artefacts: {missing}")
-    if not e25:
-        raise SystemExit("missing artefacts: ['e25']")
-    figure_one(e25, e20, e19)
+    figure_one(e25, e20, e13, e30, e33, e34, e35, e37)
+    figure_topography(e25, e33)
     figure_margins(e13, e11, e19)
     figure_samplesize(e20, e19)
     figure_two(e21)
-    print(f"wrote {paths.FIGURES / 'fig1_results'}.pdf, "
+    print(f"wrote {paths.FIGURES / 'fig1_results'}.pdf, figA10_topography.pdf, "
           f"{paths.FIGURES / 'fig2_utility'}.pdf and {paths.FIGURES / 'figA5_margins'}.pdf")
 
 

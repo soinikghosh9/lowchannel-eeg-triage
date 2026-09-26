@@ -144,6 +144,9 @@ STAGES = [
     ("e35", ["experiments/e35_external_transfer_all.py"],
      "external operating point carried to all three external cohorts", False,
      "results/e35_external_transfer_all.json"),
+    ("e37", ["experiments/e37_external_within_increment.py"],
+     "each external cohort's increment over age, fitted and tested within the cohort", False,
+     "results/e37_external_within_increment.json"),
     # Figure 1 is a diagrams.net drawing (outputs/figures/fig1_framework.drawio); e29 also
     # draws the montage strip it embeds.
     ("e29", ["experiments/e29_montage_map.py"],

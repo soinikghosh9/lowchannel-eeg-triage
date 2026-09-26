@@ -36,6 +36,8 @@ MONTAGES = [("r_temporal", "temporal (4)", TP), ("b4", "temporo-occipital (4)", 
 #: Montages that carry a frontal-pole electrode (Fp1 or Fp2). The bilateral array's F3/F4 are not
 #: frontal-pole sites, and it behaves like the montages without one.
 HAS_FRONTAL = {"muse", "insight", "ganglion", "b1_ap", "r_frontal", "frontal1"}
+#: The frontal-pole colours of Figure 2's placement row, so the grouping reads the same in both.
+C_NOFP, C_FP = "#4A5A66", "#87688F"
 
 
 def _load(name):
@@ -45,7 +47,7 @@ def _load(name):
 def _forest(ax, rows, title, xlim):
     y = np.arange(len(rows))[::-1]
     for yi, (label, est, lo, hi, frontal) in zip(y, rows):
-        col = viz.SERIES[2] if frontal else viz.SERIES[0]
+        col = C_FP if frontal else C_NOFP
         ax.plot([lo, hi], [yi, yi], color=col, lw=1.4, solid_capstyle="round", zorder=2)
         ax.plot(est, yi, "o", ms=4.2, color=col, mec="white", mew=0.6, zorder=3)
     ax.axvline(0, color=viz.INK, lw=0.8, zorder=1)
@@ -73,9 +75,9 @@ def figure_external(e33):
             rows.append((label, v["diff"], v["ci"][0], v["ci"][1], key in HAS_FRONTAL))
         _forest(ax, rows, title, (-0.30, 0.16))
     axes[1].tick_params(labelleft=False)
-    keys = [Line2D([0], [0], marker="o", color=viz.SERIES[0], lw=1.4, ms=4,
+    keys = [Line2D([0], [0], marker="o", color=C_NOFP, lw=1.4, ms=4,
                    label="no frontal-pole electrode"),
-            Line2D([0], [0], marker="o", color=viz.SERIES[2], lw=1.4, ms=4,
+            Line2D([0], [0], marker="o", color=C_FP, lw=1.4, ms=4,
                    label="carries Fp1 or Fp2")]
     fig.legend(handles=keys, ncol=2, loc="lower center", bbox_to_anchor=(0.55, 0.0),
                frameon=False, fontsize=7.2)

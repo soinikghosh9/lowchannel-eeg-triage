@@ -31,6 +31,7 @@ import json
 import sys
 import time
 import warnings
+import zlib
 from pathlib import Path
 
 import numpy as np
@@ -46,9 +47,11 @@ BUDGET = "b19|256|f32|full"
 TASKS = {"screening": {"AD", "FTD", "MCI", "VAD"},
          "dementia": {"AD", "FTD", "VAD"}}
 
-#: Subsample sizes. The low end brackets EasyCog (69 participants, 34 in its smaller class); the
-#: high end is the full contrast.
-SIZES = [40, 60, 80, 120, 200, 350, 600, 1000, None]
+#: Subsample sizes. The low end brackets EasyCog (69 participants, 34 in its smaller class); 69, 79
+#: and 89 are the sizes of EasyCog, BrainLat (79 with age) and P-ADIC, so each external cohort's
+#: measured increment can be read against CAUEEG draws of its own size. The high end is the full
+#: contrast.
+SIZES = [40, 60, 69, 79, 89, 120, 200, 350, 600, 1000, None]
 N_DRAWS = 25
 FOLDS, REPEATS = 5, 3
 MIN_EPV = 10.0
@@ -88,7 +91,9 @@ def sweep(X_full, y_full, age_full, task):
         for size in SIZES:
             if size is not None and size >= len(y_full):
                 continue          # would clamp to the full cohort, which `None` already covers
-            rng = np.random.default_rng(abs(hash((task, est, size or 0))) % (2 ** 32))
+            # A stable seed per (task, estimator, size). Python's hash() of a string changes from
+            # process to process, so it cannot seed a result that must reproduce.
+            rng = np.random.default_rng(zlib.crc32(f"{task}|{est}|{size or 0}".encode()))
             draws, skipped = [], 0
             for _ in range(N_DRAWS if size is not None else 1):
                 ix = _subsample(y_full, size, rng)

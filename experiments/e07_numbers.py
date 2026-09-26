@@ -872,6 +872,13 @@ def complexity(m, e20):
             worst = min(small, key=lambda r: r["inc_mean"])
             m[f"IncAtSmall{tag}"] = sgn3(worst["inc_mean"])
             m[f"NAtSmall{tag}"] = str(worst["n"])
+    # At EasyCog's size, 69, for both estimators: its one adequately powered arm is the
+    # three-feature index, so the text quotes both.
+    for est, etag in (("eeg17", "Full"), ("slow3", "Slow")):
+        at = [r for r in rows if r["task"] == "screening" and r["estimator"] == est
+              and r["n"] == 69]
+        if at:
+            m[f"IncAt69Screen{etag}"] = sgn3(at[0]["inc_mean"])
     scr = th.get("screening|eeg17", {})
     m["IncFullScreen"] = sgn3(scr.get("inc_at_full_cohort"))
     m["ComplexitySentence"] = (
@@ -1265,6 +1272,20 @@ def revision(m, e30, e33, e34, e35, e31=None):
             m[f"RevPooledInc{b}"], m[f"RevPooledInc{b}CI"] = sgn3(p["diff"]), ci(*p["ci"])
 
 
+def within_external(m, e37):
+    """Each external cohort's increment, fitted and evaluated inside the cohort (e37)."""
+    if not e37:
+        return
+    for c, tag in (("BrainLat", "BL"), ("P-ADIC", "PA"), ("ds004504", "DS")):
+        rec = e37["cohorts"].get(c)
+        if not rec:
+            continue
+        v = rec["estimators"]["eeg17"]
+        m[f"WithinInc{tag}"] = sgn3(v["inc_margin"])
+        m[f"WithinInc{tag}CI"] = ci(*v["inc_ci"])
+        m[f"WithinAgeCV{tag}"] = f3(rec["auc_age_cv"])
+
+
 def check_recorded(m):
     """Without the manuscript: compare each recomputed quantity with the value the paper prints."""
     if not VALUES.exists():
@@ -1341,6 +1362,7 @@ def main():
     revision(m, load("e30_noverlap_leakage.json"), load("e33_external_placement.json"),
              load("e34_acquisition_stress.json"), load("e35_external_transfer_all.json"),
              load("e31_external_extract.json"))
+    within_external(m, load("e37_external_within_increment.json"))
 
     # ---- verify rather than emit -------------------------------------------------------------
     import argparse
