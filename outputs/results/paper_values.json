@@ -172,7 +172,7 @@
     "value": "0.786"
   },
   "BalAccAgeDem": {
-    "count": 28,
+    "count": 27,
     "value": "0.74"
   },
   "BalAccAgeMCI": {
@@ -192,15 +192,15 @@
     "value": "0.72"
   },
   "BalAccBothScreen": {
-    "count": 7,
+    "count": 5,
     "value": "0.77"
   },
   "BalAccEEGDem": {
-    "count": 28,
+    "count": 27,
     "value": "0.74"
   },
   "BalAccEEGMCI": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "BalAccEEGScreen": {
@@ -224,7 +224,7 @@
     "value": "ShallowFBCSPNet"
   },
   "BestRegion": {
-    "count": 13,
+    "count": 12,
     "value": "temporal"
   },
   "BrierBothDem": {
@@ -252,11 +252,11 @@
     "value": "1.00"
   },
   "CalSlopeBothMCI": {
-    "count": 3,
+    "count": 1,
     "value": "0.93"
   },
   "CalSlopeEEGDem": {
-    "count": 5,
+    "count": 4,
     "value": "0.92"
   },
   "CalSlopeEEGMCI": {
@@ -312,11 +312,11 @@
     "value": "+0.025"
   },
   "DesignDelta02": {
-    "count": 34,
+    "count": 33,
     "value": "0.02"
   },
   "DesignDelta03": {
-    "count": 68,
+    "count": 67,
     "value": "0.03"
   },
   "DesignDelta04": {
@@ -324,11 +324,11 @@
     "value": "0.04"
   },
   "DesignDelta05": {
-    "count": 33,
+    "count": 31,
     "value": "0.05"
   },
   "DesignDelta06": {
-    "count": 31,
+    "count": 30,
     "value": "0.06"
   },
   "DesignDelta08": {
@@ -344,7 +344,7 @@
     "value": "210"
   },
   "DesignN06": {
-    "count": 4,
+    "count": 3,
     "value": "150"
   },
   "DigitFour12812Screen": {
@@ -392,7 +392,7 @@
     "value": "0.749"
   },
   "DigitFour6412Screen": {
-    "count": 4,
+    "count": 3,
     "value": "0.740"
   },
   "DigitFour648Screen": {
@@ -608,7 +608,7 @@
     "value": "0.723"
   },
   "ExtBothFull": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "ExtEEGFour": {
@@ -624,7 +624,7 @@
     "value": "0.809"
   },
   "ExtNormFull": {
-    "count": 2,
+    "count": 1,
     "value": "0.856"
   },
   "ExtOpGranularity": {
@@ -664,7 +664,7 @@
     "value": "0.64"
   },
   "ExtSensEEGFull": {
-    "count": 5,
+    "count": 4,
     "value": "0.83"
   },
   "ExtSensNormFour": {
@@ -708,7 +708,7 @@
     "value": "0.51"
   },
   "F1BothDemFive": {
-    "count": 3,
+    "count": 2,
     "value": "0.29"
   },
   "F1BothDemTen": {
@@ -716,7 +716,7 @@
     "value": "0.46"
   },
   "F1BothDemTwenty": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "F1BothMCIFive": {
@@ -748,7 +748,7 @@
     "value": "0.25"
   },
   "F1EEGMCIFive": {
-    "count": 11,
+    "count": 8,
     "value": "0.17"
   },
   "F1EEGMCITen": {
@@ -783,17 +783,9 @@
     "count": 2,
     "value": "0.12"
   },
-  "F1NormMCITen": {
-    "count": 1,
-    "value": "0.20"
-  },
   "F1NormMCITwenty": {
     "count": 2,
     "value": "0.30"
-  },
-  "F1NormScreenFive": {
-    "count": 1,
-    "value": "0.16"
   },
   "FlagAgeDemFive": {
     "count": 1,
@@ -956,7 +948,7 @@
     "value": "+0.041"
   },
   "IncSpan": {
-    "count": 11,
+    "count": 10,
     "value": "0.037"
   },
   "LRnegAgeDem": {
@@ -1055,14 +1047,6 @@
     "count": 1,
     "value": "-0.063"
   },
-  "MechAperiodicExponentFrontal": {
-    "count": 1,
-    "value": "0.104"
-  },
-  "MechAperiodicExponentTemporal": {
-    "count": 1,
-    "value": "0.185"
-  },
   "MechAsymmetryAlphaFrontal": {
     "count": 5,
     "value": "0.028"
@@ -1072,7 +1056,7 @@
     "value": "0.076"
   },
   "MechHjorthComplexityFrontal": {
-    "count": 3,
+    "count": 2,
     "value": "0.021"
   },
   "MechHjorthMobilityFrontal": {
@@ -1091,10 +1075,6 @@
     "count": 2,
     "value": "0.243"
   },
-  "MechPdrProminenceFrontal": {
-    "count": 1,
-    "value": "0.104"
-  },
   "MechPdrProminenceTemporal": {
     "count": 4,
     "value": "0.080"
@@ -1107,12 +1087,8 @@
     "count": 1,
     "value": "0.081"
   },
-  "MechRelBetaFrontal": {
-    "count": 1,
-    "value": "0.097"
-  },
   "MechRelBetaTemporal": {
-    "count": 2,
+    "count": 1,
     "value": "0.172"
   },
   "MechRelDeltaFrontal": {
@@ -1128,24 +1104,8 @@
     "value": "0.036"
   },
   "MechRelGammaTemporal": {
-    "count": 11,
+    "count": 10,
     "value": "0.037"
-  },
-  "MechRelThetaFrontal": {
-    "count": 1,
-    "value": "0.150"
-  },
-  "MechRelThetaTemporal": {
-    "count": 1,
-    "value": "0.207"
-  },
-  "MechSlowingRatioFrontal": {
-    "count": 1,
-    "value": "0.078"
-  },
-  "MechSlowingRatioTemporal": {
-    "count": 1,
-    "value": "0.166"
   },
   "MechSpectralEdge95Frontal": {
     "count": 5,
@@ -1172,12 +1132,8 @@
     "value": "0.101"
   },
   "MechThetaAlphaRatioFrontal": {
-    "count": 3,
-    "value": "0.130"
-  },
-  "MechThetaAlphaRatioTemporal": {
     "count": 1,
-    "value": "0.170"
+    "value": "0.130"
   },
   "NAgeTrain": {
     "count": 3,
@@ -1204,7 +1160,7 @@
     "value": "783"
   },
   "NDroppedNoAge": {
-    "count": 27,
+    "count": 25,
     "value": "504"
   },
   "NForPowerDem": {
@@ -1260,7 +1216,7 @@
     "value": "0.95"
   },
   "NPVBothScreenTwenty": {
-    "count": 5,
+    "count": 4,
     "value": "0.92"
   },
   "NPVEEGDemTwenty": {
@@ -1268,7 +1224,7 @@
     "value": "0.91"
   },
   "NPVEEGMCITen": {
-    "count": 3,
+    "count": 1,
     "value": "0.93"
   },
   "NPVEEGMCITwenty": {
@@ -1296,11 +1252,11 @@
     "value": "0.82"
   },
   "NPVNormScreenTen": {
-    "count": 3,
+    "count": 1,
     "value": "0.93"
   },
   "NPVNormScreenTwenty": {
-    "count": 7,
+    "count": 5,
     "value": "0.85"
   },
   "NPrimaryAgree": {
@@ -1320,7 +1276,7 @@
     "value": "0.403"
   },
   "OpDementiaAgeFourDSpec": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpDementiaAgeFourSens": {
@@ -1332,7 +1288,7 @@
     "value": "0.403"
   },
   "OpDementiaAgeFullDSpec": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpDementiaAgeFullSens": {
@@ -1348,11 +1304,11 @@
     "value": "-0.01"
   },
   "OpDementiaBothFourSens": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "OpDementiaBothFullAUC": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "OpDementiaBothFullDSpec": {
@@ -1372,7 +1328,7 @@
     "value": "-0.04"
   },
   "OpDementiaEEGFourSens": {
-    "count": 17,
+    "count": 16,
     "value": "0.75"
   },
   "OpDementiaEEGFullAUC": {
@@ -1384,7 +1340,7 @@
     "value": "+0.03"
   },
   "OpDementiaEEGFullSens": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "OpDementiaNormFourAUC": {
@@ -1400,11 +1356,11 @@
     "value": "0.64"
   },
   "OpDementiaNormFullAUC": {
-    "count": 2,
+    "count": 1,
     "value": "0.856"
   },
   "OpDementiaNormFullDSpec": {
-    "count": 6,
+    "count": 5,
     "value": "+0.17"
   },
   "OpDementiaNormFullSens": {
@@ -1412,7 +1368,7 @@
     "value": "0.71"
   },
   "OpMaxDevAge": {
-    "count": 31,
+    "count": 30,
     "value": "0.06"
   },
   "OpMaxDevBoth": {
@@ -1424,7 +1380,7 @@
     "value": "0.14"
   },
   "OpMaxDevNorm": {
-    "count": 11,
+    "count": 8,
     "value": "0.17"
   },
   "OpScreeningAgeFourAUC": {
@@ -1432,7 +1388,7 @@
     "value": "0.403"
   },
   "OpScreeningAgeFourDSpec": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpScreeningAgeFourSens": {
@@ -1444,7 +1400,7 @@
     "value": "0.403"
   },
   "OpScreeningAgeFullDSpec": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpScreeningAgeFullSens": {
@@ -1464,7 +1420,7 @@
     "value": "0.59"
   },
   "OpScreeningBothFullAUC": {
-    "count": 4,
+    "count": 3,
     "value": "0.740"
   },
   "OpScreeningBothFullDSpec": {
@@ -1488,7 +1444,7 @@
     "value": "0.73"
   },
   "OpScreeningEEGFullAUC": {
-    "count": 2,
+    "count": 1,
     "value": "0.854"
   },
   "OpScreeningEEGFullDSpec": {
@@ -1496,7 +1452,7 @@
     "value": "-0.01"
   },
   "OpScreeningEEGFullSens": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "OpScreeningNormFourAUC": {
@@ -1504,15 +1460,15 @@
     "value": "0.802"
   },
   "OpScreeningNormFourDSpec": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpScreeningNormFourSens": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "OpScreeningNormFullAUC": {
-    "count": 2,
+    "count": 1,
     "value": "0.849"
   },
   "OpScreeningNormFullDSpec": {
@@ -1524,7 +1480,7 @@
     "value": "0.71"
   },
   "OpWorstAgeOver": {
-    "count": 17,
+    "count": 16,
     "value": "+0.06"
   },
   "OpWorstAgeUnder": {
@@ -1548,7 +1504,7 @@
     "value": "-0.14"
   },
   "OpWorstNormOver": {
-    "count": 6,
+    "count": 5,
     "value": "+0.17"
   },
   "OpWorstNormUnder": {
@@ -1592,7 +1548,7 @@
     "value": "$P<0.0001$"
   },
   "PPVAgeDemFive": {
-    "count": 10,
+    "count": 9,
     "value": "0.15"
   },
   "PPVAgeDemTwenty": {
@@ -1600,7 +1556,7 @@
     "value": "0.46"
   },
   "PPVAgeMCIFive": {
-    "count": 5,
+    "count": 3,
     "value": "0.13"
   },
   "PPVAgeMCITen": {
@@ -1624,7 +1580,7 @@
     "value": "0.43"
   },
   "PPVBothDemFive": {
-    "count": 3,
+    "count": 2,
     "value": "0.18"
   },
   "PPVBothDemTen": {
@@ -1643,12 +1599,8 @@
     "count": 2,
     "value": "0.26"
   },
-  "PPVBothScreenFive": {
-    "count": 1,
-    "value": "0.16"
-  },
   "PPVBothScreenTen": {
-    "count": 3,
+    "count": 2,
     "value": "0.29"
   },
   "PPVBothScreenTwenty": {
@@ -1656,7 +1608,7 @@
     "value": "0.48"
   },
   "PPVEEGDemFive": {
-    "count": 10,
+    "count": 9,
     "value": "0.15"
   },
   "PPVEEGDemTwenty": {
@@ -1667,16 +1619,12 @@
     "count": 4,
     "value": "0.11"
   },
-  "PPVEEGMCITen": {
-    "count": 1,
-    "value": "0.20"
-  },
   "PPVEEGMCITwenty": {
     "count": 1,
     "value": "0.36"
   },
   "PPVEEGScreenFive": {
-    "count": 5,
+    "count": 3,
     "value": "0.13"
   },
   "PPVEEGScreenTen": {
@@ -1704,7 +1652,7 @@
     "value": "0.08"
   },
   "PPVNormMCITen": {
-    "count": 10,
+    "count": 9,
     "value": "0.15"
   },
   "PPVNormMCITwenty": {
@@ -1712,7 +1660,7 @@
     "value": "0.28"
   },
   "PPVNormScreenFive": {
-    "count": 14,
+    "count": 13,
     "value": "0.10"
   },
   "PPVNormScreenTen": {
@@ -1772,7 +1720,7 @@
     "value": "+0.037"
   },
   "PTestTemporalFrontalDem": {
-    "count": 4,
+    "count": 3,
     "value": "+0.054"
   },
   "PTestTemporalFrontalScreen": {
@@ -1980,7 +1928,7 @@
     "value": "0.820"
   },
   "PlaceTemporalScreen": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "PlaceTwoDem": {
@@ -2128,7 +2076,7 @@
     "value": "0.813"
   },
   "PrepNoICAFourScreen": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "PrepNoICAFullDem": {
@@ -2152,7 +2100,7 @@
     "value": "0.729"
   },
   "RegionTemporalAUC": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "RevADB2Bipolar": {
@@ -2164,7 +2112,7 @@
     "value": "[+0.012, +0.141]"
   },
   "RevADB2BipolarHolm": {
-    "count": 3,
+    "count": 2,
     "value": "0.18"
   },
   "RevADB2Full": {
@@ -2208,7 +2156,7 @@
     "value": "16\\,mm"
   },
   "RevDedupDem": {
-    "count": 3,
+    "count": 2,
     "value": "+0.068"
   },
   "RevDedupDemCI": {
@@ -2296,7 +2244,7 @@
     "value": "0.601"
   },
   "RevExt3_BrainLat_b19_normative_spec": {
-    "count": 7,
+    "count": 5,
     "value": "0.84"
   },
   "RevExt3_BrainLat_b4_age_transported_auc": {
@@ -2336,7 +2284,7 @@
     "value": "0.668"
   },
   "RevExt3_PADIC_b19_age_transported_spec": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "RevExt3_PADIC_b19_eeg+age_auc": {
@@ -2344,7 +2292,7 @@
     "value": "0.736"
   },
   "RevExt3_PADIC_b19_eeg+age_spec": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "RevExt3_PADIC_b19_eeg_auc": {
@@ -2360,7 +2308,7 @@
     "value": "0.653"
   },
   "RevExt3_PADIC_b19_normative_spec": {
-    "count": 28,
+    "count": 27,
     "value": "0.74"
   },
   "RevExt3_PADIC_b4_age_transported_auc": {
@@ -2368,7 +2316,7 @@
     "value": "0.668"
   },
   "RevExt3_PADIC_b4_age_transported_spec": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "RevExt3_PADIC_b4_eeg+age_auc": {
@@ -2464,15 +2412,15 @@
     "value": "4.7"
   },
   "RevIncBrainLatb19": {
-    "count": 4,
+    "count": 3,
     "value": "+0.054"
   },
   "RevIncBrainLatb19CI": {
-    "count": 2,
+    "count": 1,
     "value": "[-0.021, +0.130]"
   },
   "RevIncBrainLatb4": {
-    "count": 3,
+    "count": 2,
     "value": "+0.091"
   },
   "RevIncBrainLatb4CI": {
@@ -2480,15 +2428,15 @@
     "value": "[-0.009, +0.192]"
   },
   "RevIncPADICb19": {
-    "count": 3,
+    "count": 2,
     "value": "+0.068"
   },
   "RevIncPADICb19CI": {
-    "count": 2,
+    "count": 1,
     "value": "[-0.037, +0.173]"
   },
   "RevIncPADICb4": {
-    "count": 2,
+    "count": 1,
     "value": "+0.057"
   },
   "RevIncPADICb4CI": {
@@ -2780,11 +2728,11 @@
     "value": "0.739"
   },
   "RevStressTab_b19_contact_drop_clinic": {
-    "count": 4,
+    "count": 3,
     "value": "0.740"
   },
   "RevStressTab_b19_contact_drop_device": {
-    "count": 4,
+    "count": 3,
     "value": "0.740"
   },
   "RevStressTab_b19_displace100_device": {
@@ -2824,7 +2772,7 @@
     "value": "0.739"
   },
   "RevStressTab_b19_motion6_device": {
-    "count": 4,
+    "count": 3,
     "value": "0.740"
   },
   "RevStressTab_b19_noise10_device": {
@@ -2912,7 +2860,7 @@
     "value": "0.753"
   },
   "RevStressTab_b4_displace50_device": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "RevStressTab_b4_field_moderate_clinic": {
@@ -3012,7 +2960,7 @@
     "value": "0.748"
   },
   "RevTab_AD_BrainLat_b19": {
-    "count": 6,
+    "count": 5,
     "value": "0.751"
   },
   "RevTab_AD_BrainLat_b1_ap": {
@@ -3455,14 +3403,6 @@
     "count": 1,
     "value": "0.235"
   },
-  "RhoDemFour": {
-    "count": 1,
-    "value": "0.16"
-  },
-  "RhoDemFull": {
-    "count": 1,
-    "value": "0.16"
-  },
   "RhoDemOne": {
     "count": 8,
     "value": "0.14"
@@ -3484,11 +3424,11 @@
     "value": "0.40"
   },
   "RhoScreenFull": {
-    "count": 3,
+    "count": 2,
     "value": "0.29"
   },
   "RhoScreenOne": {
-    "count": 3,
+    "count": 2,
     "value": "0.29"
   },
   "SensAgeDem": {
@@ -3504,11 +3444,11 @@
     "value": "0.61"
   },
   "SensBothDem": {
-    "count": 5,
+    "count": 4,
     "value": "0.83"
   },
   "SensBothMCI": {
-    "count": 6,
+    "count": 5,
     "value": "0.65"
   },
   "SensBothScreen": {
@@ -3516,7 +3456,7 @@
     "value": "0.73"
   },
   "SensDirect": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "SensEEGDem": {
@@ -3592,11 +3532,11 @@
     "value": "0.28"
   },
   "SensTGA": {
-    "count": 11,
+    "count": 8,
     "value": "0.17"
   },
   "SensVAD": {
-    "count": 13,
+    "count": 12,
     "value": "0.76"
   },
   "SpanDigitFourDem": {
@@ -3640,7 +3580,7 @@
     "value": "0.57"
   },
   "SpecAnchoredSD": {
-    "count": 11,
+    "count": 8,
     "value": "0.17"
   },
   "SpecBothDem": {
@@ -3692,7 +3632,7 @@
     "value": "0.82"
   },
   "SpecNormativeFull": {
-    "count": 5,
+    "count": 4,
     "value": "0.83"
   },
   "SpecTarget": {
@@ -3796,7 +3736,7 @@
     "value": "[-0.082, +0.172]"
   },
   "WorstRegion": {
-    "count": 31,
+    "count": 30,
     "value": "frontal"
   },
   "YoudenAgeDem": {
@@ -3812,7 +3752,7 @@
     "value": "0.41"
   },
   "YoudenBothDem": {
-    "count": 18,
+    "count": 17,
     "value": "0.63"
   },
   "YoudenBothScreen": {
