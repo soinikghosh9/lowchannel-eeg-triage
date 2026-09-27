@@ -1046,7 +1046,7 @@ def preprocessing(m, e27):
     """The preprocessing axis: what a device that cannot run ICA gives up."""
     if not e27:
         return
-    for task, key in (("screening", "Screen"), ("dementia", "Dem")):
+    for task, key in (("screening", "Screen"), ("dementia", "Dem"), ("mci", "MCI")):
         rec = e27.get("tasks", {}).get(task)
         if not rec:
             continue

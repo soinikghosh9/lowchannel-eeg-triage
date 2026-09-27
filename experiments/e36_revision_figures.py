@@ -62,7 +62,7 @@ def _forest(ax, rows, title, xlim):
 
 
 def figure_external(e33):
-    fig, axes = plt.subplots(1, 2, figsize=(5.9, 2.9), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(5.9, 2.55), sharey=True)
     for ax, (con, reading, title, sub) in zip(axes, (
             ("AD", "transfer", "a  Alzheimer's disease", "CAUEEG rule transferred, 3 cohorts pooled"),
             ("FTD", "within", "b  Frontotemporal dementia", "within-cohort CV, 2 cohorts pooled"))):
@@ -92,24 +92,25 @@ FAULTS = [("noise1", "electrode noise 1 µV"), ("noise2", "noise 2 µV"), ("nois
           ("displace50", "misplacement, half-site"), ("displace100", "misplacement, full site"),
           ("short12", "48 s of signal"), ("short6", "24 s"), ("short3", "12 s"),
           ("field_moderate", "field, moderate"), ("field_severe", "field, severe")]
-ARMS = [("b19", "device", "19 electrodes, device-trained", viz.SERIES[5], -0.22),
+# Three series per fault row; the offsets keep their markers apart at the compact row height.
+ARMS = [("b19", "device", "19 electrodes, device-trained", viz.SERIES[5], -0.25),
         ("b4", "device", "4 electrodes, device-trained", viz.SERIES[0], 0.0),
-        ("b4", "clinic", "4 electrodes, clinic-trained", viz.SERIES[2], 0.22)]
+        ("b4", "clinic", "4 electrodes, clinic-trained", viz.SERIES[2], 0.25)]
 
 
 def figure_stress(e34):
     t = e34["tasks"]["screening"]["montages"]
-    fig, axes = plt.subplots(1, 2, figsize=(5.9, 3.9), sharey=True,
+    fig, axes = plt.subplots(1, 2, figsize=(5.9, 3.35), sharey=True,
                              gridspec_kw={"width_ratios": [1, 1]})
     y = np.arange(len(FAULTS))[::-1]
     for mont, reg, label, col, off in ARMS:
         for yi, (key, _) in zip(y, FAULTS):
             v = t[mont]["conditions"][key][reg]
             axes[0].plot(v["d_auc_eeg_ci"], [yi + off] * 2, color=col, lw=1.2, zorder=2)
-            axes[0].plot(v["d_auc_eeg_vs_clean"], yi + off, "o", ms=3.4, color=col,
+            axes[0].plot(v["d_auc_eeg_vs_clean"], yi + off, "o", ms=3.0, color=col,
                          mec="white", mew=0.5, zorder=3)
             axes[1].plot(v["inc_ci"], [yi + off] * 2, color=col, lw=1.2, zorder=2)
-            axes[1].plot(v["inc_margin"], yi + off, "o", ms=3.4, color=col,
+            axes[1].plot(v["inc_margin"], yi + off, "o", ms=3.0, color=col,
                          mec="white", mew=0.5, zorder=3)
     clean = t["b4"]["conditions"]["clean"]["device"]["inc_margin"]
     axes[1].axvline(clean, color=viz.MUTED, lw=0.8, ls=":", zorder=1)

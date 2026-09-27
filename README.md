@@ -84,7 +84,7 @@ python experiments/e07_numbers.py
 ```
 
 recomputes every quantity the paper states from `outputs/results/*.json` and compares it with the
-value the paper prints, recorded in `outputs/results/paper_values.json` (945 quantities).
+value the paper prints, recorded in `outputs/results/paper_values.json` (956 quantities).
 
 ## Notes
 

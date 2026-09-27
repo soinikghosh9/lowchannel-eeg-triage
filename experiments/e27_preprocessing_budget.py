@@ -6,11 +6,10 @@ question is not academic: if the increment survives without artefact removal, th
 recommendation stands as written; if it does not, preprocessing is the binding constraint and the
 electrode count matters less than it appears.
 
-The comparison is paired and complete-case. Eighty of the 1,200 screening participants have no
-no-ICA counterpart, because the no-ICA harmoniser only processes recordings that exist in the
-parent ICA cache and those eighty were recovered into this repository later. They are all vascular
-dementia, so dropping them changes the case mix; both arms are therefore scored on the same
-surviving participants and the absolute AUCs are not comparable with the headline cohort.
+The comparison is paired and complete-case: a participant without a no-ICA counterpart is dropped
+from every arm, so all arms are scored on the same people. Since the no-ICA arm was re-extracted for
+the whole cohort, none is dropped, and the ICA column reproduces the headline AUCs. All three CAUEEG
+contrasts are scored, as in the margin table.
 
 One detail makes this a fair test of preprocessing alone. The no-ICA recordings reuse the sample
 offsets the ICA arm selected rather than re-running artefact rejection. With artefact removal
@@ -34,7 +33,8 @@ from eegbudget import evaluate as ev  # noqa: E402
 from eegbudget import paths, spine  # noqa: E402
 
 COHORT = "CAUEEG"
-TASKS = {"screening": {"AD", "FTD", "MCI", "VAD"}, "dementia": {"AD", "FTD", "VAD"}}
+TASKS = {"screening": {"AD", "FTD", "MCI", "VAD"}, "dementia": {"AD", "FTD", "VAD"},
+         "mci": {"MCI"}}
 MONTAGES = ["b19", "b4"]
 ARMS = ["full", "noica", "emgfree"]
 
