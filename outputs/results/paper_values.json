@@ -224,7 +224,7 @@
     "value": "ShallowFBCSPNet"
   },
   "BestRegion": {
-    "count": 12,
+    "count": 13,
     "value": "temporal"
   },
   "BrierBothDem": {
@@ -1184,7 +1184,7 @@
     "value": "350"
   },
   "NNeededScreenSlow": {
-    "count": 11,
+    "count": 10,
     "value": "200"
   },
   "NPVAgeDemTwenty": {
