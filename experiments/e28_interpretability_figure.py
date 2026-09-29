@@ -81,6 +81,32 @@ def main():
     axes[1].set_title("b  The largest deviation, against controls", loc="left",
                       fontweight="bold")
 
+    # Keys, so each panel reads without the caption. (a) colours and shading; (b) the control
+    # scatter, the age-expected mean and its bands. The patient label moves left of its marker to
+    # leave the upper right for the key.
+    from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
+    from matplotlib.legend_handler import HandlerTuple
+    shown = {abs(v) >= 2.0 for v in z[np.argsort(np.where(np.isfinite(z), np.abs(z), -np.inf))[::-1][:9]]}
+    bar_keys = [Patch(facecolor=viz.ABNORMAL, label="|z| ≥ 2")] if True in shown else []
+    if False in shown:
+        bar_keys.append(Patch(facecolor=viz.BORDERLINE, label="1 ≤ |z| < 2"))
+    bar_keys.append(Patch(facecolor=viz.ABNORMAL, alpha=0.12, label="shaded: |z| > 2"))
+    axes[0].legend(handles=bar_keys, loc="upper left", frameon=False, fontsize=7.0,
+                   handlelength=1.1, handletextpad=0.4, borderaxespad=0.2, labelspacing=0.3)
+    for t in axes[1].texts:
+        if t.get_text() == "this patient":
+            t.xyann = (-8, -3)
+            t.set_ha("right")
+    band_keys = [Line2D([0], [0], marker="o", ls="", ms=2.6, color=viz.FAINT),
+                 (Patch(facecolor=viz.SERIES[0], alpha=0.13), Patch(facecolor=viz.SERIES[0], alpha=0.33),
+                  Line2D([0], [0], color=viz.SERIES[0], lw=1.4))]
+    axes[1].legend(band_keys, [f"controls (n = {int(ctrl.sum())})", "mean, ±1 and ±2 SD"],
+                   loc="center right", bbox_to_anchor=(1.0, 0.60), frameon=False, fontsize=7.0,
+                   handlelength=1.6,
+                   handletextpad=0.4, borderaxespad=0.2, labelspacing=0.3,
+                   handler_map={tuple: HandlerTuple(ndivide=1, pad=0.0)})
+
     fig.tight_layout(w_pad=0.9)
     viz.save(fig, paths.FIGURES / "fig3_interpretability")
 

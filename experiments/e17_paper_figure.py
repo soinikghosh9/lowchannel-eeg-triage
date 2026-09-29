@@ -297,7 +297,8 @@ def panel_by_disease(ax_ad, ax_ftd, e33, order):
                transform=ax_ad.transAxes, fontsize=6.6, ha="left", va="top", color=viz.INK)
 
 
-#: The increment over age across every check, top to bottom: (label, contrast, source).
+#: The increment over age across every check, top to bottom. A string is a group header drawn
+#: across its own row; a tuple is (label, contrast, (estimate, 95% interval)).
 def _increment_rows(e13, e30, e34, e35):
     t = e13["tasks"]
     full = "b19|256|f32|full"
@@ -308,63 +309,93 @@ def _increment_rows(e13, e30, e34, e35):
         return d[key], d[ci]
 
     return [
-        ("CAUEEG screening", "screening", rec(t["screening"]["budgets"][full])),
-        ("CAUEEG dementia", "dementia", rec(t["dementia"]["budgets"][full])),
-        ("CAUEEG MCI", "mci", rec(t["mci"]["budgets"][full])),
-        ("no repeat visits", "screening", rec(e30["dedup"]["screening"]["dedup"])),
-        ("4 el., clean", "screening", rec(four["clean"]["device"])),
-        ("4 el., moderate field", "screening", rec(four["field_moderate"]["device"])),
-        ("4 el., severe field", "screening", rec(four["field_severe"]["device"])),
-        ("4 el., lost contact", "screening", rec(four["contact_bad"]["device"])),
-        ("4 el., mains, clinic rule", "screening", rec(four["mains"]["clinic"])),
-        ("external, 19 el.", "dementia", (pooled["b19_excl_ds004504"]["diff"],
-                                          pooled["b19_excl_ds004504"]["ci"])),
-        ("external, 4 el.", "dementia", (pooled["b4_excl_ds004504"]["diff"],
-                                         pooled["b4_excl_ds004504"]["ci"])),
+        "CAUEEG, 19 electrodes",
+        ("screening", "screening", rec(t["screening"]["budgets"][full])),
+        ("dementia", "dementia", rec(t["dementia"]["budgets"][full])),
+        ("MCI", "mci", rec(t["mci"]["budgets"][full])),
+        ("screening, no repeat visits", "screening", rec(e30["dedup"]["screening"]["dedup"])),
+        "Simulated device, 4 electrodes",
+        ("clean recording", "screening", rec(four["clean"]["device"])),
+        ("moderate field faults", "screening", rec(four["field_moderate"]["device"])),
+        ("severe field faults", "screening", rec(four["field_severe"]["device"])),
+        ("lost contact, undetected", "screening", rec(four["contact_bad"]["device"])),
+        ("mains, clinic-trained rule", "screening", rec(four["mains"]["clinic"])),
+        "External, BrainLat + P-ADIC",
+        ("19 electrodes", "dementia", (pooled["b19_excl_ds004504"]["diff"],
+                                        pooled["b19_excl_ds004504"]["ci"])),
+        ("4 electrodes", "dementia", (pooled["b4_excl_ds004504"]["diff"],
+                                       pooled["b4_excl_ds004504"]["ci"])),
     ]
 
 
 C_TASK = {"screening": C_SUB, "dementia": C_INC, "mci": C_DEEP}
+TASK_LABEL = {"screening": "screening", "dementia": "dementia", "mci": "MCI"}
+
+
+def _contrast_keys(tasks):
+    """Legend handles for the contrast colours: an interval with its point estimate."""
+    from matplotlib.lines import Line2D
+    return [Line2D([0], [0], color=C_TASK[t], lw=1.1, marker="o", ms=3.2, mec="white", mew=0.4,
+                   label=TASK_LABEL[t]) for t in tasks]
 
 
 def panel_increment(ax, e13, e30, e34, e35):
-    """(c) What the recording adds beyond age, in every setting the paper tests."""
+    """(c) What the recording adds beyond age, in every setting the paper tests.
+
+    Rows are grouped under a header naming the cohort and montage; the colour of each interval is
+    the contrast, keyed below the panel.
+    """
     rows = _increment_rows(e13, e30, e34, e35)
     y = np.arange(len(rows))[::-1]
-    for yi, (label, task, (est, ci)) in zip(y, rows):
+    labels = []
+    for yi, row in zip(y, rows):
+        if isinstance(row, str):
+            # A header takes a row of its own, written across the plot from the left edge.
+            ax.text(-0.087, yi, row, fontsize=6.0, fontweight="bold", color=viz.INK,
+                    ha="left", va="center", zorder=5,
+                    bbox=dict(facecolor="white", edgecolor="none", pad=0.6))
+            if yi != y[0]:
+                ax.axhline(yi + 0.5, color=viz.FAINT, lw=0.6, zorder=0)
+            labels.append("")
+            continue
+        label, task, (est, ci) = row
         col = C_TASK[task]
         ax.plot(ci, [yi, yi], color=col, lw=1.1, solid_capstyle="round", zorder=2)
         ax.plot(est, yi, "o", ms=3.2, color=col, mec="white", mew=0.4, zorder=3)
+        labels.append(label)
     ax.axvline(0, color=viz.INK, lw=0.7, zorder=1)
-    # Group separators: CAUEEG and its leakage check, the simulated device, the external cohorts.
-    for yb in (y[3] - 0.5, y[8] - 0.5):
-        ax.axhline(yb, color=viz.FAINT, lw=0.6, zorder=0)
     ax.set_yticks(y)
-    ax.set_yticklabels([r[0] for r in rows], fontsize=6.0)
-    # Each row label takes its contrast's colour, so the panel needs no legend over the intervals.
-    for tick, (_, task, _) in zip(ax.get_yticklabels(), rows):
-        tick.set_color(C_TASK[task])
+    ax.set_yticklabels(labels, fontsize=6.0)
+    ax.tick_params(axis="y", length=0)
     ax.set_ylim(-0.6, len(rows) - 0.4)
     ax.set_xlim(-0.09, 0.16)
     ax.set_xticks([-0.05, 0, 0.05, 0.10, 0.15])
     ax.set_xticklabels(["−0.05", "0", "0.05", "0.10", "0.15"], fontsize=6.0)
     ax.xaxis.grid(True, color=viz.FAINT, lw=0.5)
     ax.set_axisbelow(True)
-    ax.set_xlabel("AUC(EEG + age) − AUC(age)", fontsize=6.6)
+    ax.set_xlabel("increment over age: AUC(EEG + age) − AUC(age)", fontsize=6.4)
     ax.set_title("c  Increment over age", loc="left", fontweight="bold", fontsize=7.6)
+    ax.legend(handles=_contrast_keys(("screening", "dementia", "mci")), title="contrast (95% CI)",
+              title_fontsize=5.8, loc="upper center", bbox_to_anchor=(0.5, -0.30), ncol=3,
+              frameon=False, fontsize=5.8, handlelength=1.6, handletextpad=0.4,
+              columnspacing=1.2, borderaxespad=0.0)
 
 
 def panel_cohort_size(ax, e20, e37):
     """(d) How many recordings the increment needs, and what cohorts of 79-89 measure.
 
-    Curves: CAUEEG subsampled to n and cross-validated inside the subsample, 10th-90th
-    percentile of 25 draws. Points: each external cohort fitted and evaluated inside itself
-    (e37), on the dementia contrast, with its 95% interval -- the same reading as the curve.
+    Curves: CAUEEG subsampled to n and cross-validated inside the subsample, mean and 10th-90th
+    percentile of 25 draws. Dashed lines: the smallest n whose 10th percentile is above zero.
+    Points: each external cohort fitted and evaluated inside itself (e37), on the dementia
+    contrast, with its 95% interval -- the same reading as the curves. Every element is keyed in
+    the legend below the panel.
     """
+    from matplotlib.legend_handler import HandlerTuple
     from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
 
     rows = [r for r in e20["rows"] if r["estimator"] == "eeg17"]
-    need = {}
+    need, keys = {}, []
     for task, colour in (("screening", C_SUB), ("dementia", C_INC)):
         r = sorted([x for x in rows if x["task"] == task], key=lambda x: x["n"])
         n = [x["n"] for x in r]
@@ -372,6 +403,9 @@ def panel_cohort_size(ax, e20, e37):
         ax.fill_between(n, [x["inc_q"][0] for x in r], [x["inc_q"][1] for x in r],
                         color=colour, alpha=0.16, lw=0, zorder=1)
         need[task] = e20["thresholds"][f"{task}|eeg17"]["smallest_n_increment_reliably_positive"]
+        keys.append(((Patch(facecolor=colour, alpha=0.25, edgecolor="none"),
+                      Line2D([0], [0], color=colour, lw=1.1, marker="o", ms=1.8)),
+                     f"{task} subsamples"))
     ax.set_xscale("log")
     ax.set_xlim(35, 1500)
     ylo, yhi = -0.17, 0.23
@@ -382,40 +416,36 @@ def panel_cohort_size(ax, e20, e37):
         ax.axvline(need[task], ymax=0.86, color=colour, ls="--", lw=0.8, zorder=2)
         ax.text(need[task] * 1.05, ylo + 0.008, f"n = {need[task]}", color=colour, fontsize=5.6,
                 ha="left", va="bottom")
+    keys.append((Line2D([0], [0], color=viz.MUTED, ls="--", lw=0.8),
+                 "n with 10th pct. > 0"))
     # External cohorts: points with 95% intervals; ds004504, whose within-cohort age model is
     # weak because its cases are younger, lies above the frame and is marked at the edge.
-    ext_keys = []
     for cohort, marker in (("BrainLat", "s"), ("P-ADIC", "^")):
         c = e37["cohorts"][cohort]
         v = c["estimators"]["eeg17"]
         x = c["n"]
         ax.plot([x, x], v["inc_ci"], color=C_INC, lw=0.9, zorder=4)
         ax.plot(x, v["inc_margin"], marker, ms=3.4, color="white", mec=C_INC, mew=1.0, zorder=5)
-        ext_keys.append(Line2D([0], [0], marker=marker, ls="", ms=3.4, color="white", mec=C_INC,
-                               mew=1.0, label=f"{cohort} ({x})"))
-    # ds004504 lies above the frame (its within-cohort age model is weak, the cases being younger):
-    # an arrowhead at the top edge, labelled beside it.
+        keys.append((Line2D([0], [0], marker=marker, ls="", ms=3.4, color="white", mec=C_INC,
+                            mew=1.0), f"{cohort}, n = {x}"))
     ds = e37["cohorts"]["ds004504"]
     ax.plot(ds["n"], yhi - 0.006, "^", ms=3.4, color=C_INC, clip_on=False, zorder=5)
     ax.text(ds["n"] * 1.12, yhi - 0.006,
             f"ds004504 {ds['estimators']['eeg17']['inc_margin']:+.2f}",
             fontsize=5.6, color=viz.INK, ha="left", va="center")
-    # The curves are named at n = 200, above and below their bands, where the panel is empty; the
-    # legend holds only the cohorts.
-    at = {t: next(x for x in rows if x["task"] == t and x["n"] == 200) for t in need}
-    ax.text(200, at["dementia"]["inc_q"][1] + 0.008, "dementia", color=C_INC, fontsize=5.8,
-            ha="center", va="bottom")
-    ax.text(200, at["screening"]["inc_q"][0] - 0.012, "screening", color=C_SUB, fontsize=5.8,
-            ha="center", va="top")
-    ax.legend(handles=ext_keys, loc="upper right", bbox_to_anchor=(1.0, 0.93), frameon=False,
-              fontsize=5.6, handlelength=1.0, handletextpad=0.4, borderaxespad=0.2,
-              labelspacing=0.3)
+    keys.append((Line2D([0], [0], marker="^", ls="", ms=3.4, color=C_INC),
+                 f"ds004504, n = {ds['n']} (off scale)"))
+    ax.legend([k for k, _ in keys], [t for _, t in keys], ncol=2, loc="upper left",
+              bbox_to_anchor=(-0.16, -0.30), frameon=False, fontsize=5.6, handlelength=1.8,
+              handletextpad=0.4, columnspacing=0.9, labelspacing=0.35, borderaxespad=0.0,
+              handler_map={tuple: HandlerTuple(ndivide=None, pad=0.0)})
     ax.set_xticks([40, 100, 300, 1000])
     ax.set_xticklabels(["40", "100", "300", "1000"], fontsize=6.0)
     ax.tick_params(axis="y", labelsize=6.0)
-    ax.set_xlabel("recordings, fitted and tested within cohort", fontsize=6.6)
+    ax.set_xlabel("number of recordings (log scale)", fontsize=6.6)
     ax.set_ylabel("increment over age", fontsize=6.6)
-    ax.set_title("d  Cohort size", loc="left", fontweight="bold", fontsize=7.6)
+    ax.set_title("d  Increment by number of recordings", loc="left", fontweight="bold",
+                 fontsize=7.6)
     viz.hgrid(ax)
 
 
@@ -510,9 +540,11 @@ def figure_one(e25, e20, e13, e30, e33, e34, e35, e37):
     from matplotlib.gridspec import GridSpec
     from matplotlib.lines import Line2D
 
-    fig = plt.figure(figsize=(BODY_W, 3.34))
-    gs = GridSpec(2, 1, figure=fig, height_ratios=[1.30, 1.0], hspace=0.74,
-                  left=0.185, right=0.985, top=0.94, bottom=0.115)
+    # The lower row is taller than it was, for the group headers in (c), and the bottom margin holds
+    # the keys of (c) and (d).
+    fig = plt.figure(figsize=(BODY_W, 4.12))
+    gs = GridSpec(2, 1, figure=fig, height_ratios=[1.26, 1.30], hspace=0.56,
+                  left=0.185, right=0.985, top=0.955, bottom=0.180)
     top = gs[0].subgridspec(1, 3, width_ratios=[1.30, 0.80, 0.80], wspace=0.10)
     bot = gs[1].subgridspec(1, 2, width_ratios=[1.0, 1.0], wspace=0.34)
     ax_a = fig.add_subplot(top[0])
@@ -530,7 +562,9 @@ def figure_one(e25, e20, e13, e30, e33, e34, e35, e37):
                          label="carries Fp1 or Fp2"),
                   Line2D([0], [0], marker="D", ls="", ms=3.4, color=C_FULL, mec=viz.INK, mew=0.4,
                          label="full montage")]
-    fig.legend(handles=place_keys, ncol=3, loc="upper right", bbox_to_anchor=(0.99, 0.497),
+    # The placement key sits under panel (b), whose rows it colours along with (a).
+    pos = ax_ftd.get_position()
+    fig.legend(handles=place_keys, ncol=3, loc="upper right", bbox_to_anchor=(0.99, pos.y0 - 0.075),
                frameon=False, fontsize=6.0, handletextpad=0.3, columnspacing=1.2)
     viz.save(fig, paths.FIGURES / "fig1_results")
 
@@ -576,7 +610,16 @@ def figure_topography(e25, e33):
     fig, axes = plt.subplots(1, 3, figsize=(BODY_W * 0.86, 2.05))
     for ax, (title, s) in zip(axes, heads):
         _head(ax, s, title, min(vals), max(vals))
-    fig.tight_layout(w_pad=0.6)
+    fig.tight_layout(w_pad=0.6, rect=(0, 0.13, 1, 1))
+    # One colour scale for all three heads, so the shading reads as a value, not only a rank.
+    from matplotlib.cm import ScalarMappable
+    from matplotlib.colors import Normalize
+    cax = fig.add_axes((0.30, 0.075, 0.40, 0.035))
+    cb = fig.colorbar(ScalarMappable(Normalize(min(vals), max(vals)), plt.get_cmap("YlGnBu")),
+                      cax=cax, orientation="horizontal")
+    cb.ax.tick_params(labelsize=6.0, length=2)
+    cb.outline.set_linewidth(0.5)
+    cb.set_label("mean |AUC − 0.5| of the six strongest markers, by region", fontsize=6.4)
     viz.save(fig, paths.FIGURES / "figA10_topography")
 
 
@@ -619,9 +662,12 @@ def figure_two(e21):
         ref = e21["tasks"]["dementia"]["budgets"]["full montage"][prev]["curves"]["age"]
         ax.plot([r["threshold"] for r in ref], [r["net_benefit_treat_all"] for r in ref],
                 ":", color=viz.MUTED, lw=1.0, label="refer everyone")
-        ax.axhline(0, color=viz.INK, lw=0.9)
+        # Referring no one has zero net benefit at every threshold: the zero line is that strategy.
+        ax.axhline(0, color=viz.MUTED, lw=0.9)
         ax.set_xlabel("threshold probability for referral")
-        ax.set_title(f"service prevalence {float(prev):.0%}", loc="left", fontweight="bold")
+        letter = "a" if prev == "0.10" else "b"
+        ax.set_title(f"{letter}  Service prevalence {float(prev):.0%}", loc="left",
+                     fontweight="bold")
         ax.set_ylim(-0.02, top * 1.12)
         ax.set_ylabel("net benefit")
         viz.hgrid(ax)
@@ -634,12 +680,15 @@ def figure_two(e21):
                      Patch(facecolor=C_DEEP, edgecolor="none", label="MCI")]
     arm_keys = [Line2D([0], [0], color=viz.INK, lw=1.6, ls="-", label="EEG + age"),
                 Line2D([0], [0], color=viz.INK, lw=1.1, ls="--", label="age alone"),
-                Line2D([0], [0], color=viz.MUTED, lw=1.0, ls=":", label="refer everyone")]
+                Line2D([0], [0], color=viz.MUTED, lw=1.0, ls=":", label="refer everyone"),
+                Line2D([0], [0], color=viz.MUTED, lw=0.9, ls="-", label="refer no one")]
     # matplotlib fills legend columns top-to-bottom, so interleave to get contrasts on the top row
     # and line styles on the bottom row rather than one of each stacked per column.
+    from matplotlib.patches import Rectangle
+    blank = Rectangle((0, 0), 0, 0, fill=False, edgecolor="none", visible=False, label=" ")
     ordered = [contrast_keys[0], arm_keys[0], contrast_keys[1], arm_keys[1],
-               contrast_keys[2], arm_keys[2]]
-    fig.legend(handles=ordered, ncol=3, loc="lower center",
+               contrast_keys[2], arm_keys[2], blank, arm_keys[3]]
+    fig.legend(handles=ordered, ncol=4, loc="lower center",
                bbox_to_anchor=(0.5, 0.0), frameon=False, fontsize=6.3,
                columnspacing=1.8, handlelength=1.7, handletextpad=0.6)
     fig.tight_layout(w_pad=1.6, rect=(0, 0.17, 1, 1))

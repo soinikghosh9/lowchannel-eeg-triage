@@ -57,6 +57,8 @@ def main():
                          fontsize=7.2, fontweight="semibold", color=viz.INK, clip_on=False)
 
     fig.tight_layout(h_pad=0.6, w_pad=0.3, rect=(0.04, 0, 1, 1))
+    # After the layout, so the key's text cannot change the spacing of the heads.
+    _key(axes[1][ncol - 1])
     viz.save(fig, paths.FIGURES / "figA7_montages")
     print(f"wrote {paths.FIGURES / 'figA7_montages'}.pdf")
     ladder_strip()
@@ -71,6 +73,29 @@ LADDER = [("b19", "full 10–20", "19 electrodes"), ("b8", "bilateral", "8 elect
 #: The right 16 pt stay empty: the "4 Arms" box of the diagram overlaps that edge.
 STRIP_PT = (303.8, 61.9)
 STRIP_RIGHT_PT = 16.0
+
+
+def _key(ax):
+    """What the symbols mean, drawn in an empty grid cell so the figure reads without the caption."""
+    from matplotlib.patches import Circle, Polygon
+    ax.axis("off")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.set_aspect("auto")
+    rows = [0.90, 0.72, 0.54, 0.36, 0.18]
+    x0, tx = 0.10, 0.24
+    ax.add_patch(Circle((x0, rows[0]), 0.045, facecolor=viz.INK, ec=viz.INK, lw=0.8))
+    ax.add_patch(Circle((x0, rows[1]), 0.045, facecolor="none", ec=viz.FAINT, lw=0.8))
+    ax.plot([x0 - 0.07, x0 + 0.07], [rows[2] - 0.02, rows[2] + 0.02], color=viz.SERIES[2], lw=1.1)
+    ax.add_patch(Polygon([(x0 - 0.045, rows[3] - 0.035), (x0, rows[3] + 0.05),
+                          (x0 + 0.045, rows[3] - 0.035)], closed=True, fill=False,
+                         ec=viz.MUTED, lw=1.0))
+    ax.add_patch(Circle((x0, rows[4]), 0.03, fill=False, ec=viz.MUTED, lw=1.0))
+    for y, text in zip(rows, ("recorded", "not recorded", "bipolar pair (1 signal)",
+                              "nose (view from above)", "ear")):
+        ax.text(tx, y, text, fontsize=6.0, va="center", ha="left", color=viz.INK)
+    ax.text(0.0, 1.06, "(n), electrodes recorded", fontsize=6.0, va="bottom", ha="left",
+            color=viz.INK, fontweight="semibold")
 
 
 def _draw_head(ax, name):

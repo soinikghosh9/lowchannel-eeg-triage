@@ -176,7 +176,7 @@
     "value": "0.786"
   },
   "BalAccAgeDem": {
-    "count": 30,
+    "count": 31,
     "value": "0.74"
   },
   "BalAccAgeMCI": {
@@ -200,7 +200,7 @@
     "value": "0.77"
   },
   "BalAccEEGDem": {
-    "count": 30,
+    "count": 31,
     "value": "0.74"
   },
   "BalAccEEGMCI": {
@@ -284,7 +284,7 @@
     "value": "4.83"
   },
   "CaseNControls": {
-    "count": 4,
+    "count": 5,
     "value": "459"
   },
   "CaseZSlowingRatio": {
@@ -1140,7 +1140,7 @@
     "value": "0.05--0.10"
   },
   "NCtrlAll": {
-    "count": 4,
+    "count": 5,
     "value": "459"
   },
   "NCtrlSMI": {
@@ -1308,7 +1308,7 @@
     "value": "-0.01"
   },
   "OpDementiaBothFullSens": {
-    "count": 14,
+    "count": 13,
     "value": "0.66"
   },
   "OpDementiaEEGFourAUC": {
@@ -2300,7 +2300,7 @@
     "value": "0.644"
   },
   "RevExt3_BrainLat_b19_eeg_spec": {
-    "count": 14,
+    "count": 13,
     "value": "0.66"
   },
   "RevExt3_BrainLat_b19_normative_auc": {
@@ -2324,7 +2324,7 @@
     "value": "0.725"
   },
   "RevExt3_BrainLat_b4_eeg+age_spec": {
-    "count": 14,
+    "count": 13,
     "value": "0.66"
   },
   "RevExt3_BrainLat_b4_eeg_auc": {
@@ -2340,7 +2340,7 @@
     "value": "0.635"
   },
   "RevExt3_BrainLat_b4_normative_spec": {
-    "count": 14,
+    "count": 13,
     "value": "0.66"
   },
   "RevExt3_PADIC_b19_age_transported_auc": {
@@ -2372,7 +2372,7 @@
     "value": "0.653"
   },
   "RevExt3_PADIC_b19_normative_spec": {
-    "count": 30,
+    "count": 31,
     "value": "0.74"
   },
   "RevExt3_PADIC_b4_age_transported_auc": {
@@ -3568,7 +3568,7 @@
     "value": "0.61"
   },
   "SensNormative": {
-    "count": 14,
+    "count": 13,
     "value": "0.66"
   },
   "SensSMI": {
@@ -3780,7 +3780,7 @@
     "value": "[-0.082, +0.172]"
   },
   "WorstRegion": {
-    "count": 23,
+    "count": 24,
     "value": "frontal"
   },
   "YoudenAgeDem": {
